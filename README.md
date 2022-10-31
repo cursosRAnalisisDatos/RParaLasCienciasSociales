@@ -6,8 +6,7 @@
 - Fís. Octavio Eduardo Vizcaya Xilotl
 
 ### Temario
-[Motivación](presentaciones/motivacion.md)
-1. [Introducción a Java](presentaciones/introduccion.md)      
+[Motivación](presentaciones/motivacion.md)   
 1. [Introducción a R](presentaciones/modulo1.md)
 2. [Operaciones y funciones básicas con R](presentaciones/modulo2.md)
 3. [Objetos de R](presentaciones/modulo3.md)
