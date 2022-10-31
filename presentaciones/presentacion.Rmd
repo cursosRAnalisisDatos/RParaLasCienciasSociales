@@ -1,0 +1,107 @@
+---
+title: "Introducción a R para las Ciencias Sociales"
+author: 
+- "Dr. Eric Hernández Ramírez"
+- "Lic. en C. C. Virginia Teodosio Procopio"
+- "Fís. Octavio Eduardo Vizcaya Xilotl"
+date: "`r Sys.Date()`"
+output: ioslides_presentation
+logo: logoIIEc.jpg
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+## Presentación del curso y Forma de Evaluación
+
+## Qué es R?
+
+- R es un lenguaje de programación de propósito específico, está más enfocado a modelos estadísticos y gráficos (*R Core Team and the R Foundation for Statistical Computing*), pero con el paso del tiempo parece que se convertirá en lenguaje de propósito general.
+- R es uno de los lenguajes más populares en el manejo de minería de datos (en el 2020 según el índice TIOBE).
+- R es usado entre gente que hace minería de datos, bioinformáticos, estadísticos, y desarrolladores de aplicaciones estadísticas, entre otros.
+- R es un entorno de software libre (*licencia GNU GLP*)  e independiente de plataforma.
+- R cuenta con una gran cantidad de paquetes especializados, y que ayudan a que el lenguaje sea más poderoso, logrando que no tengamos que reconstruir siempre todo al momento de solucionar un problema.
+
+
+##
+
+### Paquetes en R  
+
+_Un paquete (package) es una colección de funciones, datos y código R que se almacenan en una carpeta conforme a una estructura bien definida, fácilmente accesible para R._
+ 
+Los paquetes los podemos encontrar en: <https://r-pkgs.org/>
+
+<TABLE style="margin: 0 auto;">
+    <TR>
+    <TD> 
+      <img src="images/rPackages.png" alt="Big Data en R" width="200px"> 
+    </TD>
+    <TD> 
+      <img src="images/noPaquetesR.png" alt="Big Data en R" width="500px"> 
+    </TD>
+    </TR>
+</TABLE>
+ 
+## Objetivo del curso de R
+
+\  
+
+Los asistentes aprenderán los principales conceptos del lenguaje de programación
+R y adquirirán las habilidades y las herramientas básicas para el análisis de datos.
+
+## Las habilidades que van a adquirir los participantes
+
+Al finalizar el curso los alumnos serán capaces de identificar las principales
+características de R y sus distintos usos. 
+
+\  
+
+Así como también, serán capaces de manipular, editar y realizar análisis básicos de datos de forma gráfica y estadística. 
+
+\  
+
+Finalmente, los asistentes tendrán un acercamiento a los principales ciclos de programación para automatizar algunas tareas.
+
+
+## Reglamento Aula Virtual
+
+- El aula virtual se abre 10 minutos antes de iniciar la clase.
+- Al ingresar en el aula virtual escriba su nombre completo en el chat, esa será la forma de registrar su asistencia.
+- Mantengan su cámara abierta durante toda la sesión.
+- Apague su micrófono; esto evita la interferencia durante la sesión.
+- Si hay alguna duda use el icono de dedo alzado.
+- En caso de tener un problema al correr el código escriba en el chat; alguno de nuestros colaboradores se pondrá en contacto con usted.
+
+## Acreditación del curso 
+
+Para obtener la Constancia de Acreditación del curso, se deben cubrir los
+siguientes requisitos:
+
+- Al menos 80% de asistencia al curso
+- Realizar las actividades que se desarrollen durante las clases
+- Presentar y pasar las evaluaciones del curso
+
+La forma de evaluación es la siguiente:
+
+- 30% Examen-Practico Final
+- 40% Actividades en la clase
+- 30% Tareas
+
+## Temario del curso
+
+1. Introducción a R. La instalación e iteracción con el entorno de desarrollo de R y RStudio
+2. Operaciones y funciones básicas con R. Conociendo las variables y las funciones en R
+3. Objetos de R. Manipulando datos en la memoria interna, a través de vectores, matrices, listas, dataframes
+4. Manejo de datos. Manipulando datos en la memoria externa (archivos), importando archivos y exportando archivos y luego su posterior edición
+5. Introducción a la estadística y probabilidad con R
+6. Graficando datos con R (ggplot2)
+7. Estructuras de control
+8. Análisis de una base de datos real (INEGI, BM, ONU, etc)
+
+## Bibliografía General
+
+- An Introduction to R, Venables, W.,N., Smith, D. M. and the R Core Team
+- R for beginners, Paradis, Emmanuel
+- R in a nutshell. A desktop quick reference, Adler, Joseph, O’reilly, 2010.
+- Learning R, Cotton, Richard, O’Reilly, 2013.
+- A beginner’s Guide to R, Zuur, Alain F., et. al., Springer, 2009

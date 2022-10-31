@@ -1,0 +1,123 @@
+---
+title: "Introducción a R para las Ciencias Sociales"
+author: 
+- "Dr. Eric Hernández Ramírez"
+- "Lic. en C. C. Virginia Teodosio Procopio"
+- "Fís. Octavio Eduardo Vizcaya Xilotl"
+date: "`r Sys.Date()`"
+output: ioslides_presentation
+logo: logoIIEc.jpg
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+## Módulo 2: Operaciones y funciones básicas con R
+En R contamos con varias funciones de ayuda que nos permiten entrar a la documentación de las funciones, bases de datos y otros objetos ya sean parte de la instalación estándar como de los paquetes extras, entre ellas podemos enlistar las siguientes: 
+
+### Funciones de ayuda
+- help() 
+
+R tiene documentación integrada en el entorno de desarrollo. Para obtener ayuda de una función puedes usar las funciones 
+
+help o ?
+
+##
+
+Se usa como:
+
+?nombre_de_funcion, help(nombre_de_funcion)
+
+Ejemplo: la distribución normal
+
+  > help(rnorm)
+  
+  > ?rnorm
+
+Esto cargará una página de ayuda en RStudio (o como texto sin formato en R por sí mismo).
+
+##
+
+Cada página de ayuda se divide en secciones:
+
+  - Descripción: una descripción extendida de lo que hace la función.
+  - Uso: los argumentos de la función y sus valores predeterminados.
+  - Argumentos: una explicación de los datos que espera cada argumento.
+  - Detalles: cualquier detalle importante a tener en cuenta
+  - Valor: los datos que regresa la función
+  - Ver también: cualquier función relacionada que pueda serte útil.
+  - Ejemplos: algunos ejemplos de cómo usar la función
+
+## Favor de teclear  
+<pre><code>
+ help.start()
+</code></pre>
+
+## Los directorios de trabajo
+
+<pre><code>
+getwd()
+
+setwd("C:\otro_directorio")
+
+</code></pre>
+
+### Paquetes y bibliotecas
+
+install.packages()
+
+Paquete readr. Es una forma de leer datos haciendo cortes rectangulares.
+
+Ejemplo: install.packages("readr")
+
+library()
+
+Ejemplo: 
+
+library(readr)
+
+
+### Forma de citar
+
+Una forma de reconocer el trabajo de quien hizo una función o todo un paquete es citando correctamente a sus autores, para esto \textbf{R} cuenta con :
+
+citation()
+
+Ejemplo:
+#Primero hay que cargar el paquete
+library(ggplot2)
+citation("ggplot2")
+
+### Operaciones Aritméticas}
+Sumas, restas, divisiones, multiplicaciones, potencias, ...
+
+Potencias
+5 ^ 3
+
+División entera (hace la división y regresa el residuo)
+4 %% 2
+## [1] 0
+
+5 %% 2
+## [1] 1
+
+### Operadores relacionales
+
+<pre><code>
+<  Menor que  5 < 3 FALSE
+<= Menor o igual que 5<=3 FALSE
+> Mayor que 5>3 TRUE
+>= Mayor o igual que 5>=3 TRUE
+== Exactamente igual que 5==3 FALSE
+!= Distinto 5 != 3 TRUE
+
+</code></pre>
+
+Errores
+#4 + "tres"
+
+### Funciones matemáticas
+Algunas Funciones Matemáticas
+
+logaritmo, exponencial, seno, coseno ...
+
