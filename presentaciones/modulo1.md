@@ -18,7 +18,7 @@ knitr::opts_chunk$set(echo = FALSE)
 
 [https://cran.r-project.org/](https://cran.r-project.org/)
 
-<img src="images/modulo1/proyectoR.jpeg" alt="proyecto R" width="800px"> 
+<img src="../images/modulo1/proyectoR.jpeg" alt="proyecto R" width="800px"> 
 
 ## Instalando R. Bajando el archivo ejecutable
 <img src="images/modulo1/instalandoR.jpeg" alt="proyecto R" width="800px"> 
