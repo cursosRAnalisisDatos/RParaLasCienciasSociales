@@ -18,33 +18,33 @@ knitr::opts_chunk$set(echo = FALSE)
 
 [https://cran.r-project.org/](https://cran.r-project.org/)
 
-<img src="images/modulo3/proyectoR.jpeg" alt="proyecto R" width="800px"> 
+<img src="images/modulo1/proyectoR.jpeg" alt="proyecto R" width="800px"> 
 
 ## Instalando R. Bajando el archivo ejecutable
-<img src="images/modulo3/instalandoR.jpeg" alt="proyecto R" width="800px"> 
+<img src="images/modulo1/instalandoR.jpeg" alt="proyecto R" width="800px"> 
 
 ## Instalando R. Aceptar la licencia
-<img src="images/modulo3/instalandoROK.jpeg" alt="proyecto R" width="800px"> 
+<img src="images/modulo1/instalandoROK.jpeg" alt="proyecto R" width="800px"> 
 
 ## Instalando R. Aceptando las opciones por omisión
-<img src="images/modulo3/instalandoROpcionesOmision.jpeg" alt="proyecto R" width="800px"> 
+<img src="images/modulo1/instalandoROpcionesOmision.jpeg" alt="proyecto R" width="800px"> 
 
 ## Ejecutar R
 <p style = 'text-align:center;'>
 <TABLE style="margin: 10 auto;">
     <TR>
     <TD> 
-      <img src="images/modulo3/consolaRWin.jpeg" alt="Big Data en R" width="400px"> 
+      <img src="images/modulo1/consolaRWin.jpeg" alt="Big Data en R" width="400px"> 
     </TD>
     <TD> 
-      <img src="images/modulo3/consolaRUbuntu.png" alt="Big Data en R" width="400px"> 
+      <img src="images/modulo1/consolaRUbuntu.png" alt="Big Data en R" width="400px"> 
     </TD>
     </TR>
 </TABLE>
 </p>
 
 ## Usando la consola de R
-<img src="images/modulo3/usandoLaConsolaR.jpeg" alt="proyecto R" width="800px"> 
+<img src="images/modulo1/usandoLaConsolaR.jpeg" alt="proyecto R" width="800px"> 
 
 ## RStudio. Es un IDE
 
@@ -57,16 +57,16 @@ entre el usuario y el programa en R se interactua principalmente con la
 linea de comandos.
 
 ## RStudio. IDE disponible en línea 
-<img src="images/modulo3/RStudio.jpg" alt="proyecto R" width="800px"> 
+<img src="images/modulo1/RStudio.jpg" alt="proyecto R" width="800px"> 
 
 ## RStudio selección de la versión a instalar
-<img src="images/modulo3/RStudioSeleccion.jpg" alt="proyecto R" width="800px"> 
+<img src="images/modulo1/RStudioSeleccion.jpg" alt="proyecto R" width="800px"> 
 
 ## RStudio selección por sistema operativo
-<img src="images/modulo3/RStudioInstalacion.jpg" alt="proyecto R" width="800px"> 
+<img src="images/modulo1/RStudioInstalacion.jpg" alt="proyecto R" width="800px"> 
 
 ## RStudio ambiente de trabajo
-<img src="images/modulo3/RStudioVentanas.png" alt="proyecto R" width="800px"> 
+<img src="images/modulo1/RStudioVentanas.png" alt="proyecto R" width="800px"> 
 
 ## RStudio ventanas del ambiente de trabajo
 RStudio consta de 4 ventanas en su ambiente de trabajo:
