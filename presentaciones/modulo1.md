@@ -6,12 +6,9 @@ author:
 - "Fís. Octavio Eduardo Vizcaya Xilotl"
 date: "`r Sys.Date()`"
 output: ioslides_presentation
-logo: logoIIEc.jpg
+logo: ../images/logoIIEc.jpg
 ---
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = FALSE)
-```
 ## Módulo 1. Introducción a R
 
 ## Instalando R. El proyecto que le da soporte y descarga
