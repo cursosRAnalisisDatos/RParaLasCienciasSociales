@@ -9,30 +9,32 @@ output: ioslides_presentation
 logo: logoIIEc.jpg
 ---
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = FALSE)
-```
 ## Módulo 2: Operaciones y funciones básicas con R
 En R contamos con varias funciones de ayuda que nos permiten entrar a la documentación de las funciones, bases de datos y otros objetos ya sean parte de la instalación estándar como de los paquetes extras, entre ellas podemos enlistar las siguientes: 
 
 ### Funciones de ayuda
-- help() 
+<pre><code>
+help() 
+</code></pre>
 
 R tiene documentación integrada en el entorno de desarrollo. Para obtener ayuda de una función puedes usar las funciones 
-
+<pre><code>
 help o ?
+</code></pre>
 
 ##
 
 Se usa como:
-
+<pre><code>
 ?nombre_de_funcion, help(nombre_de_funcion)
+</code></pre>
 
 Ejemplo: la distribución normal
 
-  > help(rnorm)
-  
-  > ?rnorm
+<pre><code>
+  help(rnorm)
+  ?rnorm
+</code></pre>
 
 Esto cargará una página de ayuda en RStudio (o como texto sin formato en R por sí mismo).
 
@@ -56,8 +58,6 @@ Cada página de ayuda se divide en secciones:
 ## Los directorios de trabajo
 
 <pre><code>
-getwd()
-
-setwd("C:\otro_directorio")
-
+getwd() # para conocer el directorio de trabajo
+setwd("C:\otro_directorio") #para modificar el directorio de trabajo
 </code></pre>
