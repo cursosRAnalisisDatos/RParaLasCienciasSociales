@@ -12,7 +12,7 @@ logo: logoIIEc.jpg
 ## Módulo 2: Operaciones y funciones básicas con R
 
 ##
-[Así va el scrip para este módulo...](src/main.md)
+[Así va el scrip para este módulo...](../src/modulo2.R)
 ##
 En R contamos con varias funciones de ayuda que nos permiten entrar a la documentación de las funciones, bases de datos y otros objetos ya sean parte de la instalación estándar como de los paquetes extras, entre ellas podemos enlistar las siguientes: 
 
