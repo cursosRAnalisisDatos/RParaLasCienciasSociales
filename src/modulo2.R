@@ -21,9 +21,11 @@ getwd()
 #en windows
 setwd("C:/Users/UsuariO/Desktop/cursoRParaLasCienciasSociales/sesion1")
 
-##desde acá inicia la sesión 2
 
+# ---------------------------------------------------------------------
 # ----------
+# ----------
+##desde acá inicia la sesión 2
 # este comando nos permite conocer la ruta del ambiente de trabajo
 getwd()
 setwd("C:/Users/UsuariO/Desktop/cursoR")
