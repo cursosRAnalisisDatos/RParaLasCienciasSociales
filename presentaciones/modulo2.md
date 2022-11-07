@@ -27,8 +27,6 @@ help o ?
 </code></pre>
 
 ##
-
-##
 Se usa como:
 <pre><code>
 ?nombre_de_funcion, help(nombre_de_funcion)
