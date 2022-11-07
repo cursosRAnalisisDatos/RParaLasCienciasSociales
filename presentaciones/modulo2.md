@@ -113,7 +113,7 @@ El **[1]** al inicio de la línea resultado nos dice el número de la observaci�
 </code></pre>
 
 ## Operadores aritméticos
-<img src="images/modulo3/operadoresAritmeticos.png" alt="proyecto R" width="650px"> 
+<img src="../images/modulo2/operadoresAritmeticos.png" alt="proyecto R" width="650px"> 
 
 La precedencia de operadores es la usual, de tal manera que la expresión:
 **2 + 3 * 4**
@@ -123,7 +123,7 @@ La precedencia de operadores es la usual, de tal manera que la expresión:
 - Recomendación: usar siempre paréntesis bien anidados.
 
 ## Precedencia de operadores
-<img src="./images/modulo3/precedenciaOperadores.png" alt="proyecto R" width="650px"> 
+<img src="../images/modulo2/precedenciaOperadores.png" alt="proyecto R" width="650px"> 
 
 ## La división entera (o módulo)
 Es la división de un número entre otro, pero en lugar de devolver el cociente, nos devuelve el residuo.
@@ -137,7 +137,7 @@ Ejemplo:
 </code></pre>
 
 ## Operadores relacionales
-<img src="images/modulo3/operadoresRelacionales.png" alt="proyecto R" width="700px"> 
+<img src="../images/modulo2/operadoresRelacionales.png" alt="proyecto R" width="700px"> 
   
 Comparaciones entre cadenas. Lo hace por el orden alfabético
 Ejemplo:
