@@ -15,3 +15,5 @@
 6. [Introducción a la estadística y probabilidad con R](presentaciones/modulo6.md)
 7. [Graficando datos con R (ggplot2)](presentaciones/modulo7.md)
 8. [Análisis de una base de datos real (INEGI, BM, ONU, etc)](presentaciones/modulo8.md)
+
+[Bibliografía](presentaciones/bibliografía.md)
