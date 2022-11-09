@@ -16,4 +16,4 @@
 7. [Graficando datos con R (ggplot2)](presentaciones/modulo7.md)
 8. [Análisis de una base de datos real (INEGI, BM, ONU, etc)](presentaciones/modulo8.md)
 
-[Bibliografía](presentaciones/bibliografía.md)
+[Bibliografía](presentaciones/bibliografia.md)
