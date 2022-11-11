@@ -171,6 +171,19 @@ personaje <- c('Fernando', 'Alejandro', 'Moisés', 'Agustino', 'Ezequiel')
 personaje[-c(2, 5)]
 </code></pre>
 
+## Posibles respuestas al calculo de la media aritmética
+
+Usando la función *mean* podemos calcular la media aritmética de las calificaciones del estudiante:
+
+<pre><code>
+x <- c(2, 4, 3, 6, 3, 7, 5, 8)
+mean(x) # 4.75
+# Equivalente a:
+sum(x)/lenght(x) # 4.75
+</code></pre>
+
+
+
 ## Matrices
 Es un tipo especial de vector que tiene una dimensión más, logrando una forma rectangular y controlada por renglones y columnas.
 
