@@ -176,7 +176,6 @@ obj <- 48
 </code></pre>
   
   • Cuando los objetos se crean, se guardan en la memoria asociada a R y se pueden monitorear desde el entorno gráfico de R.
-
 <pre><code>
 obj2 <- "R is cool"
 obj2 <- R is cool #error
@@ -184,42 +183,41 @@ obj2 <- R is cool
 Error: unexpected symbol in "my_obj2 <- R is"
 </code></pre>
   
-  ## Más operaciones con objetos
-  para reasignar el valor de algún objeto, simplemente se vuelve asociar un valor nuevo con el operador de asignación 
+## Más operaciones con objetos
+Para reasignar el valor de algún objeto, simplemente se vuelve asociar un valor nuevo con el operador de asignación 
 <pre><code>
   obj2 <- 2048
 </code></pre>
   
-  -Hay que notar que en el ambiente de ejecución se actualiza también el tipo de objeto para "obj2"
-
+-Hay que notar que en el ambiente de ejecución se actualiza también el tipo de objeto para "obj2"
 -También se pueden hacer operaciones usando a los objetos almacenados previamente
 <pre><code>
 x <- obj1 + obj2
 x
 </code></pre>
-  
-  Errores con objetos no definidos
+
+##  
+Errores con objetos no definidos
 <pre><code>
 obj <- 98
 obj4 <- my_obj + no_obj
 Error: object 'no_obj' not found
 </code></pre>
   
-  ## Objetos en tiempo de ejecución con funciones
+## Objetos en tiempo de ejecución con funciones
   
-  - Para ver qué objetos se encuentran activos en la memoria se usa (ambas funciones son equivalentes)
+- Para ver qué objetos se encuentran activos en la memoria se usa (ambas funciones son equivalentes):
 <pre><code>
 objects()
 ls()
 </code></pre>
   
-  ## Lista de los paquetes adjuntos y de algunos objetos (dataframes)
-  
+## Lista de los paquetes adjuntos y de algunos objetos (dataframes)
   <pre><code>
   search()
 </code></pre>
   
-  - la salida muestra un vector que empieza con las variables de ambiente globales, e incluye a los paquetes base.
+- la salida muestra un vector que empieza con las variables de ambiente globales, e incluye a los paquetes base.
 
 ## Borrando objetos de la memoria 
 - Es necesario cuidar el espacio en memoria, sobre todo para proyectos grandes o manejo de datos masivos.
@@ -229,48 +227,72 @@ ls()
 </code></pre>
   
   Se usa:
-  <pre><code>
+<pre><code>
   rm(nombreDelObjeto)
 </code></pre>
-  
-  ## Usando paquetes
-  
-  Para usar un paquete se usa la función
-<pre><code>
-  library(elNombreDelPaquete)
-</code></pre>
-  
-  Ejemplo:
-  <pre><code>
-  library(dplyr)
-</code></pre>
-  
-  Nota: *dplyr* es un paquete que permite la manipulación de archivos de datos (de tipo columnas-renglones) para poder hacer filtros, o elegir algunas columnas, etc
-[https://swcarpentry.github.io/r-novice-gapminder-es/13-dplyr/](https://swcarpentry.github.io/r-novice-gapminder-es/13-dplyr/).
 
-## Instalando paquetes
-<pre><code>
-  install.packages(nombreDelPaquete)
-</code></pre>
-  
-  Ejemplo:
-  <pre><code>
-  install.packages(dplyr)# Instalando la librería dplyr
-</code></pre>
-  
-  ## Citando paquetes
-  Una forma de reconocer el trabajo de quien hizo una función o todo un paquete es citando correctamente a sus autores, para esto *R* cuenta con:
-  <pre><code>
-  citation()
-</code></pre>
-  El cual muestra la manera de citar a *R* en sí.
+## La función **class()**
+Le dice a una función genérica, como *print*, cómo debe manejar al objeto.
 
-Para citar a cualquier paquete
-<pre><code>
-  citation(package = "nombreDelPaquete")
-</code></pre>
+  - numérico
+  - caracter
+  - lógico
+  - factor
   
-  Ejemplo:
-  <pre><code>
-  citation(package = "dplyr")
+## Ejemplo de la función **class**
+<pre><code>
+x <- 3+5
+class(x)
+[1] "numeric"
+
+y <- "hola"
+class(y)
+[1] "character"
+
+z <- TRUE
+class(z)
+[1] "logical"
+</code></pre>
+
+## Siguiendo nombrado adecuado de los objetos
+Diferentes formas de nombrar a los objetos
+
+<pre><code>
+output_summary <- "my analysis"
+output.summary <- "my analysis"
+outputSummary  <- "my analysis"
+</code></pre>
+
+## Documentando el script
+<pre><code>
+# Title: Time series analysis of snouters
+
+# Purpose : This script performs a time series analyses on 
+#           snouter count data.
+#           Data consists of counts of snouter species 
+#           collected from 18 islands in the Hy-yi-yi 
+#           archipelago between 1950 and 1957. 
+#           For details of snouter biology see:
+#           https://en.wikipedia.org/wiki/Rhinogradentia
+
+# Project number: #007
+
+# DataFile:'data/snouter_pop.txt'
+
+# Author: A. Nother
+# Contact details: a.nother@uir.ac.uk
+
+# Date script created: Mon Dec 2 16:06:44 2019 -----------
+# Date script last modified: Thu Dec 12 16:07:12 2019 ----
+
+# package dependencies
+
+library(PopSnouter)
+library(ggplot2)
+
+print('put your lovely R code here')
+
+# good practice to include session information
+
+xfun::session_info()
 </code></pre>
