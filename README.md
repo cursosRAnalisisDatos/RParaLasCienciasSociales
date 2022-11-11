@@ -9,7 +9,7 @@
 [Motivación](presentaciones/motivacion.md)   
 1. [Introducción a R](presentaciones/modulo1.md)
 2. [Operaciones y funciones básicas con R](presentaciones/modulo2.md)
-3. [Objetos de R](presentaciones/modulo3.md)
+3. [Objetos de R (estructuras de datos)](presentaciones/modulo3.md)
 4. [Estructuras de control](presentaciones/modulo4.md)
 5. [Manejo de datos](presentaciones/modulo5.md)
 6. [Introducción a la estadística y probabilidad con R](presentaciones/modulo6.md)
