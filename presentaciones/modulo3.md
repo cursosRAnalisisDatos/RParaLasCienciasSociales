@@ -173,7 +173,7 @@ personaje[-c(2, 5)]
 
 ## Posibles respuestas al calculo de la media aritmética
 
-Usando la función *mean* podemos calcular la media aritmética de las calificaciones del estudiante:
+Usando la función *mean* podemos calcular la media aritmética de una colecci:
 
 <pre><code>
 x <- c(2, 4, 3, 6, 3, 7, 5, 8)
