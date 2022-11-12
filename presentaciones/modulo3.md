@@ -184,6 +184,105 @@ sum(x)/lenght(x) # 4.75
 
 
 
+## Estructuras de control.
+
+for, ciclos
+
 ## Matrices
 Es un tipo especial de vector que tiene una dimensión más, logrando una forma rectangular y controlada por renglones y columnas.
 
+Para crear matrices se usa la función *matrix()*
+
+- Una forma es que reciba como argumento un vector
+matrix(1:15) # genera una matriz de una columna
+
+- Otra forma es que reciba tres parámetros
+<pre><code>
+# Tres renglones y cuatro columnas
+matrix(1:15, nrow = 3, ncol = 5)
+# Cuatro columnas y tres columnas
+matrix(1:12, nrow = 4, ncol = 3)
+# Dos renglones y seis columnas
+matrix(1:12, nrow = 4, ncol = 3)
+</code></pre>
+
+## Funciones para unir vectores
+
+    cbind() para unir vectores, usando cada uno como una columna.
+    rbind() para unir vectores, usando cada uno como un renglón.
+
+<pre><code>
+vector_1 <- 1:4
+vector_2 <- 5:8
+vector_3 <- 9:12
+vector_4 <- 13:16
+matriz <- rbind(vector_1, vector_2, vector_3, vector_4)
+
+</code></pre>
+
+
+
+
+
+
+
+
+
+
+
+
+## Usando paquetes
+  
+Para usar un paquete se usa la función
+<pre><code>
+  library(elNombreDelPaquete)
+</code></pre>
+  
+  Ejemplo:
+  <pre><code>
+  library(dplyr)
+</code></pre>
+  
+  Nota: *dplyr* es un paquete que permite la manipulación de archivos de datos (de tipo columnas-renglones) para poder hacer filtros, o elegir algunas columnas, etc
+[https://swcarpentry.github.io/r-novice-gapminder-es/13-dplyr/](https://swcarpentry.github.io/r-novice-gapminder-es/13-dplyr/).
+
+## En dónde están los paquetes?
+- Los paquetes pueden ser bajados desde muchos lados, pero de las más comunes es cran-project, (install.packages())
+- BioConductor 
+- git-hub (install_github())
+
+## Instalando paquetes
+<pre><code>
+  install.packages(nombreDelPaquete)
+</code></pre>
+  
+  Ejemplo:
+  <pre><code>
+  install.packages(dplyr)# Instalando la librería dplyr
+</code></pre>
+
+## Nota importante con respecto a paquetes
+
+La importancia de instalar una sola vez un paquete.
+
+Instalar un paquete significa que lo tenemos que "bajar" de algún lado(servidor) y colocarlo en un directorio adecuado (entre otras cosas) en nuestra computadora para que **R** lo pueda encontrar, leer y usar lo que se necesite.
+
+Es importante que la instalación se realice una sola vez y se use todas las veces que se necesite.
+
+## Citando paquetes
+
+  Una forma de reconocer el trabajo de quien hizo una función o todo un paquete es citando correctamente a sus autores, para esto *R* cuenta con:
+  <pre><code>
+  citation()
+</code></pre>
+El cual muestra la manera de citar a *R* en sí.
+
+Para citar a cualquier paquete
+<pre><code>
+  citation(package = "nombreDelPaquete")
+</code></pre>
+  
+Ejemplo:
+<pre><code>
+  citation(package = "dplyr")
+</code></pre>
