@@ -33,7 +33,8 @@ El tipo del vector lo define su contenido (Si tenemos un vector que contiene dat
 
 - Atributos. Los vectores tienen varios atributos que describen características de los datos que contienen.
 
-## Ejemplos con vectores
+##
+### Ejemplos con vectores
 En **R** los datos simples se definen como vectores, por ejemplo un entero *8* es un vector de longitud 1.
 
 <pre><code>
@@ -53,7 +54,8 @@ lenght(8)
 [1] TRUE
 </code></pre>
 
-## Ejemplos de vectores con cadenas y variables lógicas
+## 
+### Ejemplos de vectores con cadenas y variables lógicas
 
 <pre><code>
 is.vector("ocho")
@@ -67,7 +69,8 @@ length(TRUE)
 [1] 1
 </code></pre>
 
-## Creando vectores
+##
+### Creando vectores
 
 Para crear un vector usamos la función *c()* (combinar), la cual recibe como argumento los elementos agregar, separados por comas.
 
@@ -85,7 +88,8 @@ c(TRUE, TRUE, FALSE, FALSE, TRUE)
 [1]  TRUE  TRUE FALSE FALSE  TRUE
 </code></pre>
 
-## Agregando elementos al vector
+##
+### Agregando elementos al vector
 Si deseamos agregar un elemento a un vector, se logra combinando el vector original con los elementos nuevos y asignando el resultado al vector original.
 
 <pre><code>
@@ -95,7 +99,8 @@ vector
 [1]  TRUE FALSE  TRUE FALSE
 </code></pre>
 
-## Uniendo dos vectores
+## 
+### Uniendo dos vectores
 Se pueden crear vectores uniendo vectores:
 
 <pre><code>
@@ -108,11 +113,12 @@ mi_vector_3
 [1] 20 21 22 23 24 25
 </code></pre>
 
-## Combinando diferentes tipos de datos en un vector
+## 
+### Combinando diferentes tipos de datos en un vector
 Cuando se usan diferentes tipos de datos en un vector, **R** realiza *coerción de tipos*, al tipo de datos más flexible.
 
-#vector numérico
 <pre><code>
+#vector numérico
 v <- c(11, 12, 13)
 class(v)
 [1] "numeric"
@@ -130,7 +136,8 @@ class(v_n)
 mi_vector_mezcla <- c(FALSE, 2, "tercero", 4.00)
 </code></pre>
 
-## Creando vectores con secuencias numéricas **:**
+## 
+### Creando vectores con secuencias numéricas **:**
 
 - en ambos lados se escribe el inicio y el final de la secuencia,
 - son consecutivas
@@ -147,7 +154,8 @@ mi_vector_mezcla <- c(FALSE, 2, "tercero", 4.00)
 46:50.05 #decimales al final
 </code></pre>
 
-## Vectorización de funciones
+## 
+### Vectorización de funciones
 Consiste en aplicar una función a cada elemento dentro de un vector
 
 <pre><code>
@@ -165,15 +173,16 @@ vector > 10
 vector == 10
 </code></pre>
 
-## Eliminando elementos del vector
+##
+### Eliminando elementos del vector
 <pre><code>
 personaje <- c('Fernando', 'Alejandro', 'Moisés', 'Agustino', 'Ezequiel')
 personaje[-c(2, 5)]
 </code></pre>
 
-## Posibles respuestas al calculo de la media aritmética
+### Posibles respuestas al calculo de la media aritmética
 
-Usando la función *mean* podemos calcular la media aritmética de una colecci:
+Usando la función *mean* podemos calcular la media aritmética de las calificaciones del estudiante:
 
 <pre><code>
 x <- c(2, 4, 3, 6, 3, 7, 5, 8)
@@ -183,8 +192,8 @@ sum(x)/lenght(x) # 4.75
 </code></pre>
 
 ## Estructuras de control.
-<pre><code>
 
+<pre><code>
 if(condición) {
   operaciones_si_la_condición_es_TRUE
 } else {
@@ -204,19 +213,21 @@ Es un tipo especial de vector que tiene una dimensión más, logrando una forma 
 Para crear matrices se usa la función *matrix()*
 
 - Una forma es que reciba como argumento un vector
+<pre><code>
 matrix(1:15) # genera una matriz de una columna
+</code></pre>
 
-- Otra forma es que reciba tres parámetros
+##
+- Otra forma es que reciba tres parámetros:
 <pre><code>
 # Tres renglones y cuatro columnas
-matrix(1:15, nrow = 3, ncol = 5)
-# Cuatro columnas y tres columnas
-matrix(1:12, nrow = 4, ncol = 3)
-# Dos renglones y seis columnas
+matrix(1:15, nrow = 3, ncol = 4)
+# Cuatro renglones y tres columnas
 matrix(1:12, nrow = 4, ncol = 3)
 </code></pre>
 
-## Funciones para unir vectores
+## 
+### Funciones para unir vectores en la matriz, por columnas y por renglón
 
     cbind() para unir vectores, usando cada uno como una columna.
     rbind() para unir vectores, usando cada uno como un renglón.
@@ -227,18 +238,99 @@ vector_2 <- 5:8
 vector_3 <- 9:12
 vector_4 <- 13:16
 matriz <- rbind(vector_1, vector_2, vector_3, vector_4)
+</code></pre>
 
+## 
+### Acceder a un elemento de la matriz: matriz[ren, col]
+<pre><code>
+x <- matriz[1, 2]
+x
+</code></pre>
+
+### Obtener todo el renglón
+<pre><code>
+ren <- matriz[noRen,]
+</code></pre>
+
+### Obtener todo la columna
+<pre><code>
+col <- matriz[,noCol]
+</code></pre>
+
+##
+### Para saber el tamaño de la matrix, se usa **dim**
+<pre><code>
+dim(matriz)
+</code></pre>
+
+### Funciones algebraicas con matrices
+<pre><code>
+diag( matriz ) # la diagonal de una matriz
+t( matriz ) # la transpuesta de una matriz
+det( matriz) # el determinante de un matriz, marca error si no es cuadrada
+solve( matriz ) # la inversa de la matriz
+eigen( matriz ) # los eigen valores y los eigen vectores de una matriz
+A %*% B #la multiplicacion de matrices, sólo se pone el signo de %
+</code></pre>
+
+## Listas
+- Una lista es un objeto que contiene una colección ordenada de objetos.
+- Los componentes no necesitan ser del mismo tipo
+
+Ejemplo:
+<pre><code>
+lst <- list(name="Alex", wife="Mary", noChildren=3, childAges=c(4,7,9) )
+</code></pre>
+
+## Características de las listas
+- Como los componentes están enumerados, entonces se pueden acceder por su posición
+<pre><code>
+lst[[indice]] con indice={1,2,3,4}
+</code></pre>
+
+- Note que lst[[4]] es un **vector**, por lo que para acceder a sus componentes se usa:
+<pre><code>
+lst[[4]][1]
+</code></pre>
+
+- Si lst es una lista, entonces tiene el atributo **length**
+<pre><code>
+class(lst)
+length(lst)
+</code></pre>
+
+##
+- Los componentes de la lista también pueden ser nombrados y entonces el elemento se puede acceder
+con el nombre en lugar de usar el número, la expresión es de la forma:
+<pre><code>
+nombreDeLaLista$nombreDelComponente
+</code></pre>
+
+Ejemplo:
+<pre><code>
+lst$name es lo mismo que lst[[1]] y es la cadena "Alex",
+lst$wife es lo mismo que lst[[2]] y es la cadena "Mary",
+lst$childAges[1] es lo mismo que lst[[4]][1] y es el número 4.
+</code></pre>
+
+##
+### Concatenando listas
+Se usa la función **c()** y si los argumentos son listas, el resultado es un objeto lista.
+<pre><code>
+list.ABC <- c(list.A, list.B, list.C)
 </code></pre>
 
 
 
-
-
-
-
-
-
-
+## Data frames
+- Un data frame es mas general que una matriz, esta estructura permite que diferentes 
+columnas contengan distintos tipos de datos: numérico, caaracter, lógicos y otros.
+- Un data frame es una estructura rectangular, en el sentido de que las columnas deben ser de
+la misma longitud.
+- Las columnas representan variables y los renglones son observaciones.
+- Otra característica es que las **columnas** deben tener nombres y ser del mismo tipo
+- Un data frame como se aclara más adelante puede pensarse como una "lista", donde los elementos
+son vectores (o factores) correspondientes a las columnas.
 
 
 ## Usando paquetes
