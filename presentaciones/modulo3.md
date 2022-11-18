@@ -322,7 +322,8 @@ list.ABC <- c(list.A, list.B, list.C)
 
 
 
-## Data frames
+## Data frames (marco de datos)
+
 - Un data frame es mas general que una matriz, esta estructura permite que diferentes 
 columnas contengan distintos tipos de datos: numérico, caaracter, lógicos y otros.
 - Un data frame es una estructura rectangular, en el sentido de que las columnas deben ser de
@@ -331,6 +332,91 @@ la misma longitud.
 - Otra característica es que las **columnas** deben tener nombres y ser del mismo tipo
 - Un data frame como se aclara más adelante puede pensarse como una "lista", donde los elementos
 son vectores (o factores) correspondientes a las columnas.
+
+##
+Ejemplo: 
+
+El conjunto Iris que viene preinstalado en todos los paquetes de R.
+
+<img src="../images/modulo3/iris.png" alt="proyecto R" width="800px"> 
+
+##
+### Funciones para mostrar primeros y últimos registros del dataframe
+
+Ejemplo:
+<pre><code>
+iris
+head(iris)
+help(head)
+head(iris, n=10)
+tail(iris)
+</code></pre>
+
+##
+### Más características del dataframe
+- La estructura de un dataframe es muy similar a la de una matriz. La diferencia es que sus filas pueden contener valores de diferentes tipos de datos.
+
+- Los dataframe también tienen similitud con las listas, puesto que son básicamente colecciones de elementos. Sin embargo, el dataframe es una lista que únicamente contiene vectores de la misma longitud.
+
+- Cada columna es considerada un vector
+
+##
+### Creando dataframes
+Creamos vectores con los valores
+<pre><code>
+nombre <- c("Juan", "Margarita", "Ruben", "Daniel")
+apellido <- c("Sanchez", "Garcia", "Sancho", "Alfara")
+fecha_nacimiento <- c("1976-06-14", "1974-05-07", "1958-12-25", "1983-09-19")
+sexo <- c("HOMBRE", "MUJER", "HOMBRE", "HOMBRE")
+nro_hijos <- c(1, 2, 3, 4)
+
+# Creamos un dataframe usando la función **data.frame()**
+censo <- data.frame(nombre, apellido, fecha_nacimiento, sexo, nro_hijos)
+censo
+</code></pre>
+
+## 
+### Los atributos del marco de datos
+- Con **dim** conocemos la dimensión del marco de datos 
+<pre><code>
+dim (censo)
+</code></pre>
+
+- El número de filas 
+<pre><code>
+dim(censo)[1]
+nrow(censo)
+</code></pre>
+
+- El número de columnas
+<pre><code>
+dim(censo)[2]
+ncol(censo) #<---
+length(censo)
+</code></pre>
+
+##
+### Los nombres en el marco de datos
+Cuentan con un atributo llamado **names**, los nombres de las columnas
+<pre><code>
+names(censo)
+</code></pre>
+
+### Para cambiar los nombres, podemos hacer uso de la función names():
+<pre><code>
+# Asignamos diferentes nombres a las columas de `censo`
+names(censo) <- c("Nombre", "Apellido", "Fecha_Nacimiento", "Sexo", "Numero_Hijos")
+names(censo)
+</code></pre>
+
+##
+### Las funciones rownames() y colnames()
+Para cambiar los nombres de las filas y columnas
+<pre><code>
+colnames(censo) <- c("Nombre", "Apellido", "Fecha_Nacimiento", "Sexo", "Numero_Hijos")
+rownames(censo) <- c("ID1", "ID2", "ID3", "ID4")
+censo
+</code></pre>
 
 
 ## Usando paquetes
