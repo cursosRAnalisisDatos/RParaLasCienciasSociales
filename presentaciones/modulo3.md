@@ -418,6 +418,51 @@ rownames(censo) <- c("ID1", "ID2", "ID3", "ID4")
 censo
 </code></pre>
 
+#######################
+### Seleccionando elementos específicos
+
+Los datos que más interesan de manera inicial es traer todo un registro-renglón
+<pre><code>
+censo[2, ]
+censo[2:4, ]
+</code></pre>
+
+También se puede acceder a las columnas
+<pre><code>
+censo[, 2]
+</code></pre>
+
+o por su nombre, usando el nombre de la columna
+<pre><code>
+censo$nombre
+censo[, "nombre"]
+censo[["nombre"]]
+</code></pre>
+
+##
+### Ordenando marco de datos por columna
+<pre><code>
+censoOrdenado <- censo[order(censo$nombre), ]
+</code></pre>
+
+##
+### Añadiendo una nueva columna al marco de datos
+<pre><code>
+censo$tieneHijos <- censo$nro_hijos > 0
+censo
+</code></pre>
+
+### También podemos hacerlo usando la función **cbind()**
+<pre><code>
+censo <- cbind(censo, direccion = c("Col.Portales","Col. El Retoño", "Col. Roma Sur", "Col. Santa Fe"))
+</code></pre>
+
+##
+### Filtrando registros de un dataframe
+<pre><code>
+censo <- censo[censo$nombre != 'Juan',]
+censo
+</code></pre>
 
 ## Usando paquetes
   
