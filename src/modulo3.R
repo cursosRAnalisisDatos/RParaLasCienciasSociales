@@ -104,17 +104,97 @@ matrix(1:15)
 
 matrix(1:10, nrow = 3, ncol = 5)
 
+#--------------------------
+#Sesion 4, 18 de Noviembre de 2022
+
 vector_1 <- 1:4
-vector_2 <- c("nombre1", "nombre2", "nombre3", "nombre5")
+vector_2 <- 5:8
 vector_3 <- 9:12
 vector_4 <- 13:16
-matriz1 <- cbind(vector_1, vector_2, vector_3, vector_4)
-matriz1
+matrizTmp <- cbind(vector_1, vector_2, vector_3, vector_4)
+matrizTmp
+vector_5 <- 
+matrizTmp <- cbind  
+class(matrizTmp)
+dim(matrizTmp)
 
-class(matriz1)
-dim(matriz1)
+matrizTmp * 2 #
+matrizTmp + 1
 
-matriz1 * 2
-        + 1
+x <- matrizTmp[2, 4]
+x
+
+renglon2 <- matrizTmp[2,]
+renglon2 
+
+columna3 <- matrizTmp[,3]
+columna3
+
+dim(matrizTmp)
 
 #------------
+# Listas
+# 
+lst <- list(name="Alex", wife="Mary", noChildren=3, childAges=c(4,7,9) )
+lst
+
+lst[[4]][2]
+
+class(lst)
+length(lst)
+
+lst$childAges
+
+lst1 <- list(name="Alex", wife="Mary", noChildren=3, childAges=c(4,7,9))
+lst2 <- list(name="Fede", wife="Irma", noChildren=2, childAges=c(1,6))
+lst3 <- list(name="Toño", wife="Elisa", noChildren=4)
+
+listaTotal <- c(lst1, lst2, lst3)
+listaTotal
+
+############################
+## dataframes
+
+iris
+head(iris)
+head(iris, n=10)
+tail(iris)
+
+###-----
+nombre <- c("Juan", "Margarita", "Ruben", "Daniel")
+apellido <- c("Sanchez", "Garcia", "Sancho", "Alfara")
+fecha_nacimiento <- c("1976-06-14", "1974-05-07", "1958-12-25", "1983-09-19")
+sexo <- c("HOMBRE", "MUJER", "HOMBRE", "HOMBRE")
+nro_hijos <- c(1, 2, 3, 4)
+
+# Creamos un dataframe usando la función **data.frame()**
+censo <- data.frame(nombre, apellido, fecha_nacimiento, sexo, nro_hijos)
+censo
+class(censo)
+dim(censo)
+
+dim(censo)[1]
+nrow(censo)
+dim(censo)[2]
+ncol(censo)
+length(censo)
+
+# Asignamos diferentes nombres a las columas de `censo`
+names(censo) <- c("Nombre", "Apellido", "Fecha_Nacimiento", "Sexo", "Numero_Hijos")
+names(censo)
+
+#
+colnames(censo) <- c("Nombre", "Apellido", "Fecha_Nacimiento", "Sexo", "Numero_Hijos")
+rownames(censo) <- c("ID1", "ID2", "ID3", "ID4")
+censo
+
+censo[2,]
+censo[2:4, ]
+
+censo[,2]
+censo$Nombre
+censo[, "Nombre"]
+censo[["Nombre"]]
+
+censoOrdenado <- censo[order(censo$Nombre, decreasing = TRUE), ]
+censoOrdenado
