@@ -320,8 +320,6 @@ Se usa la función **c()** y si los argumentos son listas, el resultado es un ob
 list.ABC <- c(list.A, list.B, list.C)
 </code></pre>
 
-
-
 ## Data frames (marco de datos)
 
 - Un data frame es mas general que una matriz, esta estructura permite que diferentes 
@@ -371,6 +369,7 @@ sexo <- c("HOMBRE", "MUJER", "HOMBRE", "HOMBRE")
 nro_hijos <- c(1, 2, 3, 4)
 
 # Creamos un dataframe usando la función **data.frame()**
+<pre><code>
 censo <- data.frame(nombre, apellido, fecha_nacimiento, sexo, nro_hijos)
 censo
 </code></pre>
@@ -466,7 +465,10 @@ censo <- cbind(censo, direccion = c("Col.Portales","Col. El Retoño", "Col. Roma
 
 ### Otra forma de hacer lo equivalente
 <pre><code>
-censo$correoElectronico <- c("juan@correo.com","margarita@correo.com","ruben@correo.com","daniel@correo.com")
+censo$correoElectronico <- c( "juan@correo.com",
+                              "margarita@correo.com",
+                              "ruben@correo.com",
+                              "daniel@correo.com")
 </code></pre>
 
 ##
@@ -480,6 +482,21 @@ censo
 
 ##
 ### Añadiendo renglones (registros)
+- Una forma es usando la posición del dataframe
+<pre><code>
+censo[ nrow(censo) + 1,] = c("Claudia", "Guevara", "1990-08-03", "MUJER", 2)
+</code></pre>
+
+- Otra manera es usando la función **rbind**
+<pre><code>
+censo <- rbind(censo, c("Raul", "Hidalgo", "1986-04-09", "HOMBRE", 0))
+</code></pre>
+
+- Una más es agregando los registros de otro dataframe al nuestro
+<pre><code>
+df3 <- rbind (df1, df2)
+df3
+</code></pre>
 
 ## Valores olvidados-perdidos NA y NULL
 **NA** se refiere a datos perdidos, es decir, que pudieron olvidarse de introducir u obtener
@@ -515,13 +532,13 @@ censo <- cbind(censo, edad)
 censo[order(censo$edad),]
 </code></pre>
 
+##
 Cuál es la diferencia entre estas dos funciones?
 <pre><code>
 edades  <- c(7, NA, 7, 6, 6, 5, 5, 5, NA, 5)
 sort(edades)
 order(edades)
 </code></pre>
-
 
 ## 
 Generalmente cuando tenemos estructuras de datos más complejas, usaremos **order**
@@ -533,7 +550,10 @@ censo[order(censo$nombre, decreasing = FALSE),]
 censoOrdenado <- censo[order(censo$nombre), ]
 </code></pre>
 
-
+### La ventaja de la funcion order, es que permite ordenar por varias columnas
+<pre><code>
+censoOrdenado <- censo[order(censo$nombre, censo$sexo), ]
+</code></pre>
 
 ##
 ### Mezclando (**merge**) dos marcos de datos por **un campo común**
@@ -553,8 +573,6 @@ nuevosDatos <- merge( censo, datosHabitacion)
 <pre><code>
 class(datosHabitacion)
 </code></pre>
-
-
 
 ## Usando paquetes
   
