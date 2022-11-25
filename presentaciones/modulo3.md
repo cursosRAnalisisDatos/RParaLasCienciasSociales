@@ -391,7 +391,7 @@ nrow(censo)
 - El número de columnas
 <pre><code>
 dim(censo)[2]
-ncol(censo) #<---
+ncol(censo) #<--- es la forma más recomendada por ser más intuitiva
 length(censo)
 </code></pre>
 
@@ -418,16 +418,16 @@ rownames(censo) <- c("ID1", "ID2", "ID3", "ID4")
 censo
 </code></pre>
 
-#######################
 ### Seleccionando elementos específicos
 
-Los datos que más interesan de manera inicial es traer todo un registro-renglón
+Los datos que más interesan de manera inicial es traer todo un registro(renglón)
 <pre><code>
 censo[2, ]
 censo[2:4, ]
 </code></pre>
 
-También se puede acceder a las columnas
+##
+Acceso a las columnas
 <pre><code>
 censo[, 2]
 </code></pre>
@@ -440,21 +440,59 @@ censo[["nombre"]]
 </code></pre>
 
 ##
-### Ordenando marco de datos por columna
+### Vectorización de un dataframe
+
+De igual manera que con un vector y con una matriz, si aplicamos una operación básica
+al marco de datos, esta se vectorizará, marcando error cuando lo amerite o haciendo coersión, según los datos
+
 <pre><code>
-censoOrdenado <- censo[order(censo$nombre), ]
+hijos <- c(1, 2, 3, 4)
+edades <-c(20, 35, 32, 51)
+pruebaVectorizacion <- data.frame(hijos, edades)
+pruebaVectorizacion
+pruebaVectorizacion * 2
+</code></pre>
+
+También marcará error cuando sea necesario, según los datos almacenados
+<pre><code>
+censo * 2
 </code></pre>
 
 ##
-### Añadiendo una nueva columna al marco de datos
+### Añadiendo una nueva columna al marco de datos con la función **cbind()**
+<pre><code>
+censo <- cbind(censo, direccion = c("Col.Portales","Col. El Retoño", "Col. Roma Sur", "Col. Santa Fe"))
+</code></pre>
+
+### Otra forma de hacer lo equivalente
+<pre><code>
+censo$correoElectronico <- c("juan@correo.com","margarita@correo.com","ruben@correo.com","daniel@correo.com")
+</code></pre>
+
+##
+### Otro ejemplo de añadiendo columnas
+Nota: volver a revisar vectorización (en vectores y matrices).
+
 <pre><code>
 censo$tieneHijos <- censo$nro_hijos > 0
 censo
 </code></pre>
 
-### También podemos hacerlo usando la función **cbind()**
+##
+### Añadiendo renglones (registros)
+
+## Valores olvidados-perdidos NA y NULL
+**NA** se refiere a datos perdidos, es decir, que pudieron olvidarse de introducir u obtener
+**NULL** se refiere a datos no-existentes, resultado de valores u objetos que no existen 
 <pre><code>
-censo <- cbind(censo, direccion = c("Col.Portales","Col. El Retoño", "Col. Roma Sur", "Col. Santa Fe"))
+temp  <- c(7.2, NA, 7.1, 6.9, 6.5, 5.8, 5.8, 5.5, NA, 5.5)
+temp
+</code></pre>
+
+- qué pasaría si quisiéramos hacer la suma de las temperaturas?
+<pre><code>
+sum(temp)
+sum(temp, na.rm=TRUE)
 </code></pre>
 
 ##
@@ -463,6 +501,60 @@ censo <- cbind(censo, direccion = c("Col.Portales","Col. El Retoño", "Col. Roma
 censo <- censo[censo$nombre != 'Juan',]
 censo
 </code></pre>
+
+##
+### Ordenando marco de datos por columna **order, sort**
+  - **order** funciona en relación a vectores juntos, sort es más para vectores individuales
+  - decreasing = {TRUE, FALSE}
+  - si se ordena con elementos NA, estos van aparecer al final de la secuencia
+ 
+Una prueba con valores NA
+<pre><code>
+edad <- c(43, NA, 49, NA)
+censo <- cbind(censo, edad)
+censo[order(censo$edad),]
+</code></pre>
+
+Cuál es la diferencia entre estas dos funciones?
+<pre><code>
+edades  <- c(7, NA, 7, 6, 6, 5, 5, 5, NA, 5)
+sort(edades)
+order(edades)
+</code></pre>
+
+
+## 
+Generalmente cuando tenemos estructuras de datos más complejas, usaremos **order**
+<pre><code>
+censo[order(censo$nombre),]
+censo[order(censo$nombre, decreasing = TRUE),]
+censo[order(censo$nombre, decreasing = FALSE),]
+
+censoOrdenado <- censo[order(censo$nombre), ]
+</code></pre>
+
+
+
+##
+### Mezclando (**merge**) dos marcos de datos por **un campo común**
+- la función que mezcla se llama **merge**
+- cómo funciona?
+- qué pasa si **el campo común** no encuentra una coincidencia?
+<pre><code>
+datosHabitacion <- data.frame("nombre" = c("Juan", "Margarita", "Ruben", "Daniel"), 
+                              "tipHab" = c("casa", "depto", "depto", "casa"), 
+                              "noFocos"= c(20,8,12,32),
+                              "habPropia" = c(TRUE, TRUE, FALSE, TRUE))
+nuevosDatos <- merge( censo, datosHabitacion)
+</code></pre>
+
+##
+### El tipo de dato con **class()**
+<pre><code>
+class(datosHabitacion)
+</code></pre>
+
+
 
 ## Usando paquetes
   
