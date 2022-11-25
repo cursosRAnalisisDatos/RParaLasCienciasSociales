@@ -493,6 +493,7 @@ censo <- rbind(censo, c("Raul", "Hidalgo", "1986-04-09", "HOMBRE", 0))
 </code></pre>
 
 - Una más es agregando los registros de otro dataframe al nuestro
+Ejercicio:
 <pre><code>
 df3 <- rbind (df1, df2)
 df3
