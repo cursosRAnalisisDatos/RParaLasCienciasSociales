@@ -574,6 +574,19 @@ nuevosDatos <- merge( censo, datosHabitacion)
 class(datosHabitacion)
 </code></pre>
 
+##
+### Más funciones para el marco de datos
+
+<pre><code>
+str(censo)
+</code></pre>
+
+- Se puede usar esta funcion para tomar en cuenta la fecha
+<pre><code>
+fecha_nacimiento <- as.Date(c("1976-06-14", "1974-05-07", "1958-12-25", "1983-09-19"))
+</code></pre>
+
+
 ## Usando paquetes
   
 Para usar un paquete se usa la función
