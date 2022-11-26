@@ -198,3 +198,45 @@ censo[["Nombre"]]
 
 censoOrdenado <- censo[order(censo$Nombre, decreasing = TRUE), ]
 censoOrdenado
+
+########
+#Sesion 5, 25 de noviembre 2022
+## dando continuidad al uso de marco de datos
+# vectorizacion con marco de datos
+hijos  <- c(1, 2, 3, 4)
+edades <- c(20, 35, 32, 51)
+pruebaVectorizacion <- data.frame(hijos, edades)
+pruebaVectorizacion * 3
+
+##censo * 3
+censo <- cbind(censo, direccion = c("Col.Portales",
+                                    "Col. El Retoño", 
+                                    "Col. Roma Sur", 
+                                    "Col. Santa Fe"))
+
+censo
+
+censo$correoElectronico <- c( "juan@correo.com",
+                              "margarita@correo.com",
+                              "ruben@correo.com",
+                              "daniel@correo.com")
+
+censo$tieneHijos <- censo$nro_hijos > 2
+
+nrow(censo)
+censo[nrow(censo) + 1,] <- c("Claudia", "Guevara", "1990-08-03", "MUJER", 2)
+
+censo <- rbind(censo, c("Raul", 
+                        "Hidalgo", 
+                        "1986-04-09", 
+                        "HOMBRE", 
+                        0,))
+
+temp  <- c(7.2, NA, 7.1, 6.9, 6.5, 5.8, NA, 5.8, 5.5, 5.5)
+temp
+sum(temp, na.rm = TRUE)
+censoTmp$nombre
+
+datosFiltrado <- censo[censo$sexo == "MUJER",]
+datosFiltrado
+censo
