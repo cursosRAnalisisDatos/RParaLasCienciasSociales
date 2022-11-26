@@ -643,3 +643,64 @@ Ejemplo:
 <pre><code>
   citation(package = "dplyr")
 </code></pre>
+
+## Estructuras de Control
+### Condicionales
+<pre><code>
+if(condición) {
+  operaciones_si_condición=TRUE
+} else {
+  operaciones_si_condición=FALSE
+}
+
+euros <- -20
+if (euros < 0){
+  print("Estás en números negativos")
+}
+</code></pre>
+
+### Condicionales con otro caso a resolver
+<pre><code>
+if(condición1) {
+  operaciones_si_condición=TRUE
+} else if(condición2) {
+  operaciones_si_condición1=FALSE_condición2=TRUE
+} else { 
+operaciones_si_condiciones=FALSE
+}
+
+Ejemplo
+
+num_real <- 5.43
+num_entero <- -10
+if(num_real < num_entero) {
+  "condición1-TRUE"
+} else if(num_real > num_entero & num_entero > num_integer) {
+  "condición2-TRUE"
+} else {
+  "condiciones-FALSE"
+}
+</code></pre>
+
+## Ciclos
+<pre><code>
+for(elemento in estructura){
+  operaciones_con/sin_elemento
+}
+
+for (i in 1:10){
+  print(i)
+}
+lista1 <- list(equipo="verde", componentes=2, nombres=c("Ana", "Juan"), ganador=TRUE) 
+for(i in lista1) {
+  i
+}
+
+# other
+vector_for1 <- 1
+for(i in 2:7) {
+  vector_for1[i] <- i
+}
+</code></pre>
+
+
