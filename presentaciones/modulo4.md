@@ -1,6 +1,4 @@
-##Modulo4
-
-## Estructuras de Control
+## Módulo4. Estructuras de Control
 ### Condicionales
 <pre><code>
 if(condición) {
