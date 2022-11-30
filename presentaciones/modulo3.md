@@ -191,22 +191,6 @@ mean(x) # 4.75
 sum(x)/lenght(x) # 4.75
 </code></pre>
 
-## Estructuras de control.
-
-<pre><code>
-if(condición) {
-  operaciones_si_la_condición_es_TRUE
-} else {
-  operaciones_si_la_condición_es_FALSE
-}
-</code></pre>
-
-<pre><code>
-for(elemento in objeto) {
-  operacion_con_elemento
-}
-</code></pre>
-
 ## Matrices
 Es un tipo especial de vector que tiene una dimensión más, logrando una forma rectangular y controlada por renglones y columnas.
 
