@@ -18,7 +18,7 @@ pero las necesidades de publicar resultados conllevan a también generar resulta
   
   - datos ya existentes en R, ejemplos: Iris, cars, mtcars, etc.
 
-[Una lista ya generada de todos los paquetes en R, versión ](https://stat.ethz.ch/R-manual/R-devel/library/datasets/html/00Index.html)
+[Una lista ya generada de todos los paquetes en R, versión 4.3 ](https://stat.ethz.ch/R-manual/R-devel/library/datasets/html/00Index.html)
 
 Para conocerlos todos, basta con usar:
 <pre><code>
