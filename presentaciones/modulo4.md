@@ -13,7 +13,7 @@ if (euros < 0){
 }
 </code></pre>
 
-### Condicionales con otro caso a resolver
+### Condicionales anidadas
 <pre><code>
 if(condición1) {
   operaciones_si_condición=TRUE
@@ -22,19 +22,21 @@ if(condición1) {
 } else { 
 operaciones_si_condiciones=FALSE
 }
+</code></pre>
 
 Ejemplo
-
+<pre><code>
 num_real <- 5.43
 num_entero <- -10
 if(num_real < num_entero) {
   "condición1-TRUE"
-} else if(num_real > num_entero & num_entero > num_integer) {
+} else if(num_real > num_entero & num_real > 0) {
   "condición2-TRUE"
 } else {
   "condiciones-FALSE"
 }
 </code></pre>
+
 
 ## Ciclos
 <pre><code>
