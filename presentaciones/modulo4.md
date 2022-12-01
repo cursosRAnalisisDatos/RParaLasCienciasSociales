@@ -43,6 +43,10 @@ if(num_real < num_entero) {
 }
 </code></pre>
 
+### Condicionales aplicadas a un vector
+<pre><code>
+resultado <- ifelse(c(3,4,5,6,7) < num_real, "condición-TRUE", "condición-FALSE")
+</code></pre>
 
 ## Ciclos
 <pre><code>
