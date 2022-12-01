@@ -17,3 +17,17 @@ if (num==0) {
   cat(num, "es mayor que 0.")
 }
 </code></pre>
+
+2. Cree el código en **R** que realice la suma de los números enteros comprendidos entre el número indicado y 100.
+
+Respuesta
+print("Ingrese un número entre 0 y 100: ")
+suma <- 0
+n <- scan(n=1)
+while (n <= 100){
+  suma <- suma+n
+  n <- n+1
+}
+<pre><code>
+cat("El valor de la suma de enteros hasta 100 es", suma)
+</code></pre>
