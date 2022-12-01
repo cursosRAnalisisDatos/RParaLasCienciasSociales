@@ -6,6 +6,7 @@
 - ....
 
 ### Condicionales
+#### if/else
 <pre><code>
 if(condición) {
   operaciones_si_condición=TRUE
@@ -19,7 +20,7 @@ if (euros < 0){
 }
 </code></pre>
 
-### Condicionales anidadas
+#### Condicionales anidadas: if/else,if/else
 <pre><code>
 if(condición1) {
   operaciones_si_condición=TRUE
@@ -43,12 +44,13 @@ if(num_real < num_entero) {
 }
 </code></pre>
 
-### Condicionales aplicadas a un vector
+#### Condicionales aplicadas a un vector
 <pre><code>
 resultado <- ifelse(c(3,4,5,6,7) < num_real, "condición-TRUE", "condición-FALSE")
 </code></pre>
 
-## Ciclos for
+### Ciclos 
+####for
 <pre><code>
 for(elemento in estructura){
   operaciones_con/sin_elemento
@@ -71,4 +73,41 @@ for(i in 2:7) {
 }
 </code></pre>
 
+#### repeat y break, next
+
+- La expresion **break** rompe un ciclo o un bloque
+- La expresion **next** se salta el ciclo actual y continua con el que sigue
+
+La sentencia **repeat** siempre necesita de **break**
+<pre><code>
+repeat{
+  operaciones
+  break
+}
+</code></pre>
+
+Ejemplo de **repeat, break**:
+<pre><code>
+num_real <- 0
+repeat{
+  num_real <- num_real / 2
+  if(num_real > -4) {
+    print("se va a romper el ciclo")
+    break
+  }
+}
+</code></pre>
+
+Ejemplo de **for, next**:
+<pre><code>
+vector_for1
+vector11 <- c()
+for(i in vector_for1) {
+  if(i == 6) {
+    next
+  }
+  vector11[i] <- vector_for1[i] * 2
+}
+vector11
+</code></pre>
 
