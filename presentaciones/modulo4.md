@@ -57,11 +57,13 @@ for(elemento in estructura){
 for (i in 1:10){
   print(i)
 }
+
 lista1 <- list(equipo="verde", componentes=2, nombres=c("Ana", "Juan"), ganador=TRUE) 
 for(i in lista1) {
-  i
+  #class(i);
+  #print(i)
+  cat("el valor:",i,":",class(i),"\n")
 }
-
 # other
 vector_for1 <- 1
 for(i in 2:7) {
