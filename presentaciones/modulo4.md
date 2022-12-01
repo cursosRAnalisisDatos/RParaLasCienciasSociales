@@ -25,9 +25,9 @@ if (euros < 0){
 if(condición1) {
   operaciones_si_condición=TRUE
 } else if(condición2) {
-  operaciones_si_condición1=FALSE_condición2=TRUE
+  operaciones_si_condición2=TRUE
 } else { 
-operaciones_si_condiciones=FALSE
+  operaciones_si_condiciones=FALSE
 }
 </code></pre>
 
