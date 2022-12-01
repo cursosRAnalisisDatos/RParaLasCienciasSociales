@@ -20,7 +20,8 @@ if (num==0) {
 
 2. Cree el código en **R** que realice la suma de los números enteros comprendidos entre el número indicado y 100.
 
-Respuesta
+Respuesta:
+<pre><code>
 print("Ingrese un número entre 0 y 100: ")
 suma <- 0
 n <- scan(n=1)
@@ -28,6 +29,24 @@ while (n <= 100){
   suma <- suma+n
   n <- n+1
 }
-<pre><code>
 cat("El valor de la suma de enteros hasta 100 es", suma)
+</code></pre>
+
+3. Modifique el **ejercicio 2** de forma que ignore el **valor 50** y finalice el programa si la suma supera el valor **2000**
+
+Respuesta:
+<pre><code>
+print("Indique un número entre 0 y 100: ")
+suma <- 0
+n <- scan(n=1)
+for(i in n:100){
+  if(i==50){
+    next
+  }
+  if(suma>2000){
+    break
+  }
+  suma <- suma + i
+}
+cat("El valor de la suma de enteros hasta que supera por primera vez el valor 2000 es", suma)
 </code></pre>
