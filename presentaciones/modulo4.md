@@ -50,7 +50,7 @@ resultado <- ifelse(c(3,4,5,6,7) < num_real, "condición-TRUE", "condición-FALS
 </code></pre>
 
 ### Ciclos 
-####for
+#### for
 <pre><code>
 for(elemento in estructura){
   operaciones_con/sin_elemento
