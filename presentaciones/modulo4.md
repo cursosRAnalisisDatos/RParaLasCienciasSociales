@@ -1,4 +1,10 @@
 ## Módulo4. Estructuras de Control
+### Flujo secuencial
+- 1. Operacion 1
+- 2. Operacion 2
+- 3. Operacion 3
+- ....
+
 ### Condicionales
 <pre><code>
 if(condición) {
