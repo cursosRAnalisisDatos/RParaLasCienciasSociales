@@ -4,6 +4,7 @@
 - 1. Cree el código que indique si el número introducido es superior, inferior, o igual a 0.
 
 Respuesta
+
 Tip: explore en la ayuda el método **scan** y **cat**
 <pre><code>
 print ("Número que desea conocer cómo es respecto a 0: ")
