@@ -48,7 +48,7 @@ if(num_real < num_entero) {
 resultado <- ifelse(c(3,4,5,6,7) < num_real, "condición-TRUE", "condición-FALSE")
 </code></pre>
 
-## Ciclos
+## Ciclos for
 <pre><code>
 for(elemento in estructura){
   operaciones_con/sin_elemento
