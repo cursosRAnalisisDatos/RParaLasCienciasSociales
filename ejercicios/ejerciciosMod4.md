@@ -7,7 +7,7 @@ Respuesta
 
 Tip: explore en la ayuda el método **scan** y **cat**
 <pre><code>
-print ("Número que desea conocer cómo es respecto a 0: ")
+print ("Introduzca el número que desea conocer cómo es respecto a 0: ")
 num <- scan(n=1)
 if (num==0) {
   cat(num, "es igual a 0.")
