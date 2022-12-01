@@ -73,6 +73,22 @@ for(i in 2:7) {
 }
 </code></pre>
 
+#### ciclos while
+
+Se repite el ciclo, mientras la **condicion** sea evaluada a **TRUE**
+<pre><code>
+while(condicion) {
+  operaciones_si_condicion=TRUE
+}
+</code></pre>
+
+Ejemplo
+<pre><code>
+while(num_real > 1 | num_entero < num_real) {
+  num_real <- num_real - 3
+}
+</code></pre>
+
 #### repeat y break, next
 
 - La expresion **break** rompe un ciclo o un bloque
@@ -110,4 +126,3 @@ for(i in vector_for1) {
 }
 vector11
 </code></pre>
-
