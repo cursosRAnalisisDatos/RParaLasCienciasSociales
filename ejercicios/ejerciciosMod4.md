@@ -1,7 +1,7 @@
 
 ## Ejercicios Módulo 4
 
--1. Cree el código que indique si el número introducido es superior, inferior, o igual a 0.
+1. Cree el código que indique si el número introducido es superior, inferior, o igual a 0.
 
 Respuesta
 
