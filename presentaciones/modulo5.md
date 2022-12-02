@@ -29,6 +29,9 @@ pero las necesidades de publicar resultados conllevan a también generar resulta
   library(help = "datasets")
   </code></pre>
   
+ - archivos CSV en general, dentro de servidores públicos
+ [https://www.inegi.org.mx/programas/ccpv/2020/?ps=microdatos](https://www.inegi.org.mx/programas/ccpv/2020/?ps=microdatos)
+  
  - en el repositorio de R (**CRAN** - Comprehensive R Archive Network -)
  
   [*importinegi*](https://rde.inegi.org.mx/index.php/2020/12/02/importinegi-un-paquete-de-r-para-descargar-y-gestionar-bases-de-datos-del-inegi/)
@@ -55,7 +58,7 @@ Por omisión utiliza **,** como separador de columnas y **.** como separador de 
 
 
 ## Usando paquetes
-  
+
 Para usar un paquete se usa la función
 <pre><code>
   library(elNombreDelPaquete)
