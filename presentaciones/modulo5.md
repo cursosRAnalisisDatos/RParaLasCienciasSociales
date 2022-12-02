@@ -50,6 +50,3 @@ Por omisión utiliza **,** como separador de columnas y **.** como separador de 
    <pre><code>
    read.csv("miArchivo.csv")
    </code></pre>
-
-
-read.csv("mi_archivo.csv")
