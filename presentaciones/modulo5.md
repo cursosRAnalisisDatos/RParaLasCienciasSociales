@@ -1,7 +1,11 @@
 
 ## Módulo5. Manejo de Datos
 
-La generación constante de información conlleva a adentrarse a diferentes formatos donde radican resultados de diferentes estudios, aplicaciones, investigaciones, entre ellos pueden ser:
+La generación constante de información conlleva a adentrarse a diferentes formatos donde radican resultados de diferentes estudios, aplicaciones, investigaciones, 
+
+### Formatos de archivos
+
+Entre ellos pueden ser:
 
 - archivos CSV
 - archivos Excel
