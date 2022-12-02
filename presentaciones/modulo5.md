@@ -49,4 +49,5 @@ pero las necesidades de publicar resultados conllevan a también generar resulta
 Por omisión utiliza **,** como separador de columnas y **.** como separador de la parte decimal para números
    <pre><code>
    read.csv("miArchivo.csv")
+   misDatos <- read.csv("mi_archivo.csv")
    </code></pre>
