@@ -44,4 +44,12 @@ pero las necesidades de publicar resultados conllevan a también generar resulta
  - **Bioconductor**
   [http://bioconductor.org/packages/release/bioc/](http://bioconductor.org/packages/release/bioc/)
  
- 
+
+## Leyendo archivos CSV
+Por omisión utiliza **,** como separador de columnas y **.** como separador de la parte decimal para números
+   <pre><code>
+   read.csv("miArchivo.csv")
+   </code></pre>
+
+
+read.csv("mi_archivo.csv")
