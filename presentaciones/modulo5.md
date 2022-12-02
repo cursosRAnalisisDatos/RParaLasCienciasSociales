@@ -28,5 +28,18 @@ pero las necesidades de publicar resultados conllevan a también generar resulta
   <pre><code>
   library(help = "datasets")
   </code></pre>
-
- - 
+  
+ - en el repositorio de R (CRAN - Comprehensive R Archive Network -)
+   <pre><code>
+    install.packages("importinegi")
+   </code></pre>
+  
+ - git-hub
+   <pre><code>
+   devtools::install_github("crenteriam/importinegi")
+   </code></pre>
+ 
+ - Bioconductor
+  [http://bioconductor.org/packages/release/bioc/](http://bioconductor.org/packages/release/bioc/)
+ 
+ 
