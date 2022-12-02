@@ -55,7 +55,12 @@ Por omisión utiliza **,** como separador de columnas y **.** como separador de 
    misDatos <- read.csv("mi_archivo.csv")
    </code></pre>
 
-
+### Codificación del CSV
+- Si hay problemas en la codificación de los datos dentro del CSV, tal vez necesites especificar el argumento **encoding**. 
+- Establecer la codificación en **UTF-8** tiende a resolver la mayoría de estos problemas.
+<pre><code>
+read.csv("mi_archivo.csv", encoding = "UTF-8")
+</code></pre>
 
 ## Usando paquetes
 
