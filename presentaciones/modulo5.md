@@ -29,17 +29,17 @@ pero las necesidades de publicar resultados conllevan a también generar resulta
   library(help = "datasets")
   </code></pre>
   
- - en el repositorio de R (CRAN - Comprehensive R Archive Network -)
+ - en el repositorio de R (**CRAN** - Comprehensive R Archive Network -)
    <pre><code>
     install.packages("importinegi")
    </code></pre>
   
- - git-hub
+ - **git-hub**
    <pre><code>
    devtools::install_github("crenteriam/importinegi")
    </code></pre>
  
- - Bioconductor
+ - **Bioconductor**
   [http://bioconductor.org/packages/release/bioc/](http://bioconductor.org/packages/release/bioc/)
  
  
