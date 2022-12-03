@@ -240,3 +240,41 @@ censoTmp$nombre
 datosFiltrado <- censo[censo$sexo == "MUJER",]
 datosFiltrado
 censo
+
+###SESION 6 2deDiciembre
+class(censo$fecha_nacimiento)
+
+edad <- c(43, NA, 49, NA)
+censo <- cbind(censo, edad)
+censo
+
+censo[order(censo$nombre),]
+
+edades  <- c(7, NA, 7, 6, 6, 5, 5, 5, NA, 5)
+edades
+length(sort(edades))
+
+order(edades)
+
+#1. crear un registro más (una fila)
+vectorTmp1 <- c("Daniela","Garduño","1976-06-14","MUJER", 8, 28)
+vectorTmp1
+#2. unir al resto del marco de datos:censo
+censo <- rbind(censo, vectorTmp1)
+censo
+censoOrdenado <- censo[order(censo$nombre, censo$nro_hijos, decreasing = TRUE), ]
+censoOrdenado
+
+datosHabitacion <- data.frame("nombre" = c("Juan", "Margarita", "Ruben", "Daniel"), 
+                              "tipHab" = c("casa", "depto", "depto", "casa"), 
+                              "noFocos"= c(20,8,12,32),
+                              "habPropia" = c(TRUE, TRUE, FALSE, TRUE))
+nuevosDatos <- merge( censo, datosHabitacion)
+
+str(censo)
+
+fechas <- c("1976-06-14", "1974-05-07", "1958-12-25", "1983-09-19")
+class(fechas)
+fecha_nacimiento <- as.Date(c("1976-02-31", "1974-05-07", "1958-12-25", "1983-09-19"))
+fecha_nacimiento
+class(fecha_nacimiento)
