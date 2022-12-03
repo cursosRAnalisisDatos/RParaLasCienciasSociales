@@ -62,6 +62,16 @@ Por omisión utiliza **,** como separador de columnas y **.** como separador de 
 read.csv("mi_archivo.csv", encoding = "UTF-8")
 </code></pre>
 
+### El argumento na.strings
+- Algunas veces los archivos contienen alguna cadena de caracteres que representan los valores faltantes u omitidos.
+- Saber qué valores se ingresan depende de la fuente de datos.
+- Si, por ejemplo, en nuestro archivo los valores **-9999** representan valor omitidos o faltantes podemos escribir:
+<pre><code>
+read.csv("mi_archivo.csv", na.strings = "-9999") 
+read.csv("mi_archivo.csv", na.strings = c("-9999" , "Na" )) 
+</code></pre>
+
+
 ## Usando paquetes
 
 Para usar un paquete se usa la función
