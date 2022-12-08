@@ -25,3 +25,5 @@ summary(datosInegiConMunicipiosOrdenado)
 </code></pre>
 
 <img src="../images/modulo6/salidaFuncionSummary.png" alt="proyecto R" width="800px"> 
+
+### 6.3 Variables discretas en R
