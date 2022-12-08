@@ -79,11 +79,29 @@ na.omit(dataFrame)
 </code></pre>
 
 ### Leyendo archivos Excel
+
 Una de las formas más comunes de hacerlo es con la función **read.xlsx()**
+
 Ejemplo:
 <pre><code>
 telde = read.xlsx("endocrino.xlsx") 
 </code></pre>
+
+## Salidas de datos.
+
+Hay muchos formatos de salidas de datos, en esta sección sólo mencionaremos dos:
+
+### Archivos CSV
+
+Una de las formas más simples es usando la función **write.csv**
+
+Ejemplo:
+<pre><code>
+write.csv(datosInegiConMunicipios,"data/datosInegiConMunicipio.csv")
+</code></pre>
+
+### RMarkdown
+(https://rmarkdown.rstudio.com/)[https://rmarkdown.rstudio.com/]
 
 ## Usando paquetes
 
