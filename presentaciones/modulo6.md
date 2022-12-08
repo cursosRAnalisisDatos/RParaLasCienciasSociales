@@ -27,3 +27,20 @@ summary(datosInegiConMunicipiosOrdenado)
 <img src="../images/modulo6/salidaFuncionSummary.png" alt="proyecto R" width="800px"> 
 
 ### 6.3 Variables discretas en R
+
+#### Frecuencias absolutas con la función **table**
+Recibe un vector o una lista
+
+Ejemplo:
+<pre><code>
+table(datosInegiConMunicipiosOrdenado$NOM_ENT)
+</code></pre>
+
+#### Frecuencias relativas (proporciones) con la función **prop.table()**
+Ejemplo:
+<pre><code>
+prop.table(table(datosInegiConMunicipiosOrdenado$NOM_ENT))
+</code></pre>
+
+
+
