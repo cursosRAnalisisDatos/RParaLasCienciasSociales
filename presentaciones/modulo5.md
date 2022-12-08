@@ -79,6 +79,8 @@ na.omit(dataFrame)
 </code></pre>
 
 ### Leyendo archivos Excel
+Una de las formas más comunes de hacerlo es con la función **read.xlsx()**
+Ejemplo:
 <pre><code>
 telde = read.xlsx("endocrino.xlsx") 
 </code></pre>
