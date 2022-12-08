@@ -78,7 +78,10 @@ La función más habitual es **na.omit**
 na.omit(dataFrame)
 </code></pre>
 
-
+### Leyendo archivos Excel
+<pre><code>
+telde = read.xlsx("endocrino.xlsx") 
+</code></pre>
 
 ## Usando paquetes
 
