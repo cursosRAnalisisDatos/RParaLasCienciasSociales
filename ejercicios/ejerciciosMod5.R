@@ -12,8 +12,8 @@ length(unique(columnaReligion))
 
 # 2. Ordena los registros por edad, y luego por religión.
 # - La edad en orden ascendente
-# - El sexo en orden decreciente
-datosInegiOrdenado <- datosInegi[order(datosInegi$EDAD, datosInegi$SEXO, decreasing = c(FALSE, TRUE)), ]
+# - La religion en orden decreciente
+datosInegiOrdenado <- datosInegi[order(datosInegi$EDAD, datosInegi$RELIGION, decreasing = c(FALSE, TRUE)), ]
 datosInegiOrdenado
 
 # 3. ¿Cuántos registros hay de menores de edad? ¿Cuántos de mayores de edad?
