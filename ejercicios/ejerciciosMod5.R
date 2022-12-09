@@ -35,7 +35,7 @@ length(municipios)
 #
 #IMPORTANTE: en esta solución haremos un merge, pero tenemos que garantizar que el nombre de la columna(s), 
 #por el que se mezcla, concuerde, eso lo hacemos con los argumentos "by.x" y "by.y"
-datosMunicipio <- read.csv("data/MUN.csv", header=TRUE)
+datosMunicipio <- read.csv("data/MUN.csv", header=TRUE, fileEncoding = "UTF-8")
 datosInegiConMunicipios <- merge(datosInegi, 
                                  datosMunicipio, 
                                  by.x = c("ENT","MUN"),
