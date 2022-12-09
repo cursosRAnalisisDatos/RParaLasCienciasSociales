@@ -49,5 +49,24 @@ Ejemplo:
 prop.table(table(datosInegiConMunicipiosOrdenado$NOM_ENT))
 </code></pre>
 
+### 7.4 Histogramas
+
+#### usando la función ggplot
+1. Creamos la variable **pl** correspondiente a la sintaxis básica en el paquete **ggplot2** para la creación de una gráfica.
+
+<pre><code>
+library(ggplot2)
+install.packages("ggplot2")
+colnames(datosInegiConMunicipiosOrdenado)
+head(datosInegiConMunicipiosOrdenado)
+pl <- ggplot(datosInegiConMunicipiosOrdenado, aes(x = EDAD))
+class(pl)
+</code></pre>
+
+2. Añadimos el elemento geométrico, en esta caso, queremos un histograma.
+<pre><code>
+pl + geom_histogram()
+</code></pre>
+
 
 
