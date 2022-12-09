@@ -28,7 +28,7 @@ La salida muestra:
 - mínimos y máximos en busca de outliers, 
 - si la media y mediana son similares la una a la otra.
 
-Tambi
+También se puede realizar el resumen por columna
 <pre><code>
 summary(datosInegiConMunicipiosOrdenado$EDAD)
 </code></pre>
