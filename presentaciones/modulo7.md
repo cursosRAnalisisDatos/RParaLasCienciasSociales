@@ -24,6 +24,15 @@ summary(datosInegiConMunicipiosOrdenado)
 
 <img src="../images/modulo6/salidaFuncionSummary.png" alt="proyecto R" width="800px"> 
 
+La salida muestra:
+- mínimos y máximos en busca de outliers, 
+- si la media y mediana son similares la una a la otra.
+
+Tambi
+<pre><code>
+summary(datosInegiConMunicipiosOrdenado$EDAD)
+</code></pre>
+
 ### 7.3 Variables discretas en R
 
 #### Frecuencias absolutas con la función **table**
