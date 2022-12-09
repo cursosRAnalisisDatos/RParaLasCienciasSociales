@@ -47,4 +47,4 @@ datosInegiConMunicipiosOrdenado <- datosInegiConMunicipios[
 datosInegiConMunicipiosOrdenado
 
 # Ejemplo de exportacion de salida en el mismo formato CSV
-write.csv(datosInegiConMunicipios,"data/datosInegiConMunicipio.csv")
+write.csv(datosInegiConMunicipiosOrdenado,"data/datosInegiConMunicipio.csv")
