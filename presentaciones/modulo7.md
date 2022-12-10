@@ -74,4 +74,10 @@ pl2 <- pl + geom_histogram(binwidth = 0.8, col='black', fill='green', alpha=0.4)
 pl2
 </code></pre>
 
-
+4. Agregamos una capa más de etiquetas.
+<pre><code>
+pl2 + labs( title = "CENSO",
+            x = "Columna Edad",
+            y = "Conteos",
+            subtitle = "Edad")
+</code></pre>
