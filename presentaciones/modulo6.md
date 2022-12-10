@@ -2,7 +2,7 @@
 
 ### Perspectiva histórica-filosófica
 
-<img src="imgs/Hacking-img12.jpg" alt="Hacking" width="500px"> 
+<img src="../images/modulo6/Hacking-img12.jpg" alt="Hacking" width="500px"> 
 
 
 ### Tipos de Probabilidad
@@ -17,7 +17,7 @@
 
   Tiene que ver con cierta inducción y con las frecuencias que vamos observando 
 
-<img src="imgs/frecuencias.jpg" alt="histograma" width="200px"> 
+<img src="../images/modulo6/frecuencias.jpg" alt="histograma" width="200px"> 
 
 Usualmente se denota $n(A)$ el número de ocurrencias del evento $A$, en $n$ realizaciones del experimento:
 
@@ -29,7 +29,7 @@ $$ P(A) =  \lim_{n \to \infty} \frac{n(A)}{n}$$
 
     P(A) = hex.chico/hex.gde. 
 
-<img src="imgs/img1-geom.jpg" alt="hexagonos" width="120px"> 
+<img src="../images/modulo6/img1-geom.jpg" alt="hexagonos" width="120px"> 
 
 
 ### d) axiomática
@@ -61,7 +61,7 @@ Formulada por A. N. Kolmogorov ( ~ 1933)
 
 #### Uso de los diagramas de Venn
 
-<img src="imgs/venn-diag.jpg" alt="" width="300px"> 
+<img src="../images/modulo6/venn-diag.jpg" alt="" width="300px"> 
 
 
 
@@ -69,7 +69,7 @@ Formulada por A. N. Kolmogorov ( ~ 1933)
 
 #### a. un dado *justo*
 
-<img src="imgs/img3.jpg" alt="" width="300px"> 
+<img src="../images/modulo6/img3.jpg" alt="" width="300px"> 
 
 Se puede ver que si $p(A)=$*p(cara del dado)* es probabilidad, cumple los 3 axiomas: 
 
@@ -92,11 +92,11 @@ Los *sucesos elementales* a veces se les nombra microestados.
 
 #### b. dos dados 
 
-<img src="imgs/img4.jpg" alt="" width="300px"> 
+<img src="../images/modulo6/img4.jpg" alt="" width="300px"> 
 
 Otra forma de visualizarlos; ya sugiere un histograma: 
 
-<img src="imgs/img5.jpg" alt="" width="300px"> 
+<img src="../images/modulo6/img5.jpg" alt="" width="300px"> 
 
 
   - Demanda *saber contar*, lo que lleva a los problemas de combinatoria.  
@@ -106,13 +106,13 @@ Otra forma de visualizarlos; ya sugiere un histograma:
 
 Se hace una transformación del espacio de resultados $\Omega$, al conjunto de números reales; que se conoce como variable aleatoria o v.a. $X$.
 
-<img src="imgs/va-continua.jpg" alt="" width="300px"> 
+<img src="../images/modulo6/va-continua.jpg" alt="" width="300px"> 
 
 De ahí se puede construir una *función de probabilidad* (o *densidad de probabilidad*) de $X$ en un intervalo apropiado $I$ con 
 
 $$P( X \in I) = \int_I f(x)dx  $$
 
-<img src="imgs/integral.jpg" alt="" width="300px"> 
+<img src="../images/modulo6/integral.jpg" alt="" width="300px"> 
 
 
 Aquí la asignación se hace de manera que para la función $f(x)$, 
@@ -131,7 +131,7 @@ Como se ve, requiere hacer uso del cálculo integral.
 
 #### Distribuciones
 
-<img src="imgs/distribuc.jpg" alt="distribuciones" width="300px"> 
+<img src="../images/modulo6/distribuc.jpg" alt="distribuciones" width="300px"> 
 
 Se busca calcular medidas de tendencia central (media, moda, mediana), y otros parámetros que indiquen la forma de la distribución (desviación estándar, varianza, curtosis), y regiones de interés (quantiles).
 
