@@ -1,7 +1,5 @@
 ## Módulo6. Introducción a la estadística y probabilidad
 
-## Probabilidad y estadística
-
 ### Perspectiva histórica-filosófica
 
 <img src="imgs/Hacking-img12.jpg" alt="Hacking" width="500px"> 
