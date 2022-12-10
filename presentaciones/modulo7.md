@@ -81,3 +81,19 @@ pl2 + labs( title = "CENSO",
             y = "Conteos",
             subtitle = "Edad")
 </code></pre>
+
+### Histogramas por grupos
+<pre><code>
+set.seed(3)
+x1 <- rnorm(500)
+x2 <- rnorm(500, mean = 3)
+x <- c(x1, x2)
+grupo <- c(rep("G1", 500), rep("G2", 500))
+
+df <- data.frame(x, group = grupo)
+</code></pre>
+
+<pre><code>
+ggplot(df, aes(x = x, fill = grupo)) + 
+  geom_histogram()
+ </code></pre>
