@@ -68,5 +68,10 @@ class(pl)
 pl + geom_histogram()
 </code></pre>
 
+3. Mejoramos la visualización agregando más parámetros a la función *geom_histogram()*
+<pre><code>
+pl2 <- pl + geom_histogram(binwidth = 0.8, col='black', fill='green', alpha=0.4)
+pl2
+</code></pre>
 
 
