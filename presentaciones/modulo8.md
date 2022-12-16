@@ -70,5 +70,14 @@ ggplot(datosInegiConMunicipiosOrdenado, aes(x = EDAD, fill = SEXO, color = 'whit
   facet_wrap(~SEXO, scales = 'free', nrow = 2)
 </code></pre>
 
+### Gráficas de densidad
+Una gráfica de densidad es similar a un histograma solo que utiliza una estimación no paramétrica de la distribución de probabilidades de los datos. El objeto geométrico es *geom_density*
+
+<pre><code>
+ggplot(datosInegiConMunicipios, aes(x = EDAD)) +
+  geom_density()
+</code></pre>
+
+
 ### Galería de gráficos en R
 [https://www.r-graph-gallery.com/](https://www.r-graph-gallery.com/)
