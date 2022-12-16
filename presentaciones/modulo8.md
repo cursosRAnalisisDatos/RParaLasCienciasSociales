@@ -12,4 +12,4 @@ En esta sección usaremos ggplot con el conjunto de datos del Inegi que ya hemos
 
    - En tercer lugar, están otros elementos como los temas, colores, titulos y leyendas
 
-(https://www.r-graph-gallery.com/)[https://www.r-graph-gallery.com/]
+[https://www.r-graph-gallery.com/](https://www.r-graph-gallery.com/)
