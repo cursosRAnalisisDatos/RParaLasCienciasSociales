@@ -12,7 +12,9 @@ En esta sección usaremos ggplot con el conjunto de datos del Inegi que ya hemos
 
    - En tercer lugar, están otros elementos como los temas, colores, titulos y leyendas
 
-[https://www.r-graph-gallery.com/](https://www.r-graph-gallery.com/)
+### Histogramas
+
+El histograma visualiza la distribución de frecuencias de los datos. En ggplot existe la forma geométrica geom_histogram:
 
 <pre><code>
 unique(datosInegiConMunicipiosOrdenado$SEXO)
@@ -56,3 +58,6 @@ ggplot(datosInegiConMunicipiosOrdenado, aes(x = EDAD, fill = SEXO, color = 'whit
   geom_histogram() +
   facet_wrap(~SEXO, scales = 'free', nrow = 2)
 </code></pre>
+
+### Galería de gráficos en R
+[https://www.r-graph-gallery.com/](https://www.r-graph-gallery.com/)
