@@ -116,8 +116,8 @@ ggplot(datosInegiConMunicipiosOrdenado, aes(y = EDAD, x = grupoSexo, fill = grup
   geom_boxplot() +
   facet_wrap(~ESCOLARI, scales = 'free', nrow = 2) +
   theme(legend.position = 'none') +
-  labs(title = 'Dataset diamonds',
-       subtitle = 'Box Plot by color and by clarity')
+  labs(title = 'Dataset Inegi',
+       subtitle = 'Box Plot by sexo and by escolaridad')
 </code></pre>
 
 
