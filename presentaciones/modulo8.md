@@ -97,6 +97,15 @@ ggplot(datosInegiConMunicipiosOrdenado, aes(x = EDAD, fill = grupoSexo)) +
        subtitle = 'Density Plot by SEXO')
 </code></pre>
 
+### Gráficas de cajas (Box Plots)
+La gráfica de cajas es otra forma de visualizar la distribución de los datos. 
+La geometría que la define es *geom_boxplot()* y son muy buenas para visualizar la dispersión por grupos de datos.
+
+<pre><code>
+ggplot(datosInegiConMunicipiosOrdenado, aes(y = EDAD, x = grupoSexo, fill = grupoSexo)) +
+  geom_boxplot()
+</code></pre>
+
 
 ### Galería de gráficos en R
 [https://www.r-graph-gallery.com/](https://www.r-graph-gallery.com/)
