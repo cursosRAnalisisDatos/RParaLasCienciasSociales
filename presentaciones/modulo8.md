@@ -85,6 +85,18 @@ ggplot(datosInegiConMunicipiosOrdenado, aes(x = EDAD, fill = grupoSexo)) +
   geom_density(alpha = 0.4)
 </code></pre>
 
+agregado una transparencia a través del parámetro *alpha = 0.4* para poder visualizar la distribución por SEXO. 
+
+Si te parece que la imagen no es muy clara, podemos aplicar un facet_wrap
+<pre><code>
+ggplot(datosInegiConMunicipiosOrdenado, aes(x = EDAD, fill = grupoSexo)) +
+  geom_density(alpha = 0.4) +
+  facet_wrap(~grupoSexo, scales = 'free', nrow = 2) +
+  theme(legend.position = 'none') +
+  labs(title = 'Inegi',
+       subtitle = 'Density Plot by SEXO')
+</code></pre>
+
 
 ### Galería de gráficos en R
 [https://www.r-graph-gallery.com/](https://www.r-graph-gallery.com/)
