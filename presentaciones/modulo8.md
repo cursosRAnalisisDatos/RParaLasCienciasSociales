@@ -14,6 +14,20 @@ En esta sección usaremos ggplot con el conjunto de datos del Inegi que ya hemos
 
 [https://www.r-graph-gallery.com/](https://www.r-graph-gallery.com/)
 
+<pre><code>
+unique(datosInegiConMunicipiosOrdenado$SEXO)
+#if(datosInegiConMunicipiosOrdenado ==  )
+class(datosInegiConMunicipiosOrdenado$SEXO)
+datosInegiConMunicipiosOrdenado <- cbind(datosInegiConMunicipiosOrdenado, 
+                                         grupoSexo = ifelse(datosInegiConMunicipiosOrdenado$SEXO <= 1, "HOMBRE", "MUJER"))
+resultadoSexo <- ifelse(datosInegiConMunicipiosOrdenado$SEXO <= 1, "HOMBRE", "MUJER")
+</code></pre>
+
+#En este histograma la variable para fill es la que se genera usando el ifelse 
+#y agregando la columna al dataframe
+ggplot(datosInegiConMunicipiosOrdenado, aes(x = EDAD, fill=grupoSexo)) + geom_histogram()
+
+
 ###
 También podemos hacer un histograma por la variable *SEXO*. Para lograr esto, podemos hacer uso de un **facet**. Los facets permiten hacer un corte en los datos para visualizarlos por grupos. Ejemplo: *facet_wrap()*
 
