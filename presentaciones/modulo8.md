@@ -13,3 +13,12 @@ En esta sección usaremos ggplot con el conjunto de datos del Inegi que ya hemos
    - En tercer lugar, están otros elementos como los temas, colores, titulos y leyendas
 
 [https://www.r-graph-gallery.com/](https://www.r-graph-gallery.com/)
+
+###
+También podemos hacer un histograma por la variable *SEXO*. Para lograr esto, podemos hacer uso de un **facet**. Los facets permiten hacer un corte en los datos para visualizarlos por grupos. Ejemplo: *facet_wrap()*
+
+<pre><code>
+ggplot(datosInegiConMunicipiosOrdenado, aes(x = EDAD, fill = SEXO, color = 'white')) +
+  geom_histogram() +
+  facet_wrap(~SEXO, scales = 'free', nrow = 2)
+</code></pre>
