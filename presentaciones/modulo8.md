@@ -27,6 +27,27 @@ resultadoSexo <- ifelse(datosInegiConMunicipiosOrdenado$SEXO <= 1, "HOMBRE", "MU
 ggplot(datosInegiConMunicipiosOrdenado, aes(x = EDAD, fill=grupoSexo)) + geom_histogram()
 </code></pre>
 
+Agregando más detalles al gráfico
+- color: agrega el color a las divisiones de las barras
+- alpha: agrega un nivel de transparencia, para poder ver los valores encimados
+- position: la manera en la que se dibujan los datos que coinciden, {identity, stack, ...}
+- theme_gray(): son los temas preinstalados que pueden tomar el gráfico, de fondo
+
+<pre><code>
+ggplot(datosInegiConMunicipiosOrdenado, aes(x = EDAD, fill=grupoSexo)) + 
+  geom_histogram(color="#e9ecef", alpha=0.6, position = "identity") +
+  scale_fill_manual(values=c("#69b3a2", "#404080")) + #cambiamos los colores de manera manual
+  theme_gray() + 
+  labs(fill="")
+</code></pre>
+
+#### Más de histogramas
+ - [https://r-graph-gallery.com/histogram.html](https://r-graph-gallery.com/histogram.html)
+
+ - histogramas con código
+  [http://www.sthda.com/english/wiki/ggplot2-histogram-plot-quick-start-guide-r-software-and-data-visualization](http://www.sthda.com/english/wiki/ggplot2-histogram-plot-quick-start-guide-r-software-and-data-visualization)
+
+
 ###
 También podemos hacer un histograma por la variable *SEXO*. Para lograr esto, podemos hacer uso de un **facet**. Los facets permiten hacer un corte en los datos para visualizarlos por grupos. Ejemplo: *facet_wrap()*
 
