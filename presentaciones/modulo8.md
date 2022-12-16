@@ -106,6 +106,20 @@ ggplot(datosInegiConMunicipiosOrdenado, aes(y = EDAD, x = grupoSexo, fill = grup
   geom_boxplot()
 </code></pre>
 
+Las gráficas de caja o **box plots** nos permiten agregar una 3er variable para visualizar los datos. 
+Supongamos que queremos ver las diferencias entre la escolaridad, el sexo y la edad Entonces, agregaremos un **facet** por la variable escolaridad.
+
+<pre><code>
+unique( datosInegiConMunicipiosOrdenado$ESCOLARI) 
+colnames(datosInegiConMunicipiosOrdenado)
+ggplot(datosInegiConMunicipiosOrdenado, aes(y = EDAD, x = grupoSexo, fill = grupoSexo)) +
+  geom_boxplot() +
+  facet_wrap(~ESCOLARI, scales = 'free', nrow = 2) +
+  theme(legend.position = 'none') +
+  labs(title = 'Dataset diamonds',
+       subtitle = 'Box Plot by color and by clarity')
+</code></pre>
+
 
 ### Galería de gráficos en R
 [https://www.r-graph-gallery.com/](https://www.r-graph-gallery.com/)
