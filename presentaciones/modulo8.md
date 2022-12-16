@@ -78,6 +78,13 @@ ggplot(datosInegiConMunicipios, aes(x = EDAD)) +
   geom_density()
 </code></pre>
 
+Al igual que en el histograma también podemos agregar capas. Por ejemplo, vamos a graficar la distribución de frecuencias por *SEXO*
+
+<pre><code>
+ggplot(datosInegiConMunicipiosOrdenado, aes(x = EDAD, fill = grupoSexo)) +
+  geom_density(alpha = 0.4)
+</code></pre>
+
 
 ### Galería de gráficos en R
 [https://www.r-graph-gallery.com/](https://www.r-graph-gallery.com/)
