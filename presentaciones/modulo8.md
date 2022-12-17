@@ -132,6 +132,16 @@ ggplot(datosInegiConMunicipiosOrdenado, aes(y = EDAD, x = grupoSexo, fill = grup
        subtitle = 'Box Plot by sexo and by escolaridad')
 </code></pre>
 
+### Gráficas de Violin (Violin plot)
+
+Es una variante del gráfico de caja que muestra de una forma mas clara la distribución de los datos en cuanto al sesgo de la distribución de frecuencias.
+
+<pre><code>
+ggplot(datosInegiConMunicipiosOrdenado, 
+       aes(y = EDAD, x = grupoSexo, fill = grupoSexo)) +
+       geom_violin()
+</code></pre>
+
 
 ### Galería de gráficos en R
 [https://www.r-graph-gallery.com/](https://www.r-graph-gallery.com/)
