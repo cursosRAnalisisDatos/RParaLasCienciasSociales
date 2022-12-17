@@ -46,12 +46,12 @@ ggplot(datosInegiConMunicipiosOrdenado, aes(x = EDAD, fill=grupoSexo)) +
 Para simplificar la gráfica, vamos a eliminar las leyendas, agregar un título y un subtitulo
 
 <pre><code>
-ggplot(diamonds, aes(x = price, fill = color)) +
+ggplot(datosInegiConMunicipiosOrdenado, aes(x = EDAD, fill = grupoSexo)) +
   geom_histogram(color = 'white') +
-  facet_wrap(~color, scales = 'free', nrow = 2) +
+  facet_wrap(~grupoSexo, scales = 'free', nrow = 2) +
   theme(legend.position = 'none') +
-  labs(title = 'Dataset diamonds',
-       subtitle = 'Histogram by color')
+  labs(title = 'Data Inegi',
+       subtitle = 'Histogram by SEXO')
 </code></pre>
 
 #### Más de histogramas
