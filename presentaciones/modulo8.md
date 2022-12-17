@@ -120,6 +120,18 @@ ggplot(datosInegiConMunicipiosOrdenado, aes(y = EDAD, x = grupoSexo, fill = grup
        subtitle = 'Box Plot by sexo and by escolaridad')
 </code></pre>
 
+Una característica interesante de **ggplot** es que también podemos agregar elementos gráficos que se computan por medio de estadísticos. Supongamos que queremos agregar un punto en cada caja que represente el promedio por grupo. Esto se logra con el elemento **stat_summary()**
+
+<pre><code>
+ggplot(datosInegiConMunicipiosOrdenado, aes(y = EDAD, x = grupoSexo, fill = grupoSexo)) +
+  geom_boxplot(alpha = 0.6) +
+  facet_wrap(~ESCOLARI, scales = 'free', nrow = 2) +
+  theme(legend.position = 'none') +
+  stat_summary(fun=mean, geom = "point", shape = 16, size = 1, color="red", fill = "red") +
+  labs(title = 'Dataset Inegi',
+       subtitle = 'Box Plot by sexo and by escolaridad')
+</code></pre>
+
 
 ### Galería de gráficos en R
 [https://www.r-graph-gallery.com/](https://www.r-graph-gallery.com/)
