@@ -5,9 +5,10 @@
 - Lic. en C. C. Virginia Teodosio Procopio
 - Fís. Octavio Eduardo Vizcaya Xilotl
 
-### Temario
+### Presentación del curso
 [Presentación](presentaciones/presentacion.md)
 
+### Temario
 [Motivación](presentaciones/motivacion.md)
 
 [Forma de evaluación](presentaciones/evaluacion.md)
