@@ -26,6 +26,8 @@ Para nosotros es muy importante la iteracción constante con los participantes, 
 
 - Si el grupo no es muy grande, se puede levantar la mano en el momento de la duda y esperar a que el expositor le dé la palabra.
 - Si el grupo es grande, y para conservar el orden, el expositor dará pautas de manera constante para poder tomar la palabra y esclarecer dudas antes de avanzar con los temas.
+
+### Fuera del tiempo de las sesiones
 - Muchas de las dudas surgen cuando ya no se está conectado en sesión, cuando eso pase, se usará un grupo de discusión de googlegroups, en donde se atenderán de forma rápida todas las dudas durante el tiempo que dure el curso.
       **cursos-de-r-iiec@@googlegroups.com**
   Sólo pueden escribir los participantes que estén inscritos.
