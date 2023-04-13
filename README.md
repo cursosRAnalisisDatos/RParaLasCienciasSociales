@@ -19,7 +19,7 @@ El curso está pensado para profesionistas y alumnos de los últimos semestres d
 ### Temario
 [Motivación](presentaciones/motivacion.md)
 
-[Forma de evaluación](presentaciones/evaluacion.md)
+[Forma de evaluación y de trabajo](presentaciones/evaluacion.md)
 
 1. [Introducción a R](presentaciones/modulo1.md)
 2. [Operaciones y funciones básicas con R](presentaciones/modulo2.md)
