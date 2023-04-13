@@ -1,12 +1,14 @@
 # Introducción a R para las Ciencias Sociales
 ## Principios de Probabilidad y Estadística con R, para las Ciencias Sociales
-### Curso diseñado e impartido para el Instituto de Investigaciones Económicas, UNAM (Octubre 2022-Diciembre 2022)
+### Curso diseñado e impartido para el Instituto de Investigaciones Económicas, UNAM (Abril 2023)
 - Dr. Eric Hernández Ramírez
 - Lic. en C. C. Virginia Teodosio Procopio
 - Fís. Octavio Eduardo Vizcaya Xilotl
 
 ### Temario
-[Motivación](presentaciones/motivacion.md)   
+[Presentación](presentaciones/presentacion.md)
+[Motivación](presentaciones/motivacion.md)
+[Fornma de evaluación](presentaciones/evaluacion.md)
 1. [Introducción a R](presentaciones/modulo1.md)
 2. [Operaciones y funciones básicas con R](presentaciones/modulo2.md)
 3. [Objetos de R (estructuras de datos)](presentaciones/modulo3.md)
