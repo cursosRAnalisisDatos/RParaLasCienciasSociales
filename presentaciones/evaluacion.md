@@ -29,6 +29,8 @@ Para nosotros es muy importante la iteracción constante con los participantes, 
 
 ### Fuera del tiempo de las sesiones
 - Muchas de las dudas surgen cuando ya no se está conectado en sesión, cuando eso pase, se usará un grupo de discusión de googlegroups, en donde se atenderán de forma rápida todas las dudas durante el tiempo que dure el curso.
+
       **cursos-de-r-iiec@@googlegroups.com**
+  
   Sólo pueden escribir los participantes que estén inscritos.
 - Se invita también a dar respuestas entre participantes y promover la iteracción entre los mismos
