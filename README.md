@@ -7,8 +7,11 @@
 
 ### Temario
 [Presentación](presentaciones/presentacion.md)
+
 [Motivación](presentaciones/motivacion.md)
+
 [Fornma de evaluación](presentaciones/evaluacion.md)
+
 1. [Introducción a R](presentaciones/modulo1.md)
 2. [Operaciones y funciones básicas con R](presentaciones/modulo2.md)
 3. [Objetos de R (estructuras de datos)](presentaciones/modulo3.md)
