@@ -15,17 +15,17 @@ Desde hace muchos años la interacción continua con dispositivos electrónicos 
 <TABLE style="margin: 0 auto;">
     <TR>
     <TD> 
-      <img src="../images/revisandoCelular.png" alt="Big Data en R" width="200px"> 
+      <img src="../images/motivacion/revisandoCelular.png" alt="Big Data en R" width="200px"> 
     </TD>
     <TD> 
-      <img src="../images/revisandoMensajes.jpg" alt="Big Data en R" width="200px"> 
+      <img src="../images/motivacion/revisandoMensajes.jpg" alt="Big Data en R" width="200px"> 
     </TD>
     </TR>
 </TABLE>
 
 <div>
 <p style = 'text-align:center;'>
-<img src="../images/revisandoSmartwatch.jpg" alt="Big Data en R" width="200px">
+<img src="../images/motivacion/revisandoSmartwatch.jpg" alt="Big Data en R" width="200px">
 </p>
 </div> 
 
@@ -35,17 +35,17 @@ Esa iteracción constante genera muchos datos que guardan información “oculta
 <TABLE style="margin: 0 auto;">
     <TR>
     <TD> 
-      <img src="../images/libroElectronico.jpeg" alt="Big Data en R" width="300px"> 
+      <img src="../images/motivacion/libroElectronico.jpeg" alt="Big Data en R" width="300px"> 
     </TD>
     <TD> 
-      <img src="../images/interpretacionesDatos.png" alt="Big Data en R" width="300px"> 
+      <img src="../images/motivacion/interpretacionesDatos.png" alt="Big Data en R" width="300px"> 
     </TD>
     </TR>
 </TABLE>
 
 <div>
 <p style = 'text-align:center;'>
-<img src="../images/volumenDatos.jpeg" alt="Big Data en R" width="300px">
+<img src="../images/motivacion/volumenDatos.jpeg" alt="Big Data en R" width="300px">
 </p>
 </div> 
 
@@ -91,10 +91,10 @@ Los paquetes los podemos encontrar en: <https://r-pkgs.org/>
 <TABLE style="margin: 0 auto;">
     <TR>
     <TD> 
-      <img src="../images/rPackages.png" alt="Big Data en R" width="200px"> 
+      <img src="../images/motivacion/rPackages.png" alt="Big Data en R" width="200px"> 
     </TD>
     <TD> 
-      <img src="../images/noPaquetesR.png" alt="Big Data en R" width="500px"> 
+      <img src="../images/motivacion/noPaquetesR.png" alt="Big Data en R" width="500px"> 
     </TD>
     </TR>
 </TABLE>
@@ -132,7 +132,7 @@ Con resultados tipo informes que incluye gráficos de alta calidad (<https://git
 
 <div>
 <p style = 'text-align:center;'>
-<img src="../images/bigDataEnR.jpg" alt="Big Data en R" width="600px">
+<img src="../images/motivacion/bigDataEnR.jpg" alt="Big Data en R" width="600px">
 </p>
 </div> 
 
@@ -144,7 +144,7 @@ Con aplicaciones web y servidores para las aplicaciones. (**shiny** desarrollada
 
 <div>
 <p style = 'text-align:center;'>
-<img src="../images/mapasIteractivosEnR.png" alt="Big Data en R" width="600px">
+<img src="../images/motivacion/mapasIteractivosEnR.png" alt="Big Data en R" width="600px">
 </p>
 </div> 
 
@@ -159,10 +159,10 @@ Con aplicaciones web y servidores para las aplicaciones. (**shiny** desarrollada
 <TABLE style="margin: 0 auto;">
     <TR>
     <TD> 
-      <img src="../images/graficaCapitalHumanoEnR.png" alt="Big Data en R" width="200px"> 
+      <img src="../images/motivacion/graficaCapitalHumanoEnR.png" alt="Big Data en R" width="200px"> 
     </TD>
     <TD> 
-      <img src="../images/graficaEmpleoEnR.png" alt="Big Data en R" width="200px"> 
+      <img src="../images/motivacion/graficaEmpleoEnR.png" alt="Big Data en R" width="200px"> 
     </TD>
     </TR>
 </TABLE>
