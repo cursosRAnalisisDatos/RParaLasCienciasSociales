@@ -19,7 +19,7 @@ logo: ../images/logoIIEc.jpg
 <img src="../images/modulo1/proyectoR.png" alt="proyecto R" width="800px"> 
 
 #### Bajando el archivo ejecutable
-<img src="../images/modulo1/instalandoR.jpeg" alt="proyecto R" width="800px"> 
+<img src="../images/modulo1/instalandoR.png" alt="proyecto R" width="800px"> 
 
 #### Aceptar la licencia
 <img src="../images/modulo1/instalandoROK.jpeg" alt="proyecto R" width="800px"> 
