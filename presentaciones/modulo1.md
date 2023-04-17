@@ -92,10 +92,10 @@ Los paquetes los podemos encontrar en: <https://r-pkgs.org/>
 <TABLE style="margin: 0 auto;">
     <TR>
     <TD> 
-      <img src="../images/rPackages.png" alt="Big Data en R" width="200px"> 
+      <img src="../images/motivacion/rPackages.png" alt="Big Data en R" width="200px"> 
     </TD>
     <TD> 
-      <img src="../images/noPaquetesR.png" alt="Big Data en R" width="500px"> 
+      <img src="../images/motivacion/noPaquetesR.png" alt="Big Data en R" width="500px"> 
     </TD>
     </TR>
 </TABLE>
