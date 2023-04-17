@@ -14,7 +14,7 @@ logo: ../images/logoIIEc.jpg
 ### Creando el ambiente de trabajo con R.
 #### El proyecto que le da soporte y descarga
 
-[https://posit.co/](https://posit.co/)
+[https://cran.r-project.org/](https://cran.r-project.org/)
 
 <img src="../images/modulo1/proyectoR.png" alt="proyecto R" width="800px"> 
 
