@@ -55,13 +55,13 @@ entre el usuario y el programa en R se interactua principalmente con la
 linea de comandos.
 
 #### RStudio. IDE disponible en línea 
-<img src="../images/modulo1/RStudio.jpg" alt="proyecto R" width="800px"> 
+<img src="../images/modulo1/RStudio.png" alt="proyecto R" width="800px"> 
 
 #### RStudio selección de la versión a instalar
-<img src="../images/modulo1/RStudioSeleccion.jpg" alt="proyecto R" width="800px"> 
+<img src="../images/modulo1/RStudioSeleccion.png" alt="proyecto R" width="800px"> 
 
 #### RStudio selección por sistema operativo
-<img src="../images/modulo1/RStudioInstalacion.jpg" alt="proyecto R" width="800px"> 
+<img src="../images/modulo1/RStudioInstalacion.png" alt="proyecto R" width="800px"> 
 
 #### RStudio ambiente de trabajo
 <img src="../images/modulo1/RStudioVentanas.png" alt="proyecto R" width="800px"> 
