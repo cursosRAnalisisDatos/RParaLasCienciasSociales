@@ -16,7 +16,7 @@ logo: ../images/logoIIEc.jpg
 
 [https://posit.co/](https://posit.co/)
 
-<img src="../images/modulo1/proyectoR.jpeg" alt="proyecto R" width="800px"> 
+<img src="../images/modulo1/proyectoR.png" alt="proyecto R" width="800px"> 
 
 #### Bajando el archivo ejecutable
 <img src="../images/modulo1/instalandoR.jpeg" alt="proyecto R" width="800px"> 
