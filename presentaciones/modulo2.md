@@ -66,12 +66,15 @@ Un directorio de trabajo es el directorio desde el cual **R** va a leer los arch
 <pre><code>
 getwd() # para conocer el directorio de trabajo
 setwd("C:\otro_directorio") #para modificar el directorio de trabajo
+
 </code></pre>
 
 Ejemplos (en ambos ejemplos se asume que existen dichos subdirectorios):
 <pre><code>
 #en Windows
 setwd("C:/Users/UsuariO/Desktop/cursoRParaLasCienciasSociales/sesion1")
+#en Mac
+setwd ("/Users/virg/Documents/Desarrollo/DarVi-Analytics/")
 #en Ubuntu 
 setwd("~/Documents/cursoDeRParaLasCienciasSociales")
 </code></pre>
