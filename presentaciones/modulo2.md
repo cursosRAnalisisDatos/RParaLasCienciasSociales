@@ -191,7 +191,9 @@ Para reasignar el valor de algún objeto, simplemente se vuelve asociar un valor
 </code></pre>
   
 -Hay que notar que en el ambiente de ejecución se actualiza también el tipo de objeto para "obj2"
+
 -También se pueden hacer operaciones usando a los objetos almacenados previamente
+
 <pre><code>
 x <- obj1 + obj2
 x
