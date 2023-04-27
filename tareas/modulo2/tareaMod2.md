@@ -2,10 +2,10 @@
 ### Nota. Se tiene que incluir en el mismo script que se desarrolló en la clase (sesion2.R), incluyendo comentarios dentro del código que diseñen.
 
 ### 1. Obtener el promedio del peso de 6 personas
-- 1.1. Crear 6 objetos numéricos
-- 1.2. Asociarles valores enteros positivos a cada uno
-- 1.3. Aplicar la fórmula de promedio
-- 1.4 Mostrar el resultado en la pantalla
+  1.1. Crear 6 objetos numéricos
+  1.2. Asociarles valores enteros positivos a cada uno
+  1.3. Aplicar la fórmula de promedio
+  1.4. Mostrar el resultado en la pantalla
 
 ### 2. Sabemos que el área de un círculo está dado por la fórmula
               ** A = pi*r^2 **
