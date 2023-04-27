@@ -9,5 +9,6 @@
 
 ## 2. Sabemos que el área de un círculo está dado por la fórmula
               ** A = pi*r^2 **
-Si nos dan 3 círculos de radios r1=4cm, r2=8cm, y r3=20cm. 
+Si nos dan 3 círculos de radios r1=4cm, r2=8cm, y r3=20cm.
+
 2.1. Calcular el área promedio de dichos círculos.
