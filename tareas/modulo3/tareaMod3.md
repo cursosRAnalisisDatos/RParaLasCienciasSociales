@@ -1,6 +1,7 @@
 ### Especificación de las actividades del módulo 3
 
-Dado el grupo de pacientes: 
+Dado el grupo de pacientes:
+
 Juan Pérez, de 25 años, en observación, paciente con diabetes Tipo1, pronóstico: Pobre.
 Leticia Ramírez, en cuidado, de 34 años, con diabetes Tipo2, pronóstico: Mejora.
 Rosa Flores: de 38 años, con diabetes Tipo1, pronóstico: Excelente. residente de la CDMX, 
