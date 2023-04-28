@@ -69,7 +69,6 @@ length(TRUE)
 [1] 1
 </code></pre>
 
-##
 ### Creando vectores
 
 Para crear un vector usamos la función *c()* (combinar), la cual recibe como argumento los elementos agregar, separados por comas.
