@@ -97,3 +97,34 @@ datos[ 4, ]
 #valores del individuo 1 y 4
 datos [c(1,4), c(2,3)]
 
+
+#2.4 Determinar la media del pulso de los hombres.
+#La función sum() suma los componentes de un vector.
+
+hombre1<-datos[[3]][[1]]
+hombre2<-datos[[3]][[3]]
+hombre3<-datos[[3]][[4]]
+
+todos<-sum(hombre1,hombre2,hombre3)
+todos
+
+## [1] 242
+
+media<-todos/3
+media
+
+## [1] 80.66667
+
+
+#2.5 Calcular la raíz cuadrada de la presión arterial del cuarto paciente.
+# La función sqrt ejecuta la raíz del dato seleccionado.
+
+hombre2<-datos[[2]][[4]]
+hombre2
+
+## [1] 78
+
+sqrt(hombre2)
+
+## [1] 8.831761
+
