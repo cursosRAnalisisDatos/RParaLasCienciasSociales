@@ -75,3 +75,25 @@ nro_hijos <- c(1, 2, 1, 3, 2)
 #RESPUESTA
 censo <- data.frame(nombre, apellido, fecha_nacimiento, sexo, nro_hijos)
 #pero va a generar un error, porque la longitud del vector nro_hijos es más grande
+
+#2. La tabla recopila información de 5 pacientes (sexo,presión arterial y pulsos por minuto), atendidos en un hospital
+
+#2.1 que llamen al dataframe "datos",
+#2.2 que hagan un respaldo del dataframe (sólo que lo copien en otro dataframe pacientes = datos
+#2.3 Mostrar los valores para las 3 variables para el primer individuo y el cuarto indi#viduo
+#Los corchetes [] permiten identificar la ubicación, en la lista del dato que se desea mostrar . 
+#En el caso de los dobles corchetes [[]] se especifica con detalle el dato buscado en la lista y se presenta para la operación
+
+#primer individuo 
+datos[1, ]
+##     Sexo Presi.n.arterial Pulso.x.min
+## 1 Hombre              119          59
+
+#cuarto individuo 
+datos[ 4, ]
+##     Sexo Presi.n.arterial Pulso.x.min
+## 4 Hombre               78          76
+
+#valores del individuo 1 y 4
+datos [c(1,4), c(2,3)]
+
