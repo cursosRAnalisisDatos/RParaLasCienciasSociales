@@ -308,7 +308,7 @@ list.ABC <- c(list.A, list.B, list.C)
 ## Data frames (marco de datos)
 
 - Un data frame es mas general que una matriz, esta estructura permite que diferentes 
-columnas contengan distintos tipos de datos: numérico, caaracter, lógicos y otros.
+columnas contengan distintos tipos de datos: numérico, cáracter, lógicos y otros.
 - Un data frame es una estructura rectangular, en el sentido de que las columnas deben ser de
 la misma longitud.
 - Las columnas representan variables y los renglones son observaciones.
@@ -329,10 +329,16 @@ El conjunto Iris que viene preinstalado en todos los paquetes de R.
 Ejemplo:
 <pre><code>
 iris
+View(iris)
 head(iris)
 help(head)
 head(iris, n=10)
 tail(iris)
+</code></pre>
+
+También existen conjuntos de datos que muestran resultados de an
+<pre><code>
+Titanic
 </code></pre>
 
 ##
