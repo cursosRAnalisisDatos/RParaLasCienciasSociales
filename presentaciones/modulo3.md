@@ -592,3 +592,21 @@ str(censo)
 fecha_nacimiento <- as.Date(c("1976-06-14", "1974-05-07", "1958-12-25", "1983-09-19"))
 </code></pre>
 
+### Borrando columnas en el dataframe con !(names(dataframe) %in% vector)
+<pre><code>
+id <- c(1,2,3,4,5,6,7,8,9)
+valor <- c(7,1,12,4,5,16,71,38,19)
+categoria <- c(rep("bajo",3),rep("medio",3),rep("alto",3))
+color <- c(rep("rojo",1),rep("azul",2),
+           rep("naranja",2),rep("morado",1),
+           rep("amarillo",2),rep("verde",1))
+
+datos <- data.frame(id=id, valor=valor, categoria=categoria,color=color)
+
+head(datos, n=9)
+
+# Eliminar columnas de un dataframe
+borrar <- c("valor","categoria")
+datos2 <- datos[ , !(names(datos) %in% borrar)]
+head(datos2, n=9)
+</code></pre>
