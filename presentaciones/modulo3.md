@@ -371,6 +371,7 @@ apellido <- c("Sanchez", "Garcia", "Sancho", "Alfara")
 fecha_nacimiento <- c("1976-06-14", "1974-05-07", "1958-12-25", "1983-09-19")
 sexo <- c("HOMBRE", "MUJER", "HOMBRE", "HOMBRE")
 nro_hijos <- c(1, 2, 3, 4)
+</code></pre>
 
 # Creamos un dataframe usando la función **data.frame()**
 <pre><code>
