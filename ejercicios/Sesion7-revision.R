@@ -1,6 +1,5 @@
 ##### Introducción a R para las Ciencias Sociales  ####
 #####         SESIÓn 8     #######
-##    16 de diciembre, 2022       ###
 
 ####  Revisión de la actividad 7
 
