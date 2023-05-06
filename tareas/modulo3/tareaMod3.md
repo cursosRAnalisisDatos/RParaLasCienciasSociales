@@ -1,7 +1,6 @@
 ### Especificación de las actividades del módulo 3
 
 #### Actividad correspondiente a temas de: vectores, listas y matrices.
-##### Actividad:
 
 Dado el grupo de pacientes:
 
@@ -18,7 +17,6 @@ Felipe García; con diabetes Tipo1, pronóstico: Pobre. de Cuernavaca, Morelos.
 Nota: los nombres son ficticios.
 
 #### Actividad correspondiente a temas de: dataframes
-##### Actividad:
 
 Transformar la actividad de la sesión 3 en un dataframe, y a partir de ese dataframe:
 
