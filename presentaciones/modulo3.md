@@ -424,16 +424,23 @@ censo
 
 ### Seleccionando elementos específicos
 
+#### Acceder a todo un registro (renglón)
 Los datos que más interesan de manera inicial es traer todo un registro(renglón)
+
 <pre><code>
-censo[2, ]
-censo[2:4, ]
+censo[2, ] # todo el registro número 2
+censo[2:4, ] # del registro 2 al 4. 
 </code></pre>
 
-##
-Acceso a las columnas
+#### Acceso a las columnas
 <pre><code>
-censo[, 2]
+censo[, 2] #una sola columna
+censo[, 1:3] #un recorte de la columna 1 a la 3
+</code></pre>
+
+#### Hacer un recorte de renglones y columnas
+<pre><code>
+censo[1:5, 1:3] ##del renglón 1 al 5, de la columna 1 a la 3
 </code></pre>
 
 o por su nombre, usando el nombre de la columna
@@ -442,6 +449,11 @@ censo$nombre
 censo[, "nombre"]
 censo[["nombre"]]
 </code></pre>
+
+#### Recorte del dataframe por selecciones
+Son subtablas con registros (renglones) que cumplan ciertas condiciones.
+#La subtabla formada por las filas correspondientes a personas con sexo = "MUJER" cuyo número de hijos es 0.
+censo[censo$Sexo == "MUJER" & censo$Numero_Hijos == 0, ]
 
 ##
 ### Vectorización de un dataframe
