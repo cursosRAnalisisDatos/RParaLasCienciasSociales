@@ -452,10 +452,13 @@ censo[["nombre"]]
 
 #### Recorte del dataframe por selecciones
 Son subtablas con registros (renglones) que cumplan ciertas condiciones.
+
+<pre><code>
 #La subtabla formada por las filas correspondientes a personas con sexo = "MUJER" cuyo número de hijos es 0.
 censo[censo$Sexo == "MUJER" & censo$Numero_Hijos == 0, ]
 
-#censo[censo$Sexo == "MUJER" & censo$Numero_Hijos == 0, ][1:4, ]# y hacer más combinaciones
+#censo[censo$Sexo == "MUJER" & censo$Numero_Hijos == 0, ][1:4, ]# y hacer más combinaciones (faltan registros para que se vea que esto funciona bien :))
+</code></pre>
 
 ##
 ### Vectorización de un dataframe
