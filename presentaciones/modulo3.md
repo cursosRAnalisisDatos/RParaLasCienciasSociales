@@ -455,6 +455,8 @@ Son subtablas con registros (renglones) que cumplan ciertas condiciones.
 #La subtabla formada por las filas correspondientes a personas con sexo = "MUJER" cuyo número de hijos es 0.
 censo[censo$Sexo == "MUJER" & censo$Numero_Hijos == 0, ]
 
+#censo[censo$Sexo == "MUJER" & censo$Numero_Hijos == 0, ][1:4, ]# y hacer más combinaciones
+
 ##
 ### Vectorización de un dataframe
 
