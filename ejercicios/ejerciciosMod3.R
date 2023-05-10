@@ -1,18 +1,20 @@
 # @author: Virginia Teodosio
 # @email: lunysska@gmail.com
-# @date: Nov, 2022.
-# @version: 1.0
+# @date: May, 2023.
+# @version: 2.0
 
+# ----------------------------------------------------------------------------------------------------------
+# Ejercicio 1.
 # Objetivo: Que el participante se familiarice con errores en el código (en 
 # la terminal de R y de tipo semántico) y pueda identificarlos y corregirlos.
+# ----------------------------------------------------------------------------------------------------------
 
 # Instrucciones: 
 # 1. Ejecuta una línea a la vez, en el orden de aparición,
 # 2. Corrígelos en ese mismo orden 
 # 3. Ve incluyendo en el script los errores que van generando, en líneas comentadas
 
-# ------------------------------------------------------------------------------
-# Ejercicios con matrices
+## Matrices
 # 1. (RESPUESTA:índice fuera de los límites)
 matriz <- matrix(1:12, nrow = 4, ncol = 3)
 matriz
@@ -22,8 +24,7 @@ x <- matriz[1, 4]
 columna <- matriz[4,]
 columna
 
-# ------------------------------------------------------------------------------
-# Ejercicios con listas
+## Listas
 # 1. Definiendo una lista
 #Dada la lista
 lst <- list(name="Fred", wife="Mary", no.children=3, child.ages=c(4,7,9))
@@ -35,6 +36,7 @@ size(lst)
 # 2. Queremos conocer el elemento en la posicion 3, se debe usar la sintáxis adecuada
 lst[[3]]
 lst[3]
+
 # 2.1 Cual es la diferencia de ambas expresiones? (RESPUESTA la primera es el elemento 
 #numérico, la segunda es el componente, por lo tanto es una lista)
 
@@ -71,8 +73,7 @@ fecha_nacimiento <- c("1976-06-14", "1974-05-07", "1958-12-25", "1983-09-19")
 sexo <- c("HOMBRE", "MUJER", "HOMBRE", "HOMBRE")
 nro_hijos <- c(1, 2, 1, 3, 2)
 
-#Acá va la linea del dataframe
-#RESPUESTA
+## RESPUESTA
 censo <- data.frame(nombre, apellido, fecha_nacimiento, sexo, nro_hijos)
 #pero va a generar un error, porque la longitud del vector nro_hijos es más grande
 
@@ -128,3 +129,77 @@ sqrt(hombre2)
 
 ## [1] 8.831761
 
+# ----------------------------------------------------------------------------------------------------------
+# Ejercicio 3
+# Objetivo: Que el participante se familiarice con el uso de las funciones y operaciones para el data.frame
+# Nota: (Este ejercicio se puede revisar cuando ya se haya presentado el tema completo de dataframe)
+# ----------------------------------------------------------------------------------------------------------
+
+#Funciones extras
+# - data() muestra los datos precargados
+
+# Datos: data.frame precargado de R
+# Carros de 1920: conversión, añadir y quitar columnas
+# Para cargar al espacio de trabajo
+# cars   ##1a opción
+data(cars)
+cars   # datos de 1920: velocidad y distancia de frenado
+# Los datos se encuentran en unidades mph (millas por hora), y ft (pies)
+
+#1. Cambiar los datos a algo más familiar: kph y m (através de una conversión)
+#2. Y agregar las columnas con los nuevos datos
+
+#Formas de agregar las columnas
+cars$kph <- cars$speed / 0.62137
+cars$meters <- cars$dist / 3.2808
+
+# creando vectores temporales
+kph<- cars$speed / 0.62137
+frenadoMetros <- cars$dist / 3.2808
+
+##Diferentes maneras de AGREGAR columnas al data.frame:
+## 1a opción
+cars<- cbind(cars, kph, meters)
+
+## 2a opción
+cars<- cbind(cars[,c("speed","dist")], kph, meters)
+
+## 3a opción
+cars<- cbind(cars[,c(1,2)], kph, meters)
+
+# ----------------------------------------------------------------------------------------------------------
+# Ejercicio4. Practicar agregar, eliminar, ordenar y cambiar nombres de las columnas
+# ----------------------------------------------------------------------------------------------------------
+
+# Datos: data.frame precargado de R: women, precargado, 1975, 30-39 años
+## height (in)  weight (lbs)
+# - AGREGAR una fila, que se olvidó con datos: 74 in, 161 lbs
+# - Conservamos el nombre del data.frame y agregamos la fila
+women<- rbind(women,c(74,161))
+women
+
+# Conversión de longitud
+meter<- women$height*0.0254
+
+# Agregar la columna en metros
+women<- cbind(women, meter)
+
+# Finalmente ORDENAR respecto a la estatura
+women<- women[order(women$meter),]
+women
+
+# Quitar la columna en in, pero conservar el data.frame inicial
+womenSI<- women[,-c(1)]
+
+names(women)
+names(womenSI)
+
+# Cambiar nombres
+names(women)<- c("estatura(in)", "peso (lbs)", "estatura (m)")
+names(womenSI)<- c("peso (lbs)", "estatura (m)")
+
+# Para eliminar la columna en in
+womenSI<- women[,-height]
+womenSI<- women[,-"height"]
+womenSI<- women[,-c(height)]
+womenSI<- women[,-c(1)]
