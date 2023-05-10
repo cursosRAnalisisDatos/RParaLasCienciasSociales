@@ -1,7 +1,7 @@
 # Especificación de las actividades del módulo 3
 # ##### RESPUESTAS
 #####################################################################
-# Actividad correspondiente a temas de: vectores, listas y matrices.
+# Actividad 1. Correspondiente a temas de: vectores, listas y matrices.
 # 
 # Dado el grupo de pacientes:
 #   
@@ -16,7 +16,7 @@
 # ¿Qué preguntas consideras que sería relevante plantear?
 #   
 #   Nota: los nombres son ficticios.
-# Actividad correspondiente a temas de: dataframes
+# Actividad 2. Correspondiente a temas de: dataframes
 # 
 # Transformar la actividad de correspondientes a "vectores, listas y matrices" en 
 #un dataframe, y a partir de ese dataframe:
