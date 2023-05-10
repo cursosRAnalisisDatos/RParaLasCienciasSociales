@@ -29,12 +29,12 @@ Juan Pérez, 85 kg; Leticia Ramírez, 68 kg; Rosa Flores, 59 kg; Josue Navarrete
 
 
 #### Actividad 3. Correspondiente a "dataframe": Vamos a explorar un conjunto de datos!
-# Instrucciones:
+Instrucciones:
 Para cada pregunta, debe:
 a) incluir el código que usó para generar el resultado
 b) muestre el resultado en un comentario dentro del script
 
-# Considere los datos DNase precargados en R.
+Considere los datos "DNase" precargados en R.
 1. Dé un "vistazo" a estos datos
 2. Muestre el nombre de las columnas
 3. Cuántos registros tienen los datos
