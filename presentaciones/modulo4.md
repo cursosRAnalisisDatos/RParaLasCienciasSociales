@@ -66,6 +66,7 @@ for(i in lista1) {
   #print(i)
   cat("el valor:",i,":",class(i),"\n")
 }
+
 # other
 vector_for1 <- 1
 for(i in 2:7) {
