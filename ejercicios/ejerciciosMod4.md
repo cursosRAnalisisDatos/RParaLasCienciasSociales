@@ -19,12 +19,13 @@ if (num==0) {
 </code></pre>
 
 2. Cree el código en **R** que realice la suma de los números enteros comprendidos entre el número indicado y 100.
+Hint: para leer del teclado, la opción del usuario, use la función "scan" (help(scan))
 
 Respuesta:
 <pre><code>
 print("Ingrese un número entre 0 y 100: ")
 suma <- 0
-n <- scan(n=1)
+n <- scan(n=1) # acá lee la opción tecleada por el usuario! 
 while (n <= 100){
   suma <- suma+n
   n <- n+1
