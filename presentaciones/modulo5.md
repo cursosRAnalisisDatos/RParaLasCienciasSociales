@@ -3,7 +3,7 @@
 
 La generación constante de información conlleva a adentrarse a diferentes formatos donde radican resultados de diferentes estudios, aplicaciones, investigaciones, 
 
-### Formatos de archivos
+### 5.1 Formatos de archivos
 
 Entre ellos pueden ser:
 
@@ -16,7 +16,7 @@ Entre ellos pueden ser:
 
 pero las necesidades de publicar resultados conllevan a también generar resultados en diferentes formatos
 
-### Lugares donde residen datos de lectura
+### 5.2 Lugares donde residen datos de lectura
 
   Las variantes son muy amplias, acá intentamos destacar las más comunes.
   
@@ -48,7 +48,7 @@ pero las necesidades de publicar resultados conllevan a también generar resulta
   [http://bioconductor.org/packages/release/bioc/](http://bioconductor.org/packages/release/bioc/)
  
 
-## Leyendo archivos CSV
+## 5.3 Leyendo archivos CSV
 Por omisión utiliza **,** como separador de columnas y **.** como separador de la parte decimal para números
    <pre><code>
    read.csv("miArchivo.csv")
@@ -78,7 +78,7 @@ La función más habitual es **na.omit**
 na.omit(dataFrame)
 </code></pre>
 
-### Leyendo archivos Excel
+### 5.4 Leyendo archivos Excel
 
 Una de las formas más comunes de hacerlo es con la función **read.xlsx()**
 
@@ -87,7 +87,7 @@ Ejemplo:
 telde = read.xlsx("endocrino.xlsx") 
 </code></pre>
 
-## Salidas de datos.
+### 5.5 Salidas de datos.
 
 Hay muchos formatos de salidas de datos, en esta sección sólo mencionaremos dos:
 
