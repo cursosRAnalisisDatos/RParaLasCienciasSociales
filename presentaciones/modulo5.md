@@ -48,21 +48,21 @@ pero las necesidades de publicar resultados conllevan a también generar resulta
   [http://bioconductor.org/packages/release/bioc/](http://bioconductor.org/packages/release/bioc/)
  
 
-## 5.3 Leyendo archivos CSV
+### 5.3 Leyendo archivos CSV
 Por omisión utiliza **,** como separador de columnas y **.** como separador de la parte decimal para números
    <pre><code>
    read.csv("miArchivo.csv")
    misDatos <- read.csv("mi_archivo.csv")
    </code></pre>
 
-### Codificación del CSV
+#### Codificación del CSV
 - Si hay problemas en la codificación de los datos dentro del CSV, tal vez necesites especificar el argumento **encoding**. 
 - Establecer la codificación en **UTF-8** tiende a resolver la mayoría de estos problemas.
 <pre><code>
 read.csv("mi_archivo.csv", encoding = "UTF-8")
 </code></pre>
 
-### El argumento na.strings
+#### El argumento na.strings
 - Algunas veces los archivos contienen alguna cadena de caracteres que representan los valores faltantes u omitidos.
 - Saber qué valores se ingresan depende de la fuente de datos.
 - Si, por ejemplo, en nuestro archivo los valores **-9999** representan valor omitidos o faltantes podemos escribir:
@@ -71,7 +71,7 @@ read.csv("mi_archivo.csv", na.strings = "-9999")
 read.csv("mi_archivo.csv", na.strings = c("-9999" , "Na" )) 
 </code></pre>
 
-### Eliminando valores NA
+#### Eliminando valores NA
 Si necesitas eliminar los valores NA después de abrir el CSV, deberás usar la función que corresponda según tus datos. 
 La función más habitual es **na.omit**
 <pre><code>
@@ -91,7 +91,7 @@ telde = read.xlsx("endocrino.xlsx")
 
 Hay muchos formatos de salidas de datos, en esta sección sólo mencionaremos dos:
 
-### Archivos CSV
+#### Archivos CSV
 
 Una de las formas más simples es usando la función **write.csv**
 
@@ -100,10 +100,10 @@ Ejemplo:
 write.csv(datosInegiConMunicipios,"data/datosInegiConMunicipio.csv")
 </code></pre>
 
-### RMarkdown
+#### RMarkdown
 (https://rmarkdown.rstudio.com/)[https://rmarkdown.rstudio.com/]
 
-## Usando paquetes
+### 5.6 Usando paquetes
 
 Para usar un paquete se usa la función
 <pre><code>
@@ -118,12 +118,12 @@ Para usar un paquete se usa la función
   Nota: *dplyr* es un paquete que permite la manipulación de archivos de datos (de tipo columnas-renglones) para poder hacer filtros, o elegir algunas columnas, etc
 [https://swcarpentry.github.io/r-novice-gapminder-es/13-dplyr/](https://swcarpentry.github.io/r-novice-gapminder-es/13-dplyr/).
 
-## En dónde están los paquetes?
+#### En dónde están los paquetes?
 - Los paquetes pueden ser bajados desde muchos lados, pero de las más comunes es cran-project, (install.packages())
 - BioConductor 
 - git-hub (install_github())
 
-## Instalando paquetes
+#### Instalando paquetes
 <pre><code>
   install.packages(nombreDelPaquete)
 </code></pre>
@@ -133,7 +133,7 @@ Para usar un paquete se usa la función
   install.packages(dplyr)# Instalando la librería dplyr
 </code></pre>
 
-## Nota importante con respecto a paquetes
+#### Nota importante con respecto a paquetes
 
 La importancia de instalar una sola vez un paquete.
 
@@ -141,7 +141,7 @@ Instalar un paquete significa que lo tenemos que "bajar" de algún lado(servidor
 
 Es importante que la instalación se realice una sola vez y se use todas las veces que se necesite.
 
-## Citando paquetes
+#### Citando paquetes
 
   Una forma de reconocer el trabajo de quien hizo una función o todo un paquete es citando correctamente a sus autores, para esto *R* cuenta con:
   <pre><code>
