@@ -60,7 +60,9 @@ Por omisión utiliza **","** como separador de columnas y **"."** como separador
   </code></pre>
 
 #### Explorando los argumentos del método "read.csv"
+ <pre><code>
 misDatos <- read.csv("data/censo.csv", header=FALSE)
+</code></pre>
 
 
 #### Codificación del CSV
