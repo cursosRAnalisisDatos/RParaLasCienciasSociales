@@ -53,9 +53,11 @@ pero las necesidades de publicar resultados conllevan a también generar resulta
 ### 5.3 Leyendo archivos CSV
 Por omisión utiliza **","** como separador de columnas y **"."** como separador de la parte decimal para números
    <pre><code>
-   read.csv("miArchivo.csv")
-   misDatos <- read.csv("mi_archivo.csv")
-   </code></pre>
+  setwd("/home/virgin/Desktop/cursoR")
+  read.csv("data/censo.csv")
+  misDatos <- read.csv("data/censo.csv")
+  misDatos   
+  </code></pre>
 
 #### Codificación del CSV
 - Si hay problemas en la codificación de los datos dentro del CSV, tal vez necesites especificar el argumento **encoding**. 
