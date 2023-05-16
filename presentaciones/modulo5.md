@@ -35,6 +35,7 @@ pero las necesidades de publicar resultados conllevan a también generar resulta
  - en el repositorio de R (**CRAN** - Comprehensive R Archive Network -)
  
   [*importinegi*](https://rde.inegi.org.mx/index.php/2020/12/02/importinegi-un-paquete-de-r-para-descargar-y-gestionar-bases-de-datos-del-inegi/)
+  
    <pre><code>
     install.packages("importinegi")
    </code></pre>
@@ -45,6 +46,7 @@ pero las necesidades de publicar resultados conllevan a también generar resulta
    </code></pre>
  
  - **Bioconductor**
+ - 
   [http://bioconductor.org/packages/release/bioc/](http://bioconductor.org/packages/release/bioc/)
  
 
