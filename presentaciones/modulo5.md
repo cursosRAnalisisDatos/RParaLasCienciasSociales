@@ -59,6 +59,10 @@ Por omisión utiliza **","** como separador de columnas y **"."** como separador
   misDatos   
   </code></pre>
 
+#### Explorando los argumentos del método "read.csv"
+misDatos <- read.csv("data/censo.csv", header=FALSE)
+
+
 #### Codificación del CSV
 - Si hay problemas en la codificación de los datos dentro del CSV, tal vez necesites especificar el argumento **encoding**. 
 - Establecer la codificación en **UTF-8** tiende a resolver la mayoría de estos problemas.
