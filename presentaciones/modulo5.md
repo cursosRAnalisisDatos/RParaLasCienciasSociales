@@ -101,6 +101,7 @@ write.csv(datosInegiConMunicipios,"data/datosInegiConMunicipio.csv")
 </code></pre>
 
 #### RMarkdown
+
 (https://rmarkdown.rstudio.com/)[https://rmarkdown.rstudio.com/]
 
 ### 5.6 Usando paquetes
