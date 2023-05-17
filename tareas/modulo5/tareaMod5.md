@@ -1,4 +1,5 @@
-## Tarea correspondiente al módulo 5.
+## Tema: Manejo de Datos
+
 Objetivo: Trabajar con datos reales, en este caso del INEGI, y aplicar toda la exploración de métodos que hemos visto para un dataframe.
 
 A partir de la información proporcionada por el **INEGI**<br>
