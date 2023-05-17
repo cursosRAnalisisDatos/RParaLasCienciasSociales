@@ -85,8 +85,9 @@ read.csv("mi_archivo.csv", encoding = "UTF-8")
 - Saber qué valores se ingresan depende de la fuente de datos.
 - Si, por ejemplo, en nuestro archivo los valores **-9999** representan valor omitidos o faltantes podemos escribir:
 <pre><code>
-read.csv("mi_archivo.csv", na.strings = "-9999") 
-read.csv("mi_archivo.csv", na.strings = c("-9999" , "Na" )) 
+data <- read.csv("data/censoConCadenasRaras.csv", na.strings = "-9999", header=FALSE)
+View(data)
+read.csv("mi_archivo.csv", na.strings = c("-9999" , "Na" )) # o se le puede pasar un vector con todos los posibles valores a omitir.
 </code></pre>
 
 #### Eliminando valores NA
