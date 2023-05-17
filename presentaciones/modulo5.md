@@ -116,7 +116,7 @@ Una de las formas más simples es usando la función **write.csv**
 
 Ejemplo:
 <pre><code>
-write.csv(datosInegiConMunicipios,"data/datosInegiConMunicipio.csv")
+write.csv(na.omit(data),"data/datosSinNA.csv")
 </code></pre>
 
 #### RMarkdown
