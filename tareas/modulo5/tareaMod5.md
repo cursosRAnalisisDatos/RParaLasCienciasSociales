@@ -14,9 +14,10 @@ B) Otro es el archivo correspondiente a los municipios y sus claves  (MUN.csv)<b
 https://www.inegi.org.mx/contenidos/programas/ccpv/2020/microdatos/Censo2020_clasificaciones_CPV_csv.zip
 (Archivo: MUN.csv)<br>
 
+NOTA: Al ser un archivo real, puedes encontrar valores numéricos muy grandes, y el visualizador de RStudio los va a meter en un código para desplegarlos, si necesitas explorarlos, tal vez convenga usar otro editor de texto. También recuerda que si fuera necesario, puedes recortar estos valores quedándote con las cifras m
 A partir de ellos, da respuesta a las siguientes preguntas:
 1. ¿Cuántas religiones hay?
-2. Ordena los registros por edad, y luego por religión.
+2. Ordena los registros por edad, y luego por religión. (Opcional: Haz una selección de las columnas que creas pertinentes, eliminando aquellas que no estén aportando mucha información.)
 3. ¿Cuántos registros hay de menores de edad? ¿Cuántos de mayores de edad?
 4. ¿Cuántos municipios diferentes presentan estos registros?  Muestra tus registros ordenados alfabéticamente y no por la clave 
 (Hint. Usa un merge con el archivo MUN.csv)
