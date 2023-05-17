@@ -12,7 +12,7 @@ https://www.inegi.org.mx/contenidos/programas/ccpv/2020/microdatos/Censo2020_CPV
 
 B) Otro es el archivo correspondiente a los municipios y sus claves  (MUN.csv)<br>
 https://www.inegi.org.mx/contenidos/programas/ccpv/2020/microdatos/Censo2020_clasificaciones_CPV_csv.zip
-(Adentro es el archivo MUN.csv)<br>
+(Archivo: MUN.csv)<br>
 
 A partir de ellos, da respuesta a las siguientes preguntas:
 1. ¿Cuántas religiones hay?
