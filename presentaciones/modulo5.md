@@ -69,6 +69,7 @@ View(datos)
 #### Explorando los argumentos del método "read.csv"
 <pre><code>
 misDatos <- read.csv("data/censo.csv", header=FALSE)
+misDatos <- read.csv("data/censoConHeader.csv", header=TRUE)
 </code></pre>
 
 #### Codificación del CSV
