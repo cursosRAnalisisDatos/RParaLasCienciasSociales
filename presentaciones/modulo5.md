@@ -1,5 +1,5 @@
 
-## Módulo5. Manejo de Datos
+## Módulo 5. Manejo de Datos
 
 La generación constante de información conlleva a adentrarse a diferentes formatos donde radican resultados de diferentes estudios, aplicaciones, investigaciones, 
 
@@ -51,8 +51,9 @@ pero las necesidades de publicar resultados conllevan a también generar resulta
  
 
 ### 5.3 Leyendo archivos CSV
+
 Por omisión utiliza **","** como separador de columnas y **"."** como separador de la parte decimal para números
-   <pre><code>
+  <pre><code>
   setwd("/home/virgin/Desktop/cursoR")
   read.csv("data/censo.csv")
   misDatos <- read.csv("data/censo.csv")
@@ -66,12 +67,12 @@ View(datos)
 </code></pre>
 
 #### Explorando los argumentos del método "read.csv"
- <pre><code>
+<pre><code>
 misDatos <- read.csv("data/censo.csv", header=FALSE)
 </code></pre>
 
-
 #### Codificación del CSV
+
 - Si hay problemas en la codificación de los datos dentro del CSV, tal vez necesites especificar el argumento **encoding**. 
 - Establecer la codificación en **UTF-8** tiende a resolver la mayoría de estos problemas.
 <pre><code>
