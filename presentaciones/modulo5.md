@@ -189,13 +189,14 @@ Los métodos más comúnes que contiene son:
 - arrange #ordenar
  
 #### El ejemplo
-- 1. Primero haremos una selección del conjunto **iris**, quedando con sólo una selección de 15 registros. 
+1. Primero haremos una selección del conjunto **iris**, quedando con sólo una selección de 15 registros. 
 <pre><code>
 lirios <- iris[c(1:5,51:55,101:105),]
 lirios
 </code></pre>
 
-- 2. Probando el método **filter**
+2. Probando el método **filter**
+Hace selecciones de registros usando ciertos valores
 <pre><code>
 #todos los lirios de la especie setosa
 filter(lirios, Species=='setosa')
@@ -206,4 +207,23 @@ filter(lirios, Species=='setosa' | Species=='virginica')
 #los lirios de la especie setosa cuya longitud de sépalo es inferior a 5 mm.
 filter(lirios, Species=='setosa', Sepal.Length < 5)
 </code></pre>
+
+3. Probando el método **select()**
+Elige un subconjunto de las variables (columnas) del dataframe.
+
+<pre><code>
+# selecciona solo algunas columnas-variables
+select(lirios, Sepal.Length, Sepal.Width)
+
+# Seleccionando un rango de variables con ":". Selecciona todas las variables entre la longitud del pétalo y la del sépalo
+select(lirios, Petal.Length:Sepal.Length)
+
+# Selecciona todas las variables menos la especie:
+select(lirios, -Species)
+
+# Seleccionar las variables cuyo nombre contenga ciertos términos:
+select(lirios, contains('Petal'))
+</code></pre>
+
+
 
