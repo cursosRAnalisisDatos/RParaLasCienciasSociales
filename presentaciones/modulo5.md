@@ -270,7 +270,9 @@ lirios %>%
 </code></pre>
 
 7. group_by() + summarise()
+
 Se usa summarise() para aplicar funciones a columnas. Generalmente se usa en combinación con "group_by()" de manera que se calculen estadísticos para subgrupos de observaciones.<br>
+
 En el siguiente ejemplo se calcula la media de la longitud del pétalo para los lirios de cada una de las especies:
 <pre><code>
 lirios %>%
