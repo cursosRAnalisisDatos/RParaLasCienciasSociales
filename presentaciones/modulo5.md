@@ -225,5 +225,55 @@ select(lirios, -Species)
 select(lirios, contains('Petal'))
 </code></pre>
 
+4. El método ordenar: arrange()
+Ordena las filas de menor a mayor valor de la variable elegida.
+<pre><code>
+arrange(lirios, Sepal.Length)
+</code></pre>
 
+Con un "-" ordena de mayor a menor
+<pre><code>
+arrange(lirios, -Sepal.Length)
+</code></pre>
 
+Ordenamientos tomando en cuenta dos columnas o más
+<pre><code>
+arrange(lirios, Species, Sepal.Length)
+</code></pre>
+
+5. Sintáxis en cadena
+Primero se escribe el nombre del "dataframe" y luego las acciones en el orden en que se realizan separadas por el operador %>%(que podríamos leer como "luego"). <br>
+Por ejemplo, si queremos:
+i) seleccionar las variables que contienen las medidas del pétalo, 
+ii) seleccionar los lirios para los que la longitud del pétalo es mayor que 4 mm 
+iii) y ordenarlos de menor a mayor longitud del pétalo, 
+
+podemos escribir:
+
+<pre><code>
+lirios %>%
+  select(contains('Petal'))  %>%
+  filter(Petal.Length > 4)   %>%
+  arrange(Petal.Length)
+  
+# arrange(filter(select(lirios, contains('Petal')), Petal.Length > 4), Petal.Length) # es equivalente
+</code></pre>
+
+6. Añadir nuevas variables-columnas: mutate()
+
+<pre><code>
+lirios %>%
+  mutate(forma = Petal.Width/Petal.Length)
+
+#lirios <- lirios %>%
+#mutate(forma = ifelse(Petal.Width/Petal.Length < 0.3, "condición-TRUE", "condición-FALSE"))
+</code></pre>
+
+7. group_by() + summarise()
+Se usa summarise() para aplicar funciones a columnas. Generalmente se usa en combinación con "group_by()" de manera que se calculen estadísticos para subgrupos de observaciones.<br>
+En el siguiente ejemplo se calcula la media de la longitud del pétalo para los lirios de cada una de las especies:
+<pre><code>
+lirios %>%
+  group_by(Species) %>%
+  summarise(mean(Petal.Length))
+</code></pre>
