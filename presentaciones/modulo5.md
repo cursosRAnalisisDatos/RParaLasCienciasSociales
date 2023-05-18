@@ -178,3 +178,32 @@ Ejemplo:
 <pre><code>
   citation(package = "dplyr")
 </code></pre>
+
+#### Usando el paquete **dplyr**
+
+El paquete **dplyr** está construído con operaciones básicas de R, sin embargo provee métodos que hacen que usarlos se vuelva más intuitivo o que responda a sentencias de otros lenguajes de uso más general (como SQL).
+
+Los métodos más comúnes que contiene son:
+- filter
+- select
+- arrange #ordenar
+ 
+#### El ejemplo
+- 1. Primero haremos una selección del conjunto **iris**, quedando con sólo una selección de 15 registros. 
+<pre><code>
+lirios <- iris[c(1:5,51:55,101:105),]
+lirios
+</code></pre>
+
+- 2. Probando el método **filter**
+<pre><code>
+#todos los lirios de la especie setosa
+filter(lirios, Species=='setosa')
+
+#los lirios de la especie setosa o virginica
+filter(lirios, Species=='setosa' | Species=='virginica')
+
+#los lirios de la especie setosa cuya longitud de sépalo es inferior a 5 mm.
+filter(lirios, Species=='setosa', Sepal.Length < 5)
+</code></pre>
+
