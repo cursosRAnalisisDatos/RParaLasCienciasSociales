@@ -150,7 +150,7 @@ Para usar un paquete se usa la función
   
   Ejemplo:
   <pre><code>
-  install.packages(dplyr)# Instalando la librería dplyr
+  install.packages("dplyr")# Instalando la librería dplyr
 </code></pre>
 
 #### Nota importante con respecto a paquetes
