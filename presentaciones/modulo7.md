@@ -9,8 +9,7 @@ Una manera de saberlo es con la función **class**, pero quisiéramos aplicarlo 
 Sintáxis: apply( x, funcion ) #aplicado de esta manera es para columnas
 Regresa: una lista con el tipo de dato para cada columna
 </code></pre>
-
-Usaremos la función **lapply**.
+Ejemplo **lapply**.
 <pre><code>
 lapply(datosInegiConMunicipiosOrdenado, class)
 </code></pre>
