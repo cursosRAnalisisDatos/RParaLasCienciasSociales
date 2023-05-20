@@ -21,7 +21,7 @@ Y por último, pedimos un resumen de nuestros datos con la función **summary()*
 summary(datosInegiConMunicipiosOrdenado)
 </code></pre>
 
-<img src="../images/modulo6/salidaFuncionSummary.png" alt="proyecto R" width="800px"> 
+<img src="../images/modulo7/salidaFuncionSummary.png" alt="proyecto R" width="800px"> 
 
 La salida muestra:
 - mínimos y máximos en busca de outliers, 
