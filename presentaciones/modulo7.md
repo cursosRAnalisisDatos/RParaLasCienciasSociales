@@ -69,7 +69,10 @@ pl + geom_histogram()
 
 3. Mejoramos la visualización agregando más parámetros a la función *geom_histogram()*
 <pre><code>
-pl2 <- pl + geom_histogram(binwidth = 0.8, col='black', fill='green', alpha=0.4)
+pl2 <- pl + geom_histogram(binwidth = 0.8, #ancho de la barra 
+                                    col='black', #contorno de la barra
+                                    fill='green', #relleno de cada barra
+                                    alpha=0.4) #transparencia del color
 pl2
 </code></pre>
 
