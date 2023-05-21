@@ -54,8 +54,8 @@ prop.table(table(datosInegiConMunicipiosOrdenado$NOM_ENT))
 1. Creamos la variable **pl** correspondiente a la sintaxis básica en el paquete **ggplot2** para la creación de una gráfica.
 
 <pre><code>
-library(ggplot2)
 install.packages("ggplot2")
+library(ggplot2)
 colnames(datosInegiConMunicipiosOrdenado)
 head(datosInegiConMunicipiosOrdenado)
 pl <- ggplot(datosInegiConMunicipiosOrdenado, aes(x = EDAD))
