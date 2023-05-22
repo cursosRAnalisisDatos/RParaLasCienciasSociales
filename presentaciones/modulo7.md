@@ -132,4 +132,18 @@ df +guides(fill = guide_legend(title = "Por Municipio"),
 </code></pre>
 
 #### Posición de la leyenda
-La posición por defecto de la leyenda es la derecha, pero puedes cambiarla con el argumento **legend.position** de la función **theme** como en el ejemplo siguiente:
+La posición por defecto de la leyenda es la derecha, pero puedes cambiarla con el argumento **legend.position** de la función **theme**. 
+La modificación de estos componentes en la gráfica se puede realizar a mucho detalle, que vale la pena revisar el **help**.<br>
+
+Los argumentos válidos son:
+- "none" 
+- "left" 
+- "right" 
+- "bottom" 
+- "top"
+
+Ejemplo:
+<pre><code>
++ theme(legend.position = "left")
+</code></pre>
+
