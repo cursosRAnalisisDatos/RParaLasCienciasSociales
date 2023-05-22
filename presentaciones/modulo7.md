@@ -111,6 +111,8 @@ ggplot(df, aes(x = datosInegiConMunicipiosOrdenado$EDAD,
   geom_histogram()
 </code></pre>
 
+Nota: Ejercicio 1. 
+
 #### Modificando los parámetros a la función geom_histogram()
 
 - alpha = [0,1]. La transparencia del color
