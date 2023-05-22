@@ -85,6 +85,8 @@ pl2 + labs( title = "CENSO",
 </code></pre>
 
 ### Histogramas por grupos
+
+Ejemplo simple:
 <pre><code>
 set.seed(3)
 x1 <- rnorm(500)
@@ -98,4 +100,13 @@ df <- data.frame(x, group = grupo)
 <pre><code>
 ggplot(df, aes(x = x, fill = grupo)) + 
   geom_histogram()
- </code></pre>
+</code></pre>
+
+Ejemplo con datos del INEGI
+<pre><code>
+df <- data.frame(datosInegiConMunicipiosOrdenado, 
+                 group = datosInegiConMunicipiosOrdenado$NOM_ENT)
+ggplot(df, aes(x = datosInegiConMunicipiosOrdenado$EDAD, 
+               fill = datosInegiConMunicipiosOrdenado$NOM_ENT)) + 
+  geom_histogram()
+</code></pre>
