@@ -110,3 +110,10 @@ ggplot(df, aes(x = datosInegiConMunicipiosOrdenado$EDAD,
                fill = datosInegiConMunicipiosOrdenado$NOM_ENT)) + 
   geom_histogram()
 </code></pre>
+
+#### La leyenda de los valores categóricos (por grupos)
+El título de la leyenda es el nombre de la columna de la variable categórica del conjunto de datos. Puedes cambiarlo con los argumentos **fill** y/o **colour** de la función **guides**. 
+<pre><code>
+df +guides(fill = guide_legend(title = "Por Municipio"),
+         colour = guide_legend(title = "Por Municipio"))
+</code></pre>
