@@ -111,6 +111,15 @@ ggplot(df, aes(x = datosInegiConMunicipiosOrdenado$EDAD,
   geom_histogram()
 </code></pre>
 
+#### Modificando los parámetros a la función geom_histogram()
+
+- alpha = [0,1]. La transparencia del color
+- position = {"stack", "identity"}. Posición de las barras
+- binwidth. Ancho de las barras
+
+NOTA: Probar una por una, para notar los cambios, para diferentes parámetros de cada argumento
+geom_histogram(alpha = 0.5, position="identity", binwidth = 1.5 )
+
 #### La leyenda de los valores categóricos (por grupos)
 El título de la leyenda es el nombre de la columna de la variable categórica del conjunto de datos. Puedes cambiarlo con los argumentos **fill** y/o **colour** de la función **guides**. 
 <pre><code>
