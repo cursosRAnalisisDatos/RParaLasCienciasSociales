@@ -1,6 +1,5 @@
 ### 7.1 Conociendo el tipo de datos que tenemos en nuestro dataframe
-Conocer el tipo de datos de nuestro marco de datos (o la estructura de datos que estemos trabajando) es importante pues eso nos permitirá saber qué análisis
-se puede realizar sobre ella, pues están determinadas si el dato representa relaciones cualitativas o cuantitativas.
+Conocer el tipo de datos de nuestro marco de datos (o la estructura de datos que estemos trabajando) es importante pues eso nos permitirá saber qué análisis se puede realizar sobre ella, pues están determinadas si el dato representa relaciones cualitativas o cuantitativas.
 
 Una manera de saberlo es con la función **class**, pero quisiéramos aplicarlo de manera automática a todas las columnas.
 
@@ -131,3 +130,6 @@ El título de la leyenda es el nombre de la columna de la variable categórica d
 df +guides(fill = guide_legend(title = "Por Municipio"),
          colour = guide_legend(title = "Por Municipio"))
 </code></pre>
+
+#### Posición de la leyenda
+La posición por defecto de la leyenda es la derecha, pero puedes cambiarla con el argumento **legend.position** de la función **theme** como en el ejemplo siguiente:
