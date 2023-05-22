@@ -1,9 +1,9 @@
 ### Prerrequisitos: Tener cargado el dataframe: datosInegiConMunicipiosOrdenado
-# Tomando el ejemplo de Histogramas por Grupo, que agrupa por el Nombre de la 
-# entidad ($NOM_ENT),
+#
 
 # -----------------------------------------------------------------------------------
-# Ejercicio1: Imítalo, y ahora agrupa por SEXO y vuelve a graficar
+# Ejercicio1: Tomando el ejemplo de Histogramas por Grupo, que agrupa por el Nombre de la 
+# entidad ($NOM_ENT). Imítalo, y ahora agrupa por SEXO y vuelve a graficar
 
 df <- data.frame(datosInegiConMunicipiosOrdenado, 
                  group = datosInegiConMunicipiosOrdenado$SEXO)
