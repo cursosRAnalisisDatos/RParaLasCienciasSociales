@@ -112,7 +112,54 @@ ggplot(df, aes(x = datosInegiConMunicipiosOrdenado$EDAD,
 
 Nota: Ejercicio 1. 
 
-#### Modificando los colores 
+### Personalizando la gráfica
+Con este paquete se puede personalizar a gran detalle cada una de las gráficas, en esta sección vamos a explorar algunas de las opciones disponibles.
+
+#### Modificando los colores
+
+##### Personalizando el color del borde
+
+Si estableces **fill** dentro de **aes** pero no **colour** puedes cambiar el color del borde para todos los histogramas así como el ancho y tipo de línea con los argumentos de **geom_histogram**.
+
+<pre><code>
+ggplot(df, aes(x = datosInegiConMunicipiosOrdenado$EDAD, 
+               fill = datosInegiConMunicipiosOrdenado$NOM_ENT)) + 
+              geom_histogram(colour = "black",
+                                lwd = 0.75,
+                                linetype = 1,
+                                position = "identity")
+</code></pre>
+
+###### Personalizando el color de fondo
+Si estableces **colour** pero no **fill** puedes cambiar el color de fondo de todos los histogramas con el argumento **fill** de **geom_histogram**.
+
+<pre><code>
+ggplot(df, aes(x = datosInegiConMunicipiosOrdenado$EDAD, 
+               colour = datosInegiConMunicipiosOrdenado$SEXO_CHAR)) + 
+  geom_histogram(fill  = "white",
+                 position = "identity")
+</code></pre>
+Nota: Asegurarse que el argumento activo de **aes** es **colour**
+
+##### Personalizando el color del borde para cada grupo
+
+El color de los bordes se puede personalizar para cada histograma con **scale_color_manual**. Si quieres usar una paleta predefinina puedes usar, por ejemplo, **scale_color_brewer**.
+
+<pre><code>
+ geom_histogram(fill  = "white",
+                 position = "identity") +
+  scale_color_manual(values = c("blue", "orange"))
+</code></pre>
+
+#### Colores predefinidos en R
+
+Existen diferentes formas de especificar un color en R: 
+- Usando números del 1 al 8, e.g. col = 1 
+- Especificando el nombre del color, e.g. col = "blue" 
+- El valor HEX del color, e.g. col = "#0000FF"
+- El valor RGB, haciendo uso de la función rgb, e.g. col = rgb(0, 0, 1). Esta última función también te permitirá cambiar la transparencia del color en caso de ser necesario, con el argumento alpha, que toma valores desde 0 (completamente transparente) hasta 1.
+
+https://r-charts.com/es/colores/
 
 #### Modificando los parámetros a la función geom_histogram()
 
@@ -121,7 +168,6 @@ Nota: Ejercicio 1.
 - binwidth. Ancho de las barras
 
 NOTA: Probar una por una, para notar los cambios, para diferentes parámetros de cada argumento
-
 
 <pre><code>
 geom_histogram(alpha = 0.5, position = "identity")
