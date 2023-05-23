@@ -112,16 +112,21 @@ ggplot(df, aes(x = datosInegiConMunicipiosOrdenado$EDAD,
 
 Nota: Ejercicio 1. 
 
+#### Modificando los colores 
+
 #### Modificando los parámetros a la función geom_histogram()
 
 - alpha = [0,1]. La transparencia del color
-- position = {"stack", "identity"}. Posición de las barras
+- position = {"stack", "identity", "dodge"}. Posición de las barras
 - binwidth. Ancho de las barras
 
 NOTA: Probar una por una, para notar los cambios, para diferentes parámetros de cada argumento
 
+
 <pre><code>
-geom_histogram(alpha = 0.5, position="identity", binwidth = 1.5 )
+geom_histogram(alpha = 0.5, position = "identity")
+#geom_histogram(alpha = 0.5, position="identity", binwidth = 1.5 ) #Ejemplo para probar
+#geom_histogram(alpha = 0.5, position = "dodge") #Ejemplo para probar
 </code></pre>
 
 #### La leyenda de los valores categóricos (por grupos)
