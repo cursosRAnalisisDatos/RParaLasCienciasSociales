@@ -130,7 +130,7 @@ ggplot(df, aes(x = datosInegiConMunicipiosOrdenado$EDAD,
                                 position = "identity")
 </code></pre>
 
-###### Personalizando el color de fondo
+##### Personalizando el color de fondo
 Si estableces **colour** pero no **fill** puedes cambiar el color de fondo de todos los histogramas con el argumento **fill** de **geom_histogram**.
 
 <pre><code>
@@ -151,7 +151,18 @@ El color de los bordes se puede personalizar para cada histograma con **scale_co
   scale_color_manual(values = c("blue", "orange"))
 </code></pre>
 
-#### Colores predefinidos en R
+##### Personalizando el color de fondo para cada grupo
+De manera similar a personalizar los colores de los bordes, los colores de fondo se pueden cambiar con **scale_fill_manual** o una función equivalente.
+<pre><code>
+ggplot(df, aes(x = datosInegiConMunicipiosOrdenado$EDAD, 
+               fill = datosInegiConMunicipiosOrdenado$SEXO_CHAR)) +
+geom_histogram(color = 1, alpha = 0.75,
+                 position = "identity") +
+ scale_fill_manual(values = c("#8795E8", "#FF6AD5"))
+</code></pre>
+Nota: Asegurarse que el campo activo para **aes** es **fill**
+
+##### Colores predefinidos en R
 
 Existen diferentes formas de especificar un color en R: 
 - Usando números del 1 al 8, e.g. col = 1 
