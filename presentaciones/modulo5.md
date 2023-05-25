@@ -244,10 +244,11 @@ arrange(lirios, Species, Sepal.Length)
 5. **Sintáxis en cadena**
 
 Primero se escribe el nombre del "dataframe" y luego las acciones en el orden en que se realizan separadas por el operador %>%(que podríamos leer como "luego"). <br>
+
 Por ejemplo, si queremos:
-i) seleccionar las variables que contienen las medidas del pétalo, 
-ii) seleccionar los lirios para los que la longitud del pétalo es mayor que 4 mm 
-iii) y ordenarlos de menor a mayor longitud del pétalo, 
+- i) seleccionar las variables que contienen las medidas del pétalo, 
+- ii) seleccionar los lirios para los que la longitud del pétalo es mayor que 4 mm 
+- iii) y ordenarlos de menor a mayor longitud del pétalo, 
 
 podemos escribir:
 
