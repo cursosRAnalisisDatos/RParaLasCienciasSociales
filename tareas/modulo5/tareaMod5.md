@@ -7,14 +7,16 @@ https://www.inegi.org.mx/programas/ccpv/2020/?ps=microdatos
 
 Hemos seleccionado 2 archivos.
 
-A) Uno es un extracto del Censo-Personas-2020  (MuestraInegi-2020-personas.csv)<br>
+A) Uno es un extracto del Censo-Personas-2020  (**MuestraInegi-2020-personas.csv**)<br>
 https://www.inegi.org.mx/contenidos/programas/ccpv/2020/microdatos/Censo2020_CPV_CB_Personas_ejemplo_csv.zip
 
-B) Otro es el archivo correspondiente a los municipios y sus claves  (MUN.csv)<br>
+B) Otro es el archivo correspondiente a los municipios y sus claves  (**MUN.csv**)<br>
 https://www.inegi.org.mx/contenidos/programas/ccpv/2020/microdatos/Censo2020_clasificaciones_CPV_csv.zip
 (Archivo: MUN.csv)<br>
 
-NOTA: Al ser un archivo real, puedes encontrar valores numéricos muy grandes, y el visualizador de RStudio los va a meter en un código para desplegarlos, si necesitas explorarlos, tal vez convenga usar otro editor de texto. También recuerda que si fuera necesario, puedes recortar estos valores quedándote con las cifras más significativas.<br>
+NOTA 1: Al ser un archivo real, puedes encontrar valores numéricos muy grandes, y el visualizador de RStudio los va a meter en un código para desplegarlos, si necesitas explorarlos, tal vez convenga usar otro editor de texto. También recuerda que si fuera necesario, puedes recortar estos valores quedándote con las cifras más significativas.<br>
+
+NOTA 2: Trabajo sólo con los archivos **MuestraInegi-2020-personas.csv** y **MUN.csv**, no trabajes con el original, pues es un archivo muy grande y la computadora puede o colapsar o tardarse mucho, además que necesitamos uniformizar los resultados entre cada participante del curso.
 
 A partir de ellos, da respuesta a las siguientes preguntas:
 1. ¿Cuántas religiones hay?
