@@ -83,6 +83,14 @@ pl2 + labs( title = "CENSO",
             subtitle = "Edad")
 </code></pre>
 
+#### Dibujando la gráfica de otra manera
+Otra manera de rellenar las barras del histograma en función del número de apariciones es usando **..count..** en los aesthetics de **geom_histogram()**
+<pre><code>
+pl2 <- pl + geom_histogram(binwidth = 0.8, #ancho de la barra 
+                           aes(fill=..count..),
+                           col="black") #transparencia del color
+</code></pre>
+
 ### Histogramas por grupos
 
 Ejemplo simple:
