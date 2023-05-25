@@ -162,7 +162,7 @@ geom_histogram(color = 1, alpha = 0.75,
 </code></pre>
 Nota: Asegurarse que el campo activo para **aes** es **fill**
 
-##### Colores predefinidos en R
+#### Colores predefinidos en R
 
 Existen diferentes formas de especificar un color en R: 
 - Usando números del 1 al 8, e.g. col = 1 
