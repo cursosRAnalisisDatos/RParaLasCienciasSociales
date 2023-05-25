@@ -241,7 +241,8 @@ Ordenamientos tomando en cuenta dos columnas o más
 arrange(lirios, Species, Sepal.Length)
 </code></pre>
 
-5. Sintáxis en cadena
+5. **Sintáxis en cadena**
+
 Primero se escribe el nombre del "dataframe" y luego las acciones en el orden en que se realizan separadas por el operador %>%(que podríamos leer como "luego"). <br>
 Por ejemplo, si queremos:
 i) seleccionar las variables que contienen las medidas del pétalo, 
