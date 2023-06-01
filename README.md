@@ -35,4 +35,5 @@ El curso está pensado para profesionistas y alumnos de los últimos semestres d
 8. [Análisis de una base de datos real (INEGI, BM, ONU, etc)](presentaciones/modulo8.md)
 
 [Bibliografía](presentaciones/bibliografia.md)
+
 [Temas extras](presentaciones/extras.md)
