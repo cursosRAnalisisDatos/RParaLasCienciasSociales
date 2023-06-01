@@ -202,9 +202,26 @@ ggplot(datosInegiConMunicipiosOrdenado, aes(y = EDAD, x = grupoSexo, fill = grup
        subtitle = 'Box Plot by sexo and by escolaridad')
 </code></pre>
 
+#### 
+Otro ejemplo con gapminder
+<pre><code>
+ggplot(data = gapminder, aes(y = lifeExp, x = country )) +
+</code></pre>
+  geom_boxplot() 
+</code></pre>
+
+#### 
+Con color y leyendas
+<pre><code>
+ggplot(gapminder, aes(y=lifeExp, x=country, fill=continent)) +
+  geom_boxplot() +
+  labs(x="País", y="Esperanza de vida", fill="Continente")   # título, ejes y leyenda
+</code></pre>
+
 ### Gráficas de Violin (Violin plot)
 
 Es una variante del gráfico de caja que muestra de una forma mas clara la distribución de los datos en cuanto al sesgo de la distribución de frecuencias.
+<pre><code>
 
 <pre><code>
 ggplot(datosInegiConMunicipiosOrdenado, 
