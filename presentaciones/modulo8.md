@@ -186,7 +186,11 @@ ggplot(datosInegiConMunicipiosOrdenado,
        subtitle = 'Box Plot by sexo and by escolaridad')
 </code></pre>
 
-Una característica interesante de **ggplot** es que también podemos agregar elementos gráficos que se computan por medio de estadísticos. Supongamos que queremos agregar un punto en cada caja que represente el promedio por grupo. Esto se logra con el elemento **stat_summary()**
+#### Más detalles a la gráfica
+
+Una característica interesante de **ggplot** es que también podemos agregar elementos gráficos que se calculan por medio de estadísticos.<br> 
+Supongamos que queremos agregar un punto en cada caja que represente el **promedio por grupo**. <br>
+Esto se logra con el elemento **stat_summary()**<br>
 
 <pre><code>
 ggplot(datosInegiConMunicipiosOrdenado, aes(y = EDAD, x = grupoSexo, fill = grupoSexo)) +
