@@ -118,6 +118,26 @@ p = ggplot(data = aa, aes(y = lifeExp, x = year )) +
 p
 </code></pre>
 
+#### Añadimos color
+<pre><code>
+p = ggplot(aa, aes(y = lifeExp, x = year , color=gdpPercap)) +
+  geom_point()
+p
+</code></pre>
+
+#### Suavizados (geom_smooth())
+El **geom_smooth()** añade una aproximación de los datos **x** e **y**, e incluye una cinta con el margen de confianza.
+<pre><code>
+p +  geom_smooth() 
+</code></pre>
+
+#### Texto (geom_text())
+Podemos añadir unas etiquetas a los puntos del gráfico de dispersión con el objeto **geom_text()**.
+<pre><code>
+p +  geom_smooth() + 
+geom_text(aes(label=country))
+</code></pre>
+
 ### Gráficas de cajas (Box Plots)
 La gráfica de cajas es otra forma de visualizar la distribución de los datos. 
 La geometría que la define es *geom_boxplot()* y son muy buenas para visualizar la dispersión por grupos de datos.
