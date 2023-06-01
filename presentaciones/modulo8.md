@@ -210,12 +210,19 @@ ggplot(data = gapminder, aes(y = lifeExp, x = country )) +
   geom_boxplot() 
 </code></pre>
 
-#### 
-Con color y leyendas
+#### Con color y leyendas
 <pre><code>
 ggplot(gapminder, aes(y=lifeExp, x=country, fill=continent)) +
   geom_boxplot() +
   labs(x="País", y="Esperanza de vida", fill="Continente")   # título, ejes y leyenda
+</code></pre>
+
+#### Añadir estadísticas que nos puedan interesar
+<pre><code>
+ggplot(gapminder, aes(y=lifeExp, x=continent, fill=continent)) +
+  geom_boxplot() +
+  labs(x="Continente", y="Esperanza de vida", fill="Continente") +  
+  geom_point(stat= "summary", fun.y=mean, shape=16, size=4, color="red")
 </code></pre>
 
 ### Gráficas de Violin (Violin plot)
@@ -223,7 +230,7 @@ ggplot(gapminder, aes(y=lifeExp, x=country, fill=continent)) +
 Es una variante del gráfico de caja que muestra de una forma mas clara la distribución de los datos en cuanto al sesgo de la distribución de frecuencias.
 <pre><code>
 
-<pre><code>
+<pre><code> 
 ggplot(datosInegiConMunicipiosOrdenado, 
        aes(y = EDAD, x = grupoSexo, fill = grupoSexo)) +
        geom_violin()
