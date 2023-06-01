@@ -225,6 +225,15 @@ ggplot(gapminder, aes(y=lifeExp, x=continent, fill=continent)) +
   geom_point(stat= "summary", fun.y=mean, shape=16, size=4, color="red")
 </code></pre>
 
+#### Podemos cambiar los ejes
+<pre><code>
+ggplot(gapminder, aes(y=lifeExp, x=continent, fill=continent)) +
+  geom_boxplot() +
+  labs(x="Continente", y="Esperanza de vida", fill="Continente") +  
+  geom_point(stat= "summary", fun.y=mean, shape=16, size=4, color="red") +
+  coord_flip()
+</code></pre>
+
 ### Gráficas de Violin (Violin plot)
 
 Es una variante del gráfico de caja que muestra de una forma mas clara la distribución de los datos en cuanto al sesgo de la distribución de frecuencias.
