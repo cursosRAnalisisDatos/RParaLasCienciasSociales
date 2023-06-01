@@ -97,6 +97,27 @@ ggplot(datosInegiConMunicipiosOrdenado, aes(x = EDAD, fill = grupoSexo)) +
        subtitle = 'Density Plot by SEXO')
 </code></pre>
 
+### Gráficos de dispersion o *geom_point*
+Veamos cómo ha evolucionado la esperanza de vida en Europa
+
+<pre><code>
+if(!require(gapminder)) {
+  install.packages("gapminder")
+  library(gapminder)} 
+df <- gapminder
+head(df)
+ncol(df)
+nrow(df)
+citation("gapminder")
+</code></pre>
+
+<pre><code>
+aa <- filter(gapminder, continent == "Europe") 
+p = ggplot(data = aa, aes(y = lifeExp, x = year )) +
+  geom_point()
+p
+</code></pre>
+
 ### Gráficas de cajas (Box Plots)
 La gráfica de cajas es otra forma de visualizar la distribución de los datos. 
 La geometría que la define es *geom_boxplot()* y son muy buenas para visualizar la dispersión por grupos de datos.
