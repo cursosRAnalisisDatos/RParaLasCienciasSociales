@@ -138,6 +138,30 @@ p +  geom_smooth() +
 geom_text(aes(label=country))
 </code></pre>
 
+### Gráficos de lineas (geom_line())
+Para hacer un gráfico de líneas usaremos una sintaxis muy parecida, pero tendremos que tener en cuenta que R va hacer una línea de punto a punto
+<pre><code>
+bb <- gapminder %>% filter(country == "Spain")
+p = ggplot(data = bb, aes(y = lifeExp, x = year )) +
+  geom_line()
+p
+</code></pre>
+
+#### Haciendo agrupaciones por países
+Si queremos graficar todos los valores del año, podemos darle un color para que nos separe por países por ejemplo:
+<pre><code>
+cc <- gapminder %>% filter(continent == "Oceania")
+ggplot(data = cc, aes(y = lifeExp, x = year ,color=country)) +
+  geom_line() +
+  geom_point()
+</code></pre>
+
+#### Separando en diferentes figuras:
+<pre><code>
+ggplot(data = cc, aes(y = lifeExp, x = year )) +
+  geom_line() + facet_wrap(~country)
+</code></pre>
+
 ### Gráficas de cajas (Box Plots)
 La gráfica de cajas es otra forma de visualizar la distribución de los datos. 
 La geometría que la define es *geom_boxplot()* y son muy buenas para visualizar la dispersión por grupos de datos.
