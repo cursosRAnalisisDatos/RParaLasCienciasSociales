@@ -237,7 +237,8 @@ ggplot(gapminder, aes(y=lifeExp, x=continent, fill=continent)) +
 ### Gráficas de Violin (Violin plot)
 
 Es una variante del gráfico de caja que muestra de una forma mas clara la distribución de los datos en cuanto al sesgo de la distribución de frecuencias.
-<pre><code>
+
+https://datavizcatalogue.com/ES/metodos/diagrama_de_violin.html
 
 <pre><code> 
 ggplot(datosInegiConMunicipiosOrdenado, 
