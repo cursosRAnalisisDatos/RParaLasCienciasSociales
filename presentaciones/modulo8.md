@@ -177,7 +177,8 @@ Supongamos que queremos ver las diferencias entre la escolaridad, el sexo y la e
 <pre><code>
 unique( datosInegiConMunicipiosOrdenado$ESCOLARI) 
 colnames(datosInegiConMunicipiosOrdenado)
-ggplot(datosInegiConMunicipiosOrdenado, aes(y = EDAD, x = grupoSexo, fill = grupoSexo)) +
+ggplot(datosInegiConMunicipiosOrdenado, 
+       aes(y = EDAD, x = SEXO, fill = factor(SEXO))) +
   geom_boxplot() +
   facet_wrap(~ESCOLARI, scales = 'free', nrow = 2) +
   theme(legend.position = 'none') +
