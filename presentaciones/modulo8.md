@@ -206,8 +206,7 @@ ggplot(datosInegiConMunicipiosOrdenado, aes(y = EDAD, x = grupoSexo, fill = grup
 Otro ejemplo con gapminder
 <pre><code>
 ggplot(data = gapminder, aes(y = lifeExp, x = country )) +
-</code></pre>
-  geom_boxplot() 
+geom_boxplot() 
 </code></pre>
 
 #### Con color y leyendas
