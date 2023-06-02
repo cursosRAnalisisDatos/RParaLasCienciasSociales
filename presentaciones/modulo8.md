@@ -221,7 +221,7 @@ ggplot(gapminder, aes(y=lifeExp, x=country, fill=continent)) +
 ggplot(gapminder, aes(y=lifeExp, x=continent, fill=continent)) +
   geom_boxplot() +
   labs(x="Continente", y="Esperanza de vida", fill="Continente") +  
-  geom_point(stat= "summary", fun.y=mean, shape=16, size=4, color="red")
+  geom_point(stat= "summary", fun="mean", shape=16, size=4, color="red") +
 </code></pre>
 
 #### Podemos cambiar los ejes
@@ -229,9 +229,9 @@ ggplot(gapminder, aes(y=lifeExp, x=continent, fill=continent)) +
 ggplot(gapminder, aes(y=lifeExp, x=continent, fill=continent)) +
   geom_boxplot() +
   labs(x="Continente", y="Esperanza de vida", fill="Continente") +  
-  geom_point(stat= "summary", fun.y=mean, shape=16, size=4, color="red") +
+  geom_point(stat= "summary", fun="mean", shape=16, size=4, color="red") +
   coord_flip()
-</code></pre>
+ </code></pre>
 
 ### Gráficas de Violin (Violin plot)
 
