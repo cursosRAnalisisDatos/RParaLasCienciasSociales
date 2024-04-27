@@ -11,7 +11,7 @@ logo: ../images/logoIIEc.jpg
 
 # Módulo 1. Introducción a R
 
-## Creando el ambiente de trabajo con R.
+## 1.1 Creando el ambiente de trabajo con R.
 ### El proyecto que le da soporte y descarga
 
 [https://cran.r-project.org/](https://cran.r-project.org/)
@@ -27,7 +27,7 @@ logo: ../images/logoIIEc.jpg
 ### Aceptando las opciones por omisión
 <img src="../images/modulo1/instalandoROpcionesOmision.jpeg" alt="proyecto R" width="800px"> 
 
-## Ejecutar R
+## 1.2 Ejecutar R
 <p style = 'text-align:center;'>
 <TABLE style="margin: 10 auto;">
     <TR>
@@ -44,7 +44,7 @@ logo: ../images/logoIIEc.jpg
 ### Usando la consola de R
 <img src="../images/modulo1/usandoLaConsolaR.jpeg" alt="proyecto R" width="800px"> 
 
-## RStudio
+## 1.3 RStudio
 
 R al igual que otros lenguajes de programación se desarrolla o se extiende
 a través de funciones escritas por el usuario. Un entorno de desarrollo
@@ -80,7 +80,7 @@ RStudio consta de 4 ventanas en su ambiente de trabajo:
   
 4. Ventana 4. La consola. Corresponde a lo que sería el programa de R en su versión básica. Allí el software ejecuta las operaciones realizadas desde el editor de sintáxis.
 
-### Paquetes en R  
+### 1.4 Paquetes en R  
 
 _Un paquete (package) es una colección de funciones, datos y código R que se almacenan en una carpeta conforme a una estructura bien definida, fácilmente accesible para R._
  
