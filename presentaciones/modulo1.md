@@ -9,25 +9,25 @@ output: ioslides_presentation
 logo: ../images/logoIIEc.jpg
 ---
 
-## Módulo 1. Introducción a R
+# Módulo 1. Introducción a R
 
-### Creando el ambiente de trabajo con R.
-#### El proyecto que le da soporte y descarga
+## Creando el ambiente de trabajo con R.
+### El proyecto que le da soporte y descarga
 
 [https://cran.r-project.org/](https://cran.r-project.org/)
 
 <img src="../images/modulo1/proyectoR.png" alt="proyecto R" width="800px"> 
 
-#### Bajando el archivo ejecutable
+### Bajando el archivo ejecutable
 <img src="../images/modulo1/instalandoR.png" alt="proyecto R" width="800px"> 
 
-#### Aceptar la licencia
+### Aceptar la licencia
 <img src="../images/modulo1/instalandoROK.jpeg" alt="proyecto R" width="800px"> 
 
-##### Aceptando las opciones por omisión
+### Aceptando las opciones por omisión
 <img src="../images/modulo1/instalandoROpcionesOmision.jpeg" alt="proyecto R" width="800px"> 
 
-### Ejecutar R
+## Ejecutar R
 <p style = 'text-align:center;'>
 <TABLE style="margin: 10 auto;">
     <TR>
@@ -44,26 +44,26 @@ logo: ../images/logoIIEc.jpg
 ### Usando la consola de R
 <img src="../images/modulo1/usandoLaConsolaR.jpeg" alt="proyecto R" width="800px"> 
 
-### RStudio. Es un IDE
+## RStudio
 
 R al igual que otros lenguajes de programación se desarrolla o se extiende
 a través de funciones escritas por el usuario. Un entorno de desarrollo
-integrado o entorno de desarrollo interactivo, tal como RStudio, esta
+integrado (IDE) o entorno de desarrollo interactivo, tal como RStudio, esta
 diseñado para facilitar este trabajo. Diferente a otros paquetes de software
 estadı́stico en que en la interfaz gráfica es el principal canal de interacción
 entre el usuario y el programa en R se interactua principalmente con la
 linea de comandos.
 
-#### RStudio. IDE disponible en línea 
+### RStudio. IDE disponible en línea 
 <img src="../images/modulo1/RStudio.png" alt="proyecto R" width="800px"> 
 
-#### RStudio selección por sistema operativo
+### RStudio selección por sistema operativo
 <img src="../images/modulo1/RStudioSeleccion.png" alt="proyecto R" width="800px"> 
 
-#### RStudio ambiente de trabajo
+### RStudio ambiente de trabajo
 <img src="../images/modulo1/RStudioVentanas.png" alt="proyecto R" width="800px"> 
 
-#### RStudio ventanas del ambiente de trabajo
+### RStudio ventanas del ambiente de trabajo
 RStudio consta de 4 ventanas en su ambiente de trabajo:
 
 1. Ventana 1. Editor de sintáxis: es el lugar donde se edita la sintaxis para posteriormente ejecutarla. Es necesario usar el botón de "Run" para que las líneas se ejecuten.
