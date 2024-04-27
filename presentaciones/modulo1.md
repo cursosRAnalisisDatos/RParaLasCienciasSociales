@@ -84,19 +84,3 @@ RStudio consta de 4 ventanas en su ambiente de trabajo:
 4. Ventana 4. La consola. Corresponde a lo que sería el programa de R en su versión básica. Allí el software ejecuta las operaciones realizadas desde el editor de sintáxis.
 <img src="../images/modulo1/RStudioVentana4.png" alt="proyecto R" width="500px">
 
-### 1.4 Paquetes en R  
-
-_Un paquete (package) es una colección de funciones, datos y código R que se almacenan en una carpeta conforme a una estructura bien definida, fácilmente accesible para R._
- 
-Los paquetes los podemos encontrar en: <https://r-pkgs.org/>
-
-<TABLE style="margin: 0 auto;">
-    <TR>
-    <TD> 
-      <img src="../images/motivacion/rPackages.png" alt="Big Data en R" width="200px"> 
-    </TD>
-    <TD> 
-      <img src="../images/motivacion/noPaquetesR.png" alt="Big Data en R" width="500px"> 
-    </TD>
-    </TR>
-</TABLE>
