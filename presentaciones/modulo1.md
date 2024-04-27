@@ -67,19 +67,22 @@ linea de comandos.
 RStudio consta de 4 ventanas en su ambiente de trabajo:
 
 1. Ventana 1. Editor de sintáxis: es el lugar donde se edita la sintaxis para posteriormente ejecutarla. Es necesario usar el botón de "Run" para que las líneas se ejecuten.
-<img src="../images/modulo1/RStudioVentana1.png" alt="proyecto R" width="800px"> 
+<img src="../images/modulo1/RStudioVentana1.png" alt="proyecto R" width="500px"> 
 
 2. Ventana 2. Es el "entorno de trabajo" del programa, ahí se muestran el conjunto de datos y los objetos ( resultados, variantes, gráficos, etc) que se almacenan al ejecutar diferentes análisis.
+<img src="../images/modulo1/RStudioVentana2.png" alt="proyecto R" width="500px"> 
 
-4. Ventana 3. Tiene varias sub pestañas:
+3. Ventana 3. Tiene varias sub pestañas:
 
   - Files. Permite ver el historial de archivos trabajados en el programa
   - Plots. Permite visualizar los gráficos que se generan
   - Packages. Permite ver los paquetes descargados y guardados en el disco duro así como gestionar su instalación o actualización.
   - help. Permite acceder al CRAN -siempre que se cuente con conexión a internet-, página oficial del software que ofrece diferentes recursos para el programa: manuales para el usuario, cursos on line, información general, descarga de paquetes, información de los paquetes instalados, etc. Esta última pestaña es bastante útil: empleando el motor de búsqueda se accede de manera rápida a manuales de uso de diferentes paquetes instalados en la computadora (sin conexión a internet).
   - Viewer. Muestra los resultados al construir reportes mediante funcionalidades tipo "rmarkdown".
+<img src="../images/modulo1/RStudioVentana3.png" alt="proyecto R" width="500px"> 
   
 4. Ventana 4. La consola. Corresponde a lo que sería el programa de R en su versión básica. Allí el software ejecuta las operaciones realizadas desde el editor de sintáxis.
+<img src="../images/modulo1/RStudioVentana4.png" alt="proyecto R" width="500px">
 
 ### 1.4 Paquetes en R  
 
