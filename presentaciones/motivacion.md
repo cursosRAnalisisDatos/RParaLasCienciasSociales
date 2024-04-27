@@ -9,7 +9,7 @@ output: ioslides_presentation
 logo: logoIIEc.jpg
 ---
 
-## Motivación para tomar un curso de análisis de datos
+## I. Motivación para tomar un curso de análisis de datos
 
 Desde hace muchos años la interacción continua con dispositivos electrónicos ha ocasionado la generación constante de datos.
 <TABLE style="margin: 0 auto;">
@@ -73,7 +73,7 @@ Aprender un lenguaje de programación de propósito general nos permitirá conoc
 Acostumbrar a nuestra mente a pensar de la manera que el lenguaje estructura la solución a problemas.
 Y sobretodo tener acceso a los diversos paquetes desarrollados para el lenguaje.
 
-## Motivación para tomar un curso de R
+## II. Motivación para tomar un curso de R
 
 - R es un lenguaje de programación de propósito específico, está más enfocado a modelos estadísticos y gráficos (*R Core Team and the R Foundation for Statistical Computing*), pero con el paso del tiempo parece que se convertirá en lenguaje de propósito general.
 - R es usado entre gente que hace minería de datos, bioinformáticos, estadísticos, y desarrolladores de aplicaciones estadísticas, entre otros.
@@ -99,12 +99,12 @@ Los paquetes los podemos encontrar en: <https://r-pkgs.org/>
     </TR>
 </TABLE>
  
-## Objetivo del curso de R
+## III. Objetivo del curso de R
 
 Los asistentes aprenderán los principales conceptos del lenguaje de programación
 R y adquirirán las habilidades y las herramientas básicas para el análisis de datos.
 
-## Los contenidos del curso de una manera general
+## III. Los contenidos del curso de una manera general
 
 - La instalación e iteracción con el entorno de desarrollo de R y RStudio
 - Conociendo las variables y las funciones en R
@@ -115,7 +115,7 @@ R y adquirirán las habilidades y las herramientas básicas para el análisis de
 - Estructuras de control básicas
 - Análisis con datos reales (INEGI, BM, ONU, etc)
 
-## Las habilidades que van a adquirir los participantes
+## IV. Las habilidades que van a adquirir los participantes
 
 Al finalizar el curso los alumnos serán capaces de identificar las principales
 características de R y sus distintos usos. 
@@ -124,7 +124,7 @@ Así como también, serán capaces de manipular, editar y realizar análisis bá
 
 Finalmente, los asistentes tendrán un acercamiento a los principales ciclos de programación para automatizar algunas tareas.
 
-## Aplicaciones en el mercado laboral o académico
+## V. Aplicaciones en el mercado laboral o académico
 
 ### Big Data
 
