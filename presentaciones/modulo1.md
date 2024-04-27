@@ -67,10 +67,11 @@ linea de comandos.
 RStudio consta de 4 ventanas en su ambiente de trabajo:
 
 1. Ventana 1. Editor de sintáxis: es el lugar donde se edita la sintaxis para posteriormente ejecutarla. Es necesario usar el botón de "Run" para que las líneas se ejecuten.
+<img src="../images/modulo1/RStudioVentana1.png" alt="proyecto R" width="800px"> 
 
 2. Ventana 2. Es el "entorno de trabajo" del programa, ahí se muestran el conjunto de datos y los objetos ( resultados, variantes, gráficos, etc) que se almacenan al ejecutar diferentes análisis.
 
-3. Ventana 3. Tiene varias sub pestañas:
+4. Ventana 3. Tiene varias sub pestañas:
 
   - Files. Permite ver el historial de archivos trabajados en el programa
   - Plots. Permite visualizar los gráficos que se generan
