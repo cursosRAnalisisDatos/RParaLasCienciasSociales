@@ -72,7 +72,7 @@ setwd("C:\otro_directorio") #para modificar el directorio de trabajo
 Ejemplos (en ambos ejemplos se asume que existen dichos subdirectorios):
 <pre><code>
 #en Windows
-setwd("C:/Users/UsuariO/Desktop/cursoRParaLasCienciasSociales/sesion1")
+setwd("C:\Users\Usuario\Desktop\cursoRParaLasCienciasSociales\sesion1")
 #en Mac
 setwd ("/Users/virg/Documents/Desarrollo/DarVi-Analytics/")
 #en Ubuntu 
