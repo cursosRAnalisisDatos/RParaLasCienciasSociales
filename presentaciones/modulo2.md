@@ -83,7 +83,7 @@ setwd("/home/virgin/Desktop/cursoR")
 
 ## Qué es un "script" (un archivo de código fuente)?
 
-**Un archivo de código fuente en R es un archivo que contiene instrucciones que sólo R sabe identificar, para luego interpretarlas y generar salidas en tiempo de ejecución**
+Un archivo de código fuente en R es un archivo que contiene instrucciones que sólo R sabe identificar, para luego interpretarlas y generar salidas en tiempo de ejecución.
 
 Es importante escribir las instrucciones de nuestro algoritmo solución en un archivo que quede guardado en la computadora, de tal manera que pueda reusarse en el futuro con los mismos datos o con datos diferentes.
 Y no volver a reconstruir todo cada vez que necesitemos hacer una análisis.
