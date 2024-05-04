@@ -197,7 +197,7 @@ Para reasignar el valor de algún objeto, simplemente se vuelve asociar un valor
 -También se pueden hacer operaciones usando a los objetos almacenados previamente
 
 <pre><code>
-x <- obj1 + obj2
+x <- obj + obj2
 x
 </code></pre>
 
