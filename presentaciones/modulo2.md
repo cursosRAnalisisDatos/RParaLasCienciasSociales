@@ -73,10 +73,12 @@ Ejemplos (en ambos ejemplos se asume que existen dichos subdirectorios):
 <pre><code>
 #en Windows
 setwd("C:\Users\Usuario\Desktop\cursoRParaLasCienciasSociales\sesion1")
+
 #en Mac
 setwd ("/Users/virg/Documents/Desarrollo/DarVi-Analytics/")
+
 #en Ubuntu 
-setwd("~/Documents/cursoDeRParaLasCienciasSociales")
+setwd("/home/virgin/Desktop/cursoR")
 </code></pre>
 
 ## Qué es un "script" (un archivo de código fuente)?
