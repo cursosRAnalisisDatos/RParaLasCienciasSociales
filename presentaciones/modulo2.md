@@ -268,6 +268,25 @@ output.summary <- "my analysis"
 outputSummary  <- "my analysis"
 </code></pre>
 
+## Funciones extras
+
+### readline
+La función **readline** básica de R sirve para escribir un mensaje en la consola y solicitar al usuario una información que luego se puede utilizar para realizar alguna operación.
+Se muestra un código de R que el lector puede copiar y pegar en un script. El código se debe ejecutar línea por línea y no en bloque.
+<pre><code>
+    #La primera línea solicita el nombre del usuario y lo almacena automáticamente en la variable my_name.  
+    my_name <- readline(prompt="Ingrese su nombre: ")
+    #La segunda línea solicita la edad y la almacena en la variable my_age
+    my_age  <- readline(prompt="Ingrese su edad en años: ")
+    #La tercera se asegura que la edad se convierta a un número entero.
+    my_age  <- as.integer(my_age) # convert character into integer
+    # La cuarta instrucción, escrita en varias líneas, saluda y entrega la edad del usuario en el próximo año.
+    print(paste("Hola,", my_name, 
+            "el año siguiente usted tendra", 
+            my_age + 1, 
+            "años de edad."))
+</code></pre>
+
 ## Documentando el script
 <pre><code>
 # Title: Time series analysis of snouters
