@@ -96,4 +96,42 @@ rm(edad)
  # compiler_4.2.1  graphics_4.2.1  grDevices_4.2.1 stats_4.2.1    
 #tools_4.2.1     utils_4.2.1     xfun_0.33    
 
+############3
+### Introducción a R para las ciencias sociales  ###
+##############  SESIÓN 2: 4 de mayo de 2024   #######
+##### Eduardo Vizcaya  
+
+
+######  EJEMPLOS    ########
+
+#1 Escribe un programa para calcular el área de un triángulo, dadas su base y su altura.
+
+## Primera forma
+####1. Crear los objetos, e ir introduciendo los valores numéricos
+b <- as.numeric(readline("Ingrese la base del trinángulo:"))
+
+h <- as.numeric(readline("Ingrese la altura del triángulo:"))
+
+cat("El área del triángulo es", b*h/2, "unidades cuadradas")
+
+
+## Segunda forma
+## mismos objetos y uno para el área A
+
+A <- b*h/2
+cat("El área del triángulo es (A)")
+
+
+############
+#2 Escribe un programa para calcular el índice de masa corporal (IMC) de una persona, pidiendo al usuario su peso (en kg) y estatura (en metros); y lo almacene en una variable, 
+# redondeado a 2 decimales
+
+####1. Crear los objetos, e ir introduciendo los valores numéricos
+
+peso_kg <- as.numeric(readline("Ingrese su peso en kg:"))
+
+estatura_m <- as.numeric(readline("Ingrese su estatura en m:"))
+
+imc <- peso_kg/estatura_m^2
+cat("Tu índice de masa corporal es de (imc): ", round(imc,2))
 
