@@ -270,6 +270,14 @@ outputSummary  <- "my analysis"
 
 ## Funciones extras
 
+### cat
+La función cat concatena e imprime objetos sin comillas. 
+<pre><code>
+cit <- "Ella dijo: \"Las comillas se pueden incluir en textos en R.\""
+cit
+cat(cit)
+</code></pre>
+
 ### readline
 La función **readline** básica de R sirve para escribir un mensaje en la consola y solicitar al usuario una información que luego se puede utilizar para realizar alguna operación.
 Se muestra un código de R que el lector puede copiar y pegar en un script. El código se debe ejecutar línea por línea y no en bloque.
