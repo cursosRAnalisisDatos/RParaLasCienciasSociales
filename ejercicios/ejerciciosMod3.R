@@ -1,6 +1,7 @@
 # @author: Virginia Teodosio
 # @email: lunysska@gmail.com
 # @date: May, 2023.
+# @update: May, 2024
 # @version: 2.0
 
 # ----------------------------------------------------------------------------------------------------------
@@ -13,6 +14,21 @@
 # 1. Ejecuta una línea a la vez, en el orden de aparición,
 # 2. Corrígelos en ese mismo orden 
 # 3. Ve incluyendo en el script los errores que van generando, en líneas comentadas
+
+## Vectores
+# 0. Realiza las siguientes sumas: Primera suma 1+2+3+⋯+10001+2+3+⋯+1000 Sol.: 500500500500
+cat(" Bienvenidos\n");cat(
+  "Sumar del 1 al 1000 y obtener de respuesta 500500500500.\n")
+##  Bienvenidos
+## Sumar del 1 al 1000 y obtener de respuesta 500500500500.
+# Ingreso de las variables.
+t1 <- rep(1:1000)
+# Aplicación de las funciones.
+x <- sum(t1)
+y <- rep(x,time=2)
+#Ejecución de la suma
+cat("La respuesta es:",y)
+## La respuesta es: 500500 500500
 
 ## Matrices
 # 1. (RESPUESTA:índice fuera de los límites)
