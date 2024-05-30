@@ -48,9 +48,9 @@ is.vector(8)
 [1] TRUE
 </code></pre>
 
-### La función **lenght()**
+### La función **length()**
 <pre><code>
-lenght(8)
+length(8)
 [1] TRUE
 </code></pre>
 
