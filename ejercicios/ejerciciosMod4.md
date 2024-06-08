@@ -23,8 +23,8 @@ Hint: para leer del teclado, la opción del usuario, use la función "scan" (hel
 
 Respuesta:
 <pre><code>
-print("Ingrese un número entre 0 y 100: ")
 suma <- 0
+print("Ingrese un número entre 0 y 100: ")
 n <- scan(n=1) # acá lee la opción tecleada por el usuario! 
 while (n <= 100){
   suma <- suma+n
@@ -37,8 +37,8 @@ cat("El valor de la suma de enteros hasta 100 es", suma)
 
 Respuesta:
 <pre><code>
-print("Indique un número entre 0 y 100: ")
 suma <- 0
+print("Indique un número entre 0 y 100: ")
 n <- scan(n=1)
 for(i in n:100){
   if(i==50){
