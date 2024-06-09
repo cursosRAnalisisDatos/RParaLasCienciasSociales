@@ -136,7 +136,7 @@ Para usar un paquete se usa la función
 </code></pre>
   
   Nota: *dplyr* es un paquete que permite la manipulación de archivos de datos (de tipo columnas-renglones) para poder hacer filtros, o elegir algunas columnas, etc
-[https://swcarpentry.github.io/r-novice-gapminder-es/13-dplyr/](https://swcarpentry.github.io/r-novice-gapminder-es/13-dplyr/).
+[https://swcarpentry.github.io/r-novice-gapminder-es/13-dplyr.html](https://swcarpentry.github.io/r-novice-gapminder-es/13-dplyr.html).
 
 #### En dónde están los paquetes?
 - Los paquetes pueden ser bajados desde muchos lados, pero de las más comunes es cran-project, (install.packages())
