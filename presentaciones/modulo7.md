@@ -1,4 +1,4 @@
-## 7. 
+## 7. Graficando datos estadísticos con R (ggplot2)
 “Un simple gráfico ha brindado más información a la mente del analista de datos que cualquier otro dispositivo”. — John Tukey
 
 ### 7.1 Conociendo el tipo de datos que tenemos en nuestro dataframe
