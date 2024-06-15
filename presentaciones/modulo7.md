@@ -1,3 +1,6 @@
+## 7. 
+“Un simple gráfico ha brindado más información a la mente del analista de datos que cualquier otro dispositivo”. — John Tukey
+
 ### 7.1 Conociendo el tipo de datos que tenemos en nuestro dataframe
 Conocer el tipo de datos de nuestro marco de datos (o la estructura de datos que estemos trabajando) es importante pues eso nos permitirá saber qué análisis se puede realizar sobre ella, pues están determinadas si el dato representa relaciones cualitativas o cuantitativas.
 
