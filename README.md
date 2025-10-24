@@ -4,7 +4,8 @@
 
 (1era edición - Octubre 2023) <br>
 (2da edición - Abril 2023) <br>
-(3era edición - Abril 2024)
+(3era edición - Abril 2024)<br>
+(4ta edición - Octubre 2025)<br>
 
 - Dr. Eric Hernández Ramírez
 - Lic. en C. C. Virginia Teodosio Procopio
