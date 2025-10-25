@@ -14,7 +14,7 @@ logo: ../images/logoIIEc.jpg
 ## 1.1 Creando el ambiente de trabajo con R.
 ### El proyecto que le da soporte y descarga
 
-[https://cran.r-project.org/](https://cran.r-project.org/)
+[https://www.r-project.org/](https://www.r-project.org/))
 
 <img src="../images/modulo1/proyectoR.png" alt="proyecto R" width="800px"> 
 
