@@ -208,7 +208,7 @@ La función tolower() pasa una cadena a minúsculas, como se muestra a continuac
 
 <pre><code>
 tolower(cadena)
-[1] "openwebinars"
+#[1] "openwebinars"
 </code></pre>
 
 ### 2.9 Objetos en el ambiente de ejecución de R
