@@ -180,9 +180,38 @@ trunc(5.99) #devuelve 5.
 10%%3 #devuelve 1.
 </code></pre>
 
-### 2.7 Funciones numéricas
+### 2.8 Funciones de Caracteres
+#### substr()
+##### usar el help()
+Lo que hace la función substr(x) es devolver una subcadena de la cadena que le hemos pasado.<br>
+    - x: Una cadena de caracteres.
+    - start: Es el primer carácter que se devolverá (o sobrescribirá).
+    - stop: El número del último carácter que se devolverá (o sobrescribirá).
 
-### 2.8 Objetos en el ambiente de ejecución de R
+<pre><code>
+cadena = “OpenWebinars”
+substr(cadena, start = 1, stop = 4)
+#Se obtiene como resultado:
+#[1] "Open" 
+</code></pre>
+
+#### toupper()
+Esta función devuelve una cadena en mayúsculas.
+
+<pre><code>
+toupper(cadena)  
+#[1] "OPENWEBINARS"
+</code></pre>
+
+#### tolower()
+La función tolower() pasa una cadena a minúsculas, como se muestra a continuación:
+
+<pre><code>
+tolower(cadena)
+[1] "openwebinars"
+</code></pre>
+
+### 2.9 Objetos en el ambiente de ejecución de R
   - Los *objetos* son espacios en la memoria que guardan información que puede accederse y guardarse de manera específica para luego hacer procedimientos estadísticos y gráficos, entre otros. 
 
 - En R existen: variables, constantes, vectores, matrices, arreglos, dataframes(marco de datos), listas, etc.
@@ -311,7 +340,7 @@ Se muestra un código de R que el lector puede copiar y pegar en un script. El c
             "años de edad."))
 </code></pre>
 
-### 2.9 Documentando el script
+### 2.10 Documentando el script
 <pre><code>
 # Title: Time series analysis of snouters
 
