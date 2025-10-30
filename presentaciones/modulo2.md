@@ -165,6 +165,24 @@ pi                    # not a function but useful
 ## [1] 3.141593
 </code></pre>
 
+## Funciones numéricas
+<pre><code>
+#abs(x): Valor absoluto de x, 
+abs(-7) #devuelve 7
+
+#ceiling(x): Devuelve el primer entero mayor a x, 
+ceiling(5.3) #devuelve 6.
+
+#floor(x): Devuelve el primer entero más pequeño de x, 
+floor(5.99) #devuelve 5.
+
+#trunc(x): Devuelve la parte entera de x eliminando los decimales de un número, 
+trunc(5.99) #devuelve 5.
+
+#Este operador módulo devuelve el resto de una división entera, 
+10%%3 #devuelve 1.
+</code></pre>
+
 ## Objetos en el ambiente de ejecución de R
   - Los *objetos* son espacios en la memoria que guardan información que puede accederse y guardarse de manera específica para luego hacer procedimientos estadísticos y gráficos, entre otros. 
 
