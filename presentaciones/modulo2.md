@@ -24,7 +24,6 @@ R tiene documentación integrada en el entorno de desarrollo. Para obtener ayuda
 help o ?
 </code></pre>
 
-##
 Se usa como:
 <pre><code>
 ?nombre_de_funcion, help(nombre_de_funcion)
@@ -39,8 +38,6 @@ Ejemplo: usando la distribución normal
 
 Esto cargará una página de ayuda en RStudio (o como texto sin formato en R por sí mismo).
 
-##
-
 Cada página de ayuda se divide en secciones:
 
   - Descripción: una descripción extendida de lo que hace la función.
@@ -51,8 +48,7 @@ Cada página de ayuda se divide en secciones:
   - Ver también: cualquier función relacionada que pueda serte útil.
   - Ejemplos: algunos ejemplos de cómo usar la función
 
-## Más ayuda
-
+#### Más ayuda
 Favor de teclear
 <pre><code>
  help.start()
@@ -60,9 +56,8 @@ Favor de teclear
 
 Despliega una versión de la documentación en línea de R, con ligas a las versiones de R instaladas localmente, manuales de R y una lista de los paquetes actualmente instalados.
 
-## Los directorios de trabajo
-
-Un directorio de trabajo es el directorio desde el cual **R** va a leer los archivos( de datos, imágenes) o a guardar archivos (si el código lo dice).
+### 2.2 Los directorios de trabajo
+Un directorio de trabajo es el directorio desde el cual **R** va a leer los archivos (de datos, imágenes) o a guardar archivos (si el código lo dice).
 <pre><code>
 getwd() # para conocer el directorio de trabajo
 setwd("C:\otro_directorio") #para modificar el directorio de trabajo
@@ -81,7 +76,7 @@ setwd ("/Users/virg/Documents/Desarrollo/DarVi-Analytics/")
 setwd("/home/virgin/Desktop/cursoR")
 </code></pre>
 
-## Qué es un "script" (un archivo de código fuente)?
+### 2.3 Qué es un "script" (un archivo de código fuente)?
 
 Un archivo de código fuente en R es un archivo que contiene instrucciones que sólo R sabe identificar, para luego interpretarlas y generar salidas en tiempo de ejecución.
 
@@ -90,7 +85,7 @@ Y no volver a reconstruir todo cada vez que necesitemos hacer una análisis.
 
 - Los scripts en *R* tienen terminación **.R**
 
-## Comentarios
+### 2.4 Comentarios
 **Los comentarios son líneas, inmersas en el código fuente, que son ignoradas por el *intérprete de R*, por lo que pueden contener cualquier información, en cualquier formato**
 
 - La mayoría de veces las instrucciones que usamos, así como el uso de las funciones y los argumentos que necesitan, no son fáciles de recordar. 
@@ -99,7 +94,9 @@ Y no volver a reconstruir todo cada vez que necesitemos hacer una análisis.
 
 - Además que es uno de los mecanismos de comunicación con nosotros mismos (en el futuro) y con otros desarrolladores.
 
-## Operaciones aritméticas
+### 2.5 Operadores
+
+#### Operaciones aritméticas
 <pre><code>
 15 + 3
 [1] 45
@@ -113,7 +110,7 @@ El **[1]** al inicio de la línea resultado nos dice el número de la observaci�
 ## Error in 4 + "tres": argumento no-numérico para operador binario
 </code></pre>
 
-## Operadores aritméticos
+#### Operadores aritméticos
 <img src="../images/modulo2/operadoresAritmeticos.png" alt="proyecto R" width="650px"> 
 
 La precedencia de operadores es la usual, de tal manera que la expresión:
@@ -123,10 +120,10 @@ La precedencia de operadores es la usual, de tal manera que la expresión:
 - Y **NO** como **(2 + 3) * 4 = 20**
 - Recomendación: usar siempre paréntesis bien anidados.
 
-## Precedencia de operadores
+#### Precedencia de operadores
 <img src="../images/modulo2/precedenciaOperadores.png" alt="proyecto R" width="650px"> 
 
-## La división entera (o módulo)
+#### La división entera (o módulo)
 Es la división de un número entre otro, pero en lugar de devolver el cociente, nos devuelve el residuo.
 
 Ejemplo:
@@ -137,7 +134,7 @@ Ejemplo:
 ## [1] 1
 </code></pre>
 
-## Operadores relacionales
+#### Operadores relacionales
 <img src="../images/modulo2/operadoresRelacionales.png" alt="proyecto R" width="700px"> 
   
 Comparaciones entre cadenas. Lo hace por el orden alfabético
@@ -147,7 +144,7 @@ Ejemplo:
 ## [1] TRUE
 </code></pre>
 
-## Funciones matemáticas
+### 2.6 Funciones matemáticas
   Hay una gran cantidades de funciones matemáticas predefinidas, sólo hay que saber que argumentos necesitan para trabajar
 
 <pre><code>
@@ -165,7 +162,7 @@ pi                    # not a function but useful
 ## [1] 3.141593
 </code></pre>
 
-## Funciones numéricas
+### 2.7 Funciones numéricas
 <pre><code>
 #abs(x): Valor absoluto de x, 
 abs(-7) #devuelve 7
@@ -183,12 +180,14 @@ trunc(5.99) #devuelve 5.
 10%%3 #devuelve 1.
 </code></pre>
 
-## Objetos en el ambiente de ejecución de R
+### 2.7 Funciones numéricas
+
+### 2.8 Objetos en el ambiente de ejecución de R
   - Los *objetos* son espacios en la memoria que guardan información que puede accederse y guardarse de manera específica para luego hacer procedimientos estadísticos y gráficos, entre otros. 
 
 - En R existen: variables, constantes, vectores, matrices, arreglos, dataframes(marco de datos), listas, etc.
 
-## Cómo crear un objeto
+#### Cómo crear un objeto
 Necesitamos un nombre, un valor y el operador de asignación para asignarle el valor
 
 Ejemplo:
@@ -204,7 +203,7 @@ obj2 <- R is cool
 Error: unexpected symbol in "my_obj2 <- R is"
 </code></pre>
   
-## Más operaciones con objetos
+#### Más operaciones con objetos
 Para reasignar el valor de algún objeto, simplemente se vuelve asociar un valor nuevo con el operador de asignación 
 <pre><code>
   obj2 <- 2048
@@ -219,30 +218,29 @@ x <- obj1 + obj2
 x #error?
 </code></pre>
 
-##  
-Errores con objetos no definidos
+#### Errores con objetos no definidos
 <pre><code>
 obj <- 98
 obj4 <- my_obj + no_obj
 Error: object 'no_obj' not found
 </code></pre>
   
-## Objetos en tiempo de ejecución con funciones
-  
+#### Objetos en tiempo de ejecución con funciones
+
 - Para ver qué objetos se encuentran activos en la memoria se usa (ambas funciones son equivalentes):
 <pre><code>
 objects()
 ls()
 </code></pre>
   
-## Lista de los paquetes adjuntos y de algunos objetos (dataframes)
+#### Lista de los paquetes adjuntos y de algunos objetos (dataframes)
   <pre><code>
   search()
 </code></pre>
   
 - la salida muestra un vector que empieza con las variables de ambiente globales, e incluye a los paquetes base.
 
-## Borrando objetos de la memoria 
+#### Borrando objetos de la memoria 
 - Es necesario cuidar el espacio en memoria, sobre todo para proyectos grandes o manejo de datos masivos.
 - Cuando un objeto ya no va a ocuparse en ejecución, lo mejor es borrarlo.
 <pre><code>
@@ -254,7 +252,7 @@ ls()
   rm(nombreDelObjeto)
 </code></pre>
 
-## La función **class()**
+#### La función **class()**
 Le dice a una función genérica, como *print*, cómo debe manejar al objeto.
 
   - numérico
@@ -262,7 +260,7 @@ Le dice a una función genérica, como *print*, cómo debe manejar al objeto.
   - lógico
   - factor
   
-## Ejemplo de la función **class**
+#### Ejemplo de la función **class**
 <pre><code>
 x <- 3+5
 class(x)
@@ -277,7 +275,7 @@ class(z)
 [1] "logical"
 </code></pre>
 
-## Siguiendo nombrado adecuado de los objetos
+#### Siguiendo nombrado adecuado de los objetos
 Diferentes formas de nombrar a los objetos
 
 <pre><code>
@@ -286,9 +284,9 @@ output.summary <- "my analysis"
 outputSummary  <- "my analysis"
 </code></pre>
 
-## Funciones extras
+#### Funciones extras
 
-### cat
+##### cat
 La función cat concatena e imprime objetos sin comillas. 
 <pre><code>
 cit <- "Ella dijo: \"Las comillas se pueden incluir en textos en R.\""
@@ -296,7 +294,7 @@ cit
 cat(cit)
 </code></pre>
 
-### readline
+#### readline
 La función **readline** básica de R sirve para escribir un mensaje en la consola y solicitar al usuario una información que luego se puede utilizar para realizar alguna operación.
 Se muestra un código de R que el lector puede copiar y pegar en un script. El código se debe ejecutar línea por línea y no en bloque.
 <pre><code>
@@ -313,7 +311,7 @@ Se muestra un código de R que el lector puede copiar y pegar en un script. El c
             "años de edad."))
 </code></pre>
 
-## Documentando el script
+### 2.9 Documentando el script
 <pre><code>
 # Title: Time series analysis of snouters
 
