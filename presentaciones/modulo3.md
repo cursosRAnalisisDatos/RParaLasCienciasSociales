@@ -176,7 +176,7 @@ vector == 10
 ### Eliminando elementos del vector
 <pre><code>
 personaje <- c('Fernando', 'Alejandro', 'Moisés', 'Agustino', 'Ezequiel')
-personaje[-c(2, 5)], 
+personaje[-c(2, 5)] 
 #elimina las posiciones:(2,5), entonces elimina a "Alejandro" y "Ezequiel", 
 #entonces es algo como leerlo "- la 2 y la 5"
 </code></pre>
