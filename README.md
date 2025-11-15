@@ -1,3 +1,10 @@
+---
+title: "Mi Documento"
+output:
+  html_document:
+    toc: true
+---
+
 # Introducción a R para las Ciencias Sociales
 ## Principios de Probabilidad y Estadística con R, para las Ciencias Sociales
 ### Curso diseñado e impartido para el Instituto de Investigaciones Económicas, UNAM 
