@@ -16,7 +16,7 @@
 # 3. Ve incluyendo en el script los errores que van generando, en líneas comentadas
 
 ## Vectores
-# 0. Realiza las siguientes sumas: Primera suma 1+2+3+⋯+10001+2+3+⋯+1000 Sol.: 500500500500
+# 0. Realiza las siguientes sumas: Primera suma 1+2+3+⋯+1000 1+2+3+⋯+1000 Sol.: 500500500500
 cat(" Bienvenidos\n");cat(
   "Sumar del 1 al 1000 y obtener de respuesta 500500500500.\n")
 ##  Bienvenidos
