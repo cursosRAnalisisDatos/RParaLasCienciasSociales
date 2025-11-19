@@ -264,6 +264,7 @@ A %*% B #la multiplicacion de matrices, sólo se pone el signo de %
 
 Ejemplo:
 <pre><code>
+lst1 <- list("Fred", "Mary", 3, c(4,7,9))
 lst <- list(name="Alex", wife="Mary", noChildren=3, childAges=c(4,7,9) )
 </code></pre>
 
