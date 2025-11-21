@@ -517,7 +517,12 @@ censo <- cbind(censo, direccion = c("Col.Portales","Col. El Retoño", "Col. Roma
 censo$correoElectronico <- c( "juan@correo.com",
                               "margarita@correo.com",
                               "ruben@correo.com",
-                              "daniel@correo.com")
+                              "daniel@correo.com",
+                              "mirna@correo.com",
+                              "ameyalli@correo.com",
+                              "roxana@correo.com",
+                              "clara@correo.com")
+censo
 </code></pre>
 
 ##
@@ -525,7 +530,7 @@ censo$correoElectronico <- c( "juan@correo.com",
 Nota: volver a revisar vectorización (en vectores y matrices).
 
 <pre><code>
-censo$tieneHijos <- censo$nro_hijos > 0
+censo$TieneHijos <- censo$NumeroHijos > 0
 censo
 </code></pre>
 
@@ -533,12 +538,13 @@ censo
 ### Añadiendo renglones (registros)
 - Una forma es usando la posición del dataframe
 <pre><code>
-censo[ nrow(censo) + 1,] = c("Claudia", "Guevara", "1990-08-03", "MUJER", 2)
+censo[ nrow(censo) + 1,] = c("Juan", "Guevara", "1990-08-03", "MUJER", 2, "Col. Del Valle", "juan@correo.com", TRUE)
+censo
 </code></pre>
 
 - Otra manera es usando la función **rbind**
 <pre><code>
-censo <- rbind(censo, c("Raul", "Hidalgo", "1986-04-09", "HOMBRE", 0))
+censo <- rbind(censo, c("Raul", "Hidalgo", "1986-04-09", "HOMBRE", 0, "Col. Del Valle", "raul@correo.com", FALSE))
 </code></pre>
 
 - Una más es agregando los registros de otro dataframe al nuestro
@@ -547,6 +553,7 @@ Ejercicio:
 df3 <- rbind (df1, df2)
 df3
 </code></pre>
+NOTA: Ver ejercicios de dataframe
 
 ## Valores olvidados-perdidos NA y NULL
 **NA** se refiere a datos perdidos, es decir, que pudieron olvidarse de introducir u obtener
