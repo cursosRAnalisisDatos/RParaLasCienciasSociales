@@ -452,13 +452,38 @@ censo[["Nombre"]]
 </code></pre>
 
 #### Recorte del dataframe por selecciones
-Son subtablas con registros (renglones) que cumplan ciertas condiciones.
+Son subtablas con registros (renglones) que cumplan ciertas condiciones.<br>
+
+Para ver mejor los resultados de las siguientes operaciones, vamos a meter más registros a nuestros datos
+<pre><code>
+censo <- rbind(censo, c("Mirna", 
+                        "Tapia", 
+                        "1990-02-12", 
+                        "MUJER", 
+                        0))
+censo <- rbind(censo, c("Ameyalli", 
+                        "Flores", 
+                        "1988-03-25", 
+                        "MUJER", 
+                        0))
+censo <- rbind(censo, c("Roxana", 
+                        "Vera", 
+                        "1985-08-03", 
+                        "MUJER", 
+                        0))
+censo <- rbind(censo, c("Clara", 
+                        "Mejia", 
+                        "1960-07-22", 
+                        "MUJER", 
+                        0))
+censo
+</code></pre>
 
 <pre><code>
 #La subtabla formada por las filas correspondientes a personas con sexo = "MUJER" cuyo número de hijos es 0.
 censo[censo$Sexo == "MUJER" & censo$Numero_Hijos == 0, ]
 
-#censo[censo$Sexo == "MUJER" & censo$Numero_Hijos == 0, ][1:4, ]# y hacer más combinaciones (faltan registros para que se vea que esto funciona bien :))
+#censo[censo$Sexo == "MUJER" & censo$Numero_Hijos == 0, ][2:5, ]# y hacer más combinaciones
 </code></pre>
 
 ##
