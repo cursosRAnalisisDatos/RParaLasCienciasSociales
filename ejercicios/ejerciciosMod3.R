@@ -1,83 +1,4 @@
-# @author: Virginia Teodosio
-# @email: lunysska@gmail.com
-# @date: May, 2023.
-# @update: May, 2024
-# @version: 2.0
 
-# ----------------------------------------------------------------------------------------------------------
-# Ejercicio 1.
-# Objetivo: Que el participante se familiarice con errores en el código (en 
-# la terminal de R y de tipo semántico) y pueda identificarlos y corregirlos.
-# ----------------------------------------------------------------------------------------------------------
-
-# Instrucciones: 
-# 1. Ejecuta una línea a la vez, en el orden de aparición,
-# 2. Corrígelos en ese mismo orden 
-# 3. Ve incluyendo en el script los errores que van generando, en líneas comentadas
-
-## Vectores
-# 0. Realiza las siguientes sumas: Primera suma 1+2+3+⋯+1000 1+2+3+⋯+1000 Sol.: 500500500500
-cat(" Bienvenidos\n");cat(
-  "Sumar del 1 al 1000 y obtener de respuesta 500500500500.\n")
-##  Bienvenidos
-## Sumar del 1 al 1000 y obtener de respuesta 500500500500.
-# Ingreso de las variables.
-t1 <- rep(1:1000)
-# Aplicación de las funciones.
-x <- sum(t1)
-y <- rep(x,time=2)
-#Ejecución de la suma
-cat("La respuesta es:",y)
-## La respuesta es: 500500 500500
-
-## Matrices
-# 1. (RESPUESTA:índice fuera de los límites)
-matriz <- matrix(1:12, nrow = 4, ncol = 3)
-matriz
-x <- matriz[1, 4]
-
-# 2. Extrayendo una columna de la matriz (RESPUESTA: error semántico, porque se esta extrayendo el renglón)
-columna <- matriz[4,]
-columna
-
-## Listas
-# 1. Definiendo una lista
-#Dada la lista
-lst <- list(name="Fred", wife="Mary", no.children=3, child.ages=c(4,7,9))
-
-#queremos saber que tamaño tiene la lista 
-#(RESPUESTA: error, la funcion no es size, es length!)
-size(lst)
-
-# 2. Queremos conocer el elemento en la posicion 3, se debe usar la sintáxis adecuada
-lst[[3]]
-lst[3]
-
-# 2.1 Cual es la diferencia de ambas expresiones? (RESPUESTA la primera es el elemento 
-#numérico, la segunda es el componente, por lo tanto es una lista)
-
-# 2.2 Intente operar aritméticamente con ambas expresiones
-# RESPUESTA (eliminar las siguientes dos líneas)
-# lst[3] + 2 
-# lst[[3]] + 2
-
-# 2.3 Con qué función podríamos conocer de qué tipo es el dato(RESPUESTA, con la función 
-#class, uno dirá que es numérico y el otro lista)
-#Respuesta: (eliminar las siguientes dos líneas)
-#class(lst[[3]])
-#class(lst[3])
-
-# 2.4 Qué pasa si se crea una lista D, de la unión de tres listas A, B, C, donde cada 
-# una de ellas tienen una variable con el mismo nombre "name" y se imprime D$name
-# qué valor exhibe?
-# Pruébelo!
-# RESPUESTA la primer ocurrencia que encuentre
-# RESpuesta, código que se debe borrar, las siguientes 5 lineas
-#lst.A <- list(name="uno", wife="Mary", noChildren=3, childAges=c(4,7,9) )
-#lst.B <- list(name="dos", wife="Mary", noChildren=3, childAges=c(4,7,9) )
-#lst.C <- list(name="tres", wife="Mary", noChildren=3, childAges=c(4,7,9) )
-#lst.ABC <- c(lst.A, lst.B, lst.C )
-#lst.ABC$name
 
 # ------------------------------------------------------------------------------
 # Ejercicios con dataframes
@@ -87,19 +8,29 @@ nombre <- c("Juan", "Margarita", "Ruben", "Daniel")
 apellido <- c("Sanchez", "Garcia", "Sancho", "Alfara")
 fecha_nacimiento <- c("1976-06-14", "1974-05-07", "1958-12-25", "1983-09-19")
 sexo <- c("HOMBRE", "MUJER", "HOMBRE", "HOMBRE")
-nro_hijos <- c(1, 2, 1, 3, 2)
+nro_hijos <- c(1, 2, 1, 3)
 
 ## RESPUESTA
 censo <- data.frame(nombre, apellido, fecha_nacimiento, sexo, nro_hijos)
 #pero va a generar un error, porque la longitud del vector nro_hijos es más grande
 
-#2. La tabla recopila información de 5 pacientes (sexo,presión arterial y pulsos por minuto), atendidos en un hospital
+#2. Se tienen los datos de 5 pacientes (sexo,presión arterial y pulsos por minuto), 
+#atendidos en un hospital
+sexo <- c("M","F","M","F","F")
+presionArterial <- c("120/70", "128/45", "141/74", "133/69", "156/43")
+pulsosXMinuto <- c(88, 85, 78, 128, 149)
 
-#2.1 que llamen al dataframe "datos",
-#2.2 que hagan un respaldo del dataframe (sólo que lo copien en otro dataframe pacientes = datos
+#2.1 Crear un dataframe que guarde esta información y que se llame "datos",
+datos <- data.frame(sexo, presionArterial, pulsosXMinuto)
+
+#2.2 que hagan un respaldo del dataframe (sólo que lo copien en otro dataframe 
+#pacientes = datos
+pacientes <- datos
+
 #2.3 Mostrar los valores para las 3 variables para el primer individuo y el cuarto indi#viduo
-#Los corchetes [] permiten identificar la ubicación, en la lista del dato que se desea mostrar . 
-#En el caso de los dobles corchetes [[]] se especifica con detalle el dato buscado en la lista y se presenta para la operación
+#Los corchetes [] permiten identificar la ubicación, en la lista del dato que se desea mostrar. 
+#En el caso de los dobles corchetes [[]] se especifica con detalle el dato buscado en 
+#la lista y se presenta para la operación
 
 #primer individuo 
 datos[1, ]
@@ -115,35 +46,34 @@ datos[ 4, ]
 datos [c(1,4), c(2,3)]
 
 
-#2.4 Determinar la media del pulso de los hombres.
+#2.4 Determinar la media del pulso de las mujeres
 #La función sum() suma los componentes de un vector.
+mujer1<-datos[[3]][[2]]
+mujer1
+mujer2<-datos[[3]][[4]]
+mujer2
+mujer3<-datos[[3]][[5]]
+mujer3
 
-hombre1<-datos[[3]][[1]]
-hombre2<-datos[[3]][[3]]
-hombre3<-datos[[3]][[4]]
-
-todos<-sum(hombre1,hombre2,hombre3)
+todos<-sum(mujer1,mujer2,mujer3)
 todos
 
-## [1] 242
+## [1] 362
 
 media<-todos/3
 media
 
-## [1] 80.66667
+## [1] 120.6667
 
 
-#2.5 Calcular la raíz cuadrada de la presión arterial del cuarto paciente.
+#2.5 Calcular la raíz cuadrada de los pulsos por minuto del cuarto paciente.
 # La función sqrt ejecuta la raíz del dato seleccionado.
+pacienteSQRT<-datos[[3]][[4]]
+pacienteSQRT
+## [1] 128
 
-hombre2<-datos[[2]][[4]]
-hombre2
-
-## [1] 78
-
-sqrt(hombre2)
-
-## [1] 8.831761
+sqrt(pacienteSQRT)
+## [1] 11.31371
 
 # ----------------------------------------------------------------------------------------------------------
 # Ejercicio 3
@@ -175,13 +105,13 @@ frenadoMetros <- cars$dist / 3.2808
 
 ##Diferentes maneras de AGREGAR columnas al data.frame:
 ## 1a opción
-cars<- cbind(cars, kph, meters)
+cars<- cbind(cars, kph, frenadoMetros)
 
 ## 2a opción
-cars<- cbind(cars[,c("speed","dist")], kph, meters)
+cars<- cbind(cars[,c("speed","dist")], kph, frenadoMetros)
 
 ## 3a opción
-cars<- cbind(cars[,c(1,2)], kph, meters)
+cars<- cbind(cars[,c(1,2)], kph, frenadoMetros)
 
 # ----------------------------------------------------------------------------------------------------------
 # Ejercicio4. Practicar agregar, eliminar, ordenar y cambiar nombres de las columnas
@@ -214,7 +144,7 @@ names(womenSI)
 names(women)<- c("estatura(in)", "peso (lbs)", "estatura (m)")
 names(womenSI)<- c("peso (lbs)", "estatura (m)")
 
-# Para eliminar la columna en in
+# Para eliminar la columna en in , (algunas tienen errores, ¿cuál será la correcta?)
 womenSI<- women[,-height]
 womenSI<- women[,-"height"]
 womenSI<- women[,-c(height)]
