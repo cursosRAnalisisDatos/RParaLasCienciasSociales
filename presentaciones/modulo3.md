@@ -446,9 +446,9 @@ censo[1:5, 1:3] ##del renglón 1 al 5, de la columna 1 a la 3
 
 o por su nombre, usando el nombre de la columna
 <pre><code>
-censo$nombre
-censo[, "nombre"]
-censo[["nombre"]]
+censo$Nombre
+censo[, "Nombre"]
+censo[["Nombre"]]
 </code></pre>
 
 #### Recorte del dataframe por selecciones
