@@ -490,8 +490,9 @@ censo[censo$Sexo == "MUJER" & censo$Numero_Hijos == 0, ]
 ### Vectorización de un dataframe
 
 De igual manera que con un vector y con una matriz, si aplicamos una operación básica
-al marco de datos, esta se vectorizará, marcando error cuando lo amerite o haciendo coersión, según los datos
+al marco de datos, esta se vectorizará, marcando error cuando lo amerite o haciendo coersión, según los datos. <br>
 
+Primero lo haremos con un dataframe simple.
 <pre><code>
 hijos <- c(1, 2, 3, 4)
 edades <-c(20, 35, 32, 51)
