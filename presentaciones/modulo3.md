@@ -584,7 +584,7 @@ censo
  
 Una prueba con valores NA
 <pre><code>
-edad <- c(43, NA, 49, NA)
+edad <- c(43, NA, 49, NA,34,56,78)
 censo <- cbind(censo, edad)
 censo[order(censo$edad),]
 </code></pre>
@@ -600,16 +600,18 @@ order(edades)
 ## 
 Generalmente cuando tenemos estructuras de datos más complejas, usaremos **order**
 <pre><code>
-censo[order(censo$nombre),]
-censo[order(censo$nombre, decreasing = TRUE),]
-censo[order(censo$nombre, decreasing = FALSE),]
+censo[order(censo$Nombre),]
+censo[order(censo$Nombre, decreasing = TRUE),]
+censo[order(censo$Nombre, decreasing = FALSE),]
 
-censoOrdenado <- censo[order(censo$nombre), ]
+censoOrdenado <- censo[order(censo$Nombre), ]
+censoOrdenado
 </code></pre>
 
 ### La ventaja de la funcion order, es que permite ordenar por varias columnas
 <pre><code>
-censoOrdenado <- censo[order(censo$nombre, censo$sexo), ]
+censoOrdenado <- censo[order(censo$direccion, censo$edad), ]
+censoOrdenado
 </code></pre>
 
 ##
@@ -618,11 +620,12 @@ censoOrdenado <- censo[order(censo$nombre, censo$sexo), ]
 - cómo funciona?
 - qué pasa si **el campo común** no encuentra una coincidencia?
 <pre><code>
-datosHabitacion <- data.frame("nombre" = c("Juan", "Margarita", "Ruben", "Daniel"), 
+datosHabitacion <- data.frame("Nombre" = c("Juan", "Margarita", "Ruben", "Daniel"), 
                               "tipHab" = c("casa", "depto", "depto", "casa"), 
                               "noFocos"= c(20,8,12,32),
                               "habPropia" = c(TRUE, TRUE, FALSE, TRUE))
 nuevosDatos <- merge( censo, datosHabitacion)
+nuevosDatos
 </code></pre>
 
 ##
