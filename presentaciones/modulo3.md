@@ -554,10 +554,7 @@ df3
 </code></pre>
 
 > [!NOTE]
-> Useful information that users should know, even when skimming content.
-
- >[!NOTE]
-NOTA: Ver ejercicios de dataframe
+> Ver los primeros ejercicios de dataframe
 
 ## Valores olvidados-perdidos NA y NULL
 **NA** se refiere a datos perdidos, es decir, que pudieron olvidarse de introducir u obtener
