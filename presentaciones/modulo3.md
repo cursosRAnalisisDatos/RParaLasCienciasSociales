@@ -36,7 +36,8 @@ El tipo del vector lo define su contenido (Si tenemos un vector que contiene dat
 ##
 ### Ejemplos con vectores
 En **R** los datos simples se definen como vectores, por ejemplo un entero *8* es un vector de longitud 1.
-```
+
+```r
 8
 ## [1] 8
 ```
