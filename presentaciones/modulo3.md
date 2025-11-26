@@ -553,7 +553,10 @@ df3 <- rbind (df1, df2)
 df3
 </code></pre>
 
- [!NOTE]
+> [!NOTE]
+> Useful information that users should know, even when skimming content.
+
+ >[!NOTE]
 NOTA: Ver ejercicios de dataframe
 
 ## Valores olvidados-perdidos NA y NULL
