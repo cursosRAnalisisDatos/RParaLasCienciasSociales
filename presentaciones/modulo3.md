@@ -43,21 +43,21 @@ En **R** los datos simples se definen como vectores, por ejemplo un entero *8* e
 ```
 
 ### La función **is.vector()**
-<pre><code>
+```r
 is.vector(8)
 [1] TRUE
-</code></pre>
+```
 
 ### La función **length()**
-<pre><code>
+```r
 length(8)
 [1] TRUE
-</code></pre>
+```
 
 ## 
 ### Ejemplos de vectores con cadenas y variables lógicas
 
-<pre><code>
+```r
 is.vector("ocho")
 ## [1] TRUE
 length("ocho")
@@ -67,13 +67,13 @@ is.vector(TRUE)
 ## [1] TRUE
 length(TRUE)
 [1] 1
-</code></pre>
+```
 
 ### Creando vectores
 
 Para crear un vector usamos la función *c()* (combinar), la cual recibe como argumento los elementos agregar, separados por comas.
 
-<pre><code>
+```r
 # Vector numérico
 c(15, 4, 0, 5, 8, 13)
 [1] 15  4  0  5  8 13
@@ -85,24 +85,24 @@ c("mujer", "hombre", "adolescente")
 # Vector lógico
 c(TRUE, TRUE, FALSE, FALSE, TRUE)
 [1]  TRUE  TRUE FALSE FALSE  TRUE
-</code></pre>
+```
 
 ##
 ### Agregando elementos al vector
 Si deseamos agregar un elemento a un vector, se logra combinando el vector original con los elementos nuevos y asignando el resultado al vector original.
 
-<pre><code>
+```r
 vector <- c(TRUE, FALSE, TRUE)
 vector <- c(vector, FALSE)
 vector
 [1]  TRUE FALSE  TRUE FALSE
-</code></pre>
+```
 
 ## 
 ### Uniendo dos vectores
 Se pueden crear vectores uniendo vectores:
 
-<pre><code>
+```r
 mi_vector_1 <- c(20, 21, 22)
 mi_vector_2 <- c(23, 24, 25)
 
@@ -110,30 +110,30 @@ mi_vector_3 <- c(mi_vector_1, mi_vector_2)
 mi_vector_3
 
 [1] 20 21 22 23 24 25
-</code></pre>
+```
 
 ## 
 ### Combinando diferentes tipos de datos en un vector
 Cuando se usan diferentes tipos de datos en un vector, **R** realiza *coerción de tipos*, al tipo de datos más flexible.
 
-<pre><code>
+```r
 #vector numérico
 v <- c(11, 12, 13)
 class(v)
 [1] "numeric"
-</code></pre>
+```
 
 Si agregamos un valor de cadena "hola"
-<pre><code>
+```r
 v_n <- c(v, "hola")
 class(v_n)
 [1] "character"
-</code></pre>
+```
 
 *Ejercicio: Hacer lo equivalente con otros tipos de datos*
-<pre><code>
+```r
 mi_vector_mezcla <- c(FALSE, 2, "tercero", 4.00)
-</code></pre>
+```
 
 ## 
 ### Creando vectores con secuencias numéricas **:**
@@ -144,20 +144,20 @@ mi_vector_mezcla <- c(FALSE, 2, "tercero", 4.00)
 - incluyen límites negativos
 - cifras decimales
 
-<pre><code>
+```r
 1:10 #ascendente
 10:1 #decreciente
 -50:-10 #negativos
 80.15:90 #cifras decimales
 -3.75:3 #decimales al inicio
 46:50.05 #decimales al final
-</code></pre>
+```
 
 ## 
 ### Vectorización de funciones
 Consiste en aplicar una función a cada elemento dentro de un vector
 
-<pre><code>
+```r
 #Sea
 vector <- c(28, 0, 1, 2, 3, 6, 7, 9, 10, 19)
 
@@ -170,27 +170,27 @@ vector %% 2
 vector < 10
 vector > 10
 vector == 10
-</code></pre>
+```
 
 ##
 ### Eliminando elementos del vector
-<pre><code>
+```r
 personaje <- c('Fernando', 'Alejandro', 'Moisés', 'Agustino', 'Ezequiel')
 personaje[-c(2, 5)] 
 #elimina las posiciones:(2,5), entonces elimina a "Alejandro" y "Ezequiel", 
 #entonces es algo como leerlo "- la 2 y la 5"
-</code></pre>
+```
 
 ### Posibles respuestas al calculo de la media aritmética
 
 Usando la función *mean* podemos calcular la media aritmética de las calificaciones del estudiante:
 
-<pre><code>
+```r
 x <- c(2, 4, 3, 6, 3, 7, 5, 8)
 mean(x) # 4.75
 # Equivalente a:
 sum(x)/lenght(x) # 4.75
-</code></pre>
+```
 
 ## Matrices
 Es un tipo especial de vector que tiene una dimensión más, logrando una forma rectangular y controlada por renglones y columnas.
@@ -198,18 +198,18 @@ Es un tipo especial de vector que tiene una dimensión más, logrando una forma 
 Para crear matrices se usa la función *matrix()*
 
 - Una forma es que reciba como argumento un vector
-<pre><code>
+```r
 matrix(1:15) # genera una matriz de una columna
-</code></pre>
+```
 
 ##
 - Otra forma es que reciba tres parámetros:
-<pre><code>
+```r
 # Tres renglones y cuatro columnas
 matrix(1:15, nrow = 3, ncol = 4)
 # Cuatro renglones y tres columnas
 matrix(1:12, nrow = 4, ncol = 3)
-</code></pre>
+```
 
 ## 
 ### Funciones para unir vectores en la matriz, por columnas y por renglón
@@ -217,94 +217,94 @@ matrix(1:12, nrow = 4, ncol = 3)
     cbind() para unir vectores, usando cada uno como una columna.
     rbind() para unir vectores, usando cada uno como un renglón.
 
-<pre><code>
+```r
 vector_1 <- 1:4
 vector_2 <- 5:8
 vector_3 <- 9:12
 vector_4 <- 13:16
 matriz <- rbind(vector_1, vector_2, vector_3, vector_4)
-</code></pre>
+```
 
 ## 
 ### Acceder a un elemento de la matriz: matriz[ren, col]
-<pre><code>
+```r
 x <- matriz[1, 2]
 x
-</code></pre>
+```
 
 ### Obtener todo el renglón
-<pre><code>
+```r
 ren <- matriz[noRen,]
-</code></pre>
+```
 
 ### Obtener todo la columna
-<pre><code>
+```r
 col <- matriz[,noCol]
-</code></pre>
+```
 
 ##
 ### Para saber el tamaño de la matrix, se usa **dim**
-<pre><code>
+```r
 dim(matriz)
-</code></pre>
+```
 
 ### Funciones algebraicas con matrices
-<pre><code>
+```r
 diag( matriz ) # la diagonal de una matriz
 t( matriz ) # la transpuesta de una matriz
 det( matriz) # el determinante de un matriz, marca error si no es cuadrada
 solve( matriz ) # la inversa de la matriz
 eigen( matriz ) # los eigen valores y los eigen vectores de una matriz
 A %*% B #la multiplicacion de matrices, sólo se pone el signo de %
-</code></pre>
+```
 
 ## Listas
 - Una lista es un objeto que contiene una colección ordenada de objetos.
 - Los componentes no necesitan ser del mismo tipo
 
 Ejemplo:
-<pre><code>
+```r
 lst1 <- list("Fred", "Mary", 3, c(4,7,9))
 lst <- list(name="Alex", wife="Mary", noChildren=3, childAges=c(4,7,9) )
-</code></pre>
+```
 
 ## Características de las listas
 - Como los componentes están enumerados, entonces se pueden acceder por su posición
-<pre><code>
+```r
 lst[[indice]] con indice={1,2,3,4}
-</code></pre>
+```
 
 - Note que lst[[4]] es un **vector**, por lo que para acceder a sus componentes se usa:
-<pre><code>
+```r
 lst[[4]][1]
-</code></pre>
+```
 
 - Si lst es una lista, entonces tiene el atributo **length**
-<pre><code>
+```r
 class(lst)
 length(lst)
-</code></pre>
+```
 
 ##
 - Los componentes de la lista también pueden ser nombrados y entonces el elemento se puede acceder
 con el nombre en lugar de usar el número, la expresión es de la forma:
-<pre><code>
+```r
 nombreDeLaLista$nombreDelComponente
-</code></pre>
+```
 
 Ejemplo:
-<pre><code>
+```r
 lst$name es lo mismo que lst[[1]] y es la cadena "Alex",
 lst$wife es lo mismo que lst[[2]] y es la cadena "Mary",
 lst$childAges[1] es lo mismo que lst[[4]][1] y es el número 4.
-</code></pre>
+```
 
 ##
 ### Concatenando listas
 Se usa la función **c()** y si los argumentos son listas, el resultado es un objeto lista.
-<pre><code>
+```r
 list.ABC <- c(list.A, list.B, list.C)
-</code></pre>
+```
 
 ## Data frames (marco de datos)
 
@@ -328,24 +328,24 @@ El conjunto Iris que viene preinstalado en todos los paquetes de R.
 ### Funciones para mostrar primeros y últimos registros del dataframe
 
 Ejemplo:
-<pre><code>
+```r
 iris
 View(iris)
 head(iris)
 help(head)
 head(iris, n=10)
 tail(iris)
-</code></pre>
+```
 
 También existen conjuntos de datos que muestran resultados de análisis
-<pre><code>
+```r
 Titanic
-</code></pre>
+```
 
 ### Función str
 Si queremos conocer la estructura global de un data frame, se usa la función **dataframe**
 
-<pre><code>
+```r
 str(d.f)
 #> 'data.frame':    150 obs. of  5 variables:
 #>  $ Sepal.Length: num  5.1 4.9 4.7 4.6 5 5.4 4.6 5 4.4 4.9 ...
@@ -353,7 +353,7 @@ str(d.f)
 #>  $ Petal.Length: num  1.4 1.4 1.3 1.5 1.4 1.7 1.4 1.5 1.4 1.5 ...
 #>  $ Petal.Width : num  0.2 0.2 0.2 0.2 0.2 0.4 0.3 0.2 0.2 0.1 ...
 #>  $ Species     : Factor w/ 3 levels "setosa","versicolor",..: 1 1 1 1 1 1 1 1 1 1 ...
-</code></pre>
+```
 
 ##
 ### Más características del dataframe
@@ -366,96 +366,96 @@ str(d.f)
 ##
 ### Creando dataframes
 Creamos vectores con los valores
-<pre><code>
+```r
 nombre <- c("Juan", "Margarita", "Ruben", "Daniel")
 apellido <- c("Sanchez", "Garcia", "Sancho", "Alfara")
 fecha_nacimiento <- c("1976-06-14", "1974-05-07", "1958-12-25", "1983-09-19")
 sexo <- c("HOMBRE", "MUJER", "HOMBRE", "HOMBRE")
 nro_hijos <- c(1, 2, 3, 4)
-</code></pre>
+```
 
 # Creamos un dataframe usando la función **data.frame()**
-<pre><code>
+```r
 censo <- data.frame(nombre, apellido, fecha_nacimiento, sexo, nro_hijos)
 censo
-</code></pre>
+```
 
 ## 
 ### Los atributos del marco de datos
 - Con **dim** conocemos la dimensión del marco de datos 
-<pre><code>
+```r
 dim (censo)
-</code></pre>
+```
 
 - El número de filas 
-<pre><code>
+```r
 dim(censo)[1]
 nrow(censo)
-</code></pre>
+```
 
 - El número de columnas
-<pre><code>
+```r
 dim(censo)[2]
 ncol(censo) #<--- es la forma más recomendada por ser más intuitiva
 length(censo)
-</code></pre>
+```
 
 ##
 ### Los nombres en el marco de datos
 Cuentan con un atributo llamado **names**, los nombres de las columnas
-<pre><code>
+```r
 names(censo)
-</code></pre>
+```
 
 ### Para cambiar los nombres, podemos hacer uso de la función names():
-<pre><code>
+```r
 # Asignamos diferentes nombres a las columas de `censo`
 names(censo) <- c("Nombre", "Apellido", "Fecha_Nacimiento", "Sexo", "Numero_Hijos")
 names(censo)
-</code></pre>
+```
 
 ##
 ### Las funciones rownames() y colnames()
 Para cambiar los nombres de las filas y columnas
-<pre><code>
+```r
 colnames(censo) <- c("Nombre", "Apellido", "Fecha_Nacimiento", "Sexo", "Numero_Hijos")
 rownames(censo) <- c("ID1", "ID2", "ID3", "ID4")
 censo
-</code></pre>
+```
 
 ### Seleccionando elementos específicos
 
 #### Acceder a todo un registro (renglón)
 Los datos que más interesan de manera inicial es traer todo un registro(renglón)
 
-<pre><code>
+```r
 censo[2, ] # todo el registro número 2
 censo[2:4, ] # del registro 2 al 4. 
-</code></pre>
+```
 
 #### Acceso a las columnas
-<pre><code>
+```r
 censo[, 2] #una sola columna
 censo[, 1:3] #un recorte de la columna 1 a la 3
-</code></pre>
+```
 
 #### Hacer un recorte de renglones y columnas
-<pre><code>
+```r
 censo[1:5, 1:3] ##del renglón 1 al 5, de la columna 1 a la 3
-</code></pre>
+```
 
 o por su nombre, usando el nombre de la columna
-<pre><code>
+```r
 censo$Nombre
 censo[, "Nombre"]
 censo[["Nombre"]]
-</code></pre>
+```
 
 #### Recorte del dataframe por selecciones
 Son subtablas con registros (renglones) que cumplan ciertas condiciones.<br>
 
 Para ver mejor los resultados de las siguientes operaciones, vamos a meter más registros a nuestros datos
-<pre><code>
+```r
 censo <- rbind(censo, c("Mirna", 
                         "Tapia", 
                         "1990-02-12", 
@@ -477,14 +477,14 @@ censo <- rbind(censo, c("Clara",
                         "MUJER", 
                         0))
 censo
-</code></pre>
+```
 
-<pre><code>
+```r
 #La subtabla formada por las filas correspondientes a personas con sexo = "MUJER" cuyo número de hijos es 0.
 censo[censo$Sexo == "MUJER" & censo$Numero_Hijos == 0, ]
 
 #censo[censo$Sexo == "MUJER" & censo$Numero_Hijos == 0, ][2:5, ]# y hacer más combinaciones
-</code></pre>
+```
 
 ##
 ### Vectorización de un dataframe
@@ -493,27 +493,27 @@ De igual manera que con un vector y con una matriz, si aplicamos una operación 
 al marco de datos, esta se vectorizará, marcando error cuando lo amerite o haciendo coersión, según los datos. <br>
 
 Primero lo haremos con un dataframe simple.
-<pre><code>
+```r
 hijos <- c(1, 2, 3, 4)
 edades <-c(20, 35, 32, 51)
 pruebaVectorizacion <- data.frame(hijos, edades)
 pruebaVectorizacion
 pruebaVectorizacion * 2
-</code></pre>
+```
 
 También marcará error cuando sea necesario, según los datos almacenados
-<pre><code>
+```r
 censo * 2
-</code></pre>
+```
 
 ##
 ### Añadiendo una nueva columna al marco de datos con la función **cbind()**
-<pre><code>
+```r
 censo <- cbind(censo, direccion = c("Col.Portales","Col. El Retoño", "Col. Roma Sur", "Col. Santa Fe"))
-</code></pre>
+```
 
 ### Otra forma de hacer lo equivalente
-<pre><code>
+```r
 censo$correoElectronico <- c( "juan@correo.com",
                               "margarita@correo.com",
                               "ruben@correo.com",
@@ -523,36 +523,36 @@ censo$correoElectronico <- c( "juan@correo.com",
                               "roxana@correo.com",
                               "clara@correo.com")
 censo
-</code></pre>
+```
 
 ##
 ### Otro ejemplo de añadiendo columnas
 Nota: volver a revisar vectorización (en vectores y matrices).
 
-<pre><code>
+```r
 censo$TieneHijos <- censo$NumeroHijos > 0
 censo
-</code></pre>
+```
 
 ##
 ### Añadiendo renglones (registros)
 - Una forma es usando la posición del dataframe
-<pre><code>
+```r
 censo[ nrow(censo) + 1,] = c("Juan", "Guevara", "1990-08-03", "MUJER", 2, "Col. Del Valle", "juan@correo.com", TRUE)
 censo
-</code></pre>
+```
 
 - Otra manera es usando la función **rbind**
-<pre><code>
+```r
 censo <- rbind(censo, c("Raul", "Hidalgo", "1986-04-09", "HOMBRE", 0, "Col. Del Valle", "raul@correo.com", FALSE))
-</code></pre>
+```
 
 - Una más es agregando los registros de otro dataframe al nuestro
 Ejercicio:
-<pre><code>
+```r
 df3 <- rbind (df1, df2)
 df3
-</code></pre>
+```
 
 > [!NOTE]
 > Ver los primeros ejercicios de dataframe
@@ -560,23 +560,23 @@ df3
 ## Valores olvidados-perdidos NA y NULL
 **NA** se refiere a datos perdidos, es decir, que pudieron olvidarse de introducir u obtener
 **NULL** se refiere a datos no-existentes, resultado de valores u objetos que no existen 
-<pre><code>
+```r
 temp  <- c(7.2, NA, 7.1, 6.9, 6.5, 5.8, 5.8, 5.5, NA, 5.5)
 temp
-</code></pre>
+```
 
 - qué pasaría si quisiéramos hacer la suma de las temperaturas?
-<pre><code>
+```r
 sum(temp)
 sum(temp, na.rm=TRUE)
-</code></pre>
+```
 
 ##
 ### Filtrando registros de un dataframe
-<pre><code>
+```r
 censo <- censo[censo$nombre != 'Juan',]
 censo
-</code></pre>
+```
 
 ##
 ### Ordenando marco de datos por columna **order, sort**
@@ -585,67 +585,67 @@ censo
   - si se ordena con elementos NA, estos van aparecer al final de la secuencia
  
 Una prueba con valores NA
-<pre><code>
+```r
 edad <- c(43, NA, 49, NA,34,56,78)
 censo <- cbind(censo, edad)
 censo[order(censo$edad),]
-</code></pre>
+```
 
 ##
 Cuál es la diferencia entre estas dos funciones?
-<pre><code>
+```r
 edades  <- c(7, NA, 7, 6, 6, 5, 5, 5, NA, 5)
 sort(edades)
 order(edades)
-</code></pre>
+```
 
 ## 
 Generalmente cuando tenemos estructuras de datos más complejas, usaremos **order**
-<pre><code>
+```r
 censo[order(censo$Nombre),]
 censo[order(censo$Nombre, decreasing = TRUE),]
 censo[order(censo$Nombre, decreasing = FALSE),]
 
 censoOrdenado <- censo[order(censo$Nombre), ]
 censoOrdenado
-</code></pre>
+```
 
 ### La ventaja de la funcion order, es que permite ordenar por varias columnas
-<pre><code>
+```r
 censoOrdenado <- censo[order(censo$direccion, censo$edad), ]
 censoOrdenado
-</code></pre>
+```
 
 ##
 ### Mezclando (**merge**) dos marcos de datos por **un campo común**
 - la función que mezcla se llama **merge**
 - cómo funciona?
 - qué pasa si **el campo común** no encuentra una coincidencia?
-<pre><code>
+```r
 datosHabitacion <- data.frame("Nombre" = c("Juan", "Margarita", "Ruben", "Daniel"), 
                               "tipHab" = c("casa", "depto", "depto", "casa"), 
                               "noFocos"= c(20,8,12,32),
                               "habPropia" = c(TRUE, TRUE, FALSE, TRUE))
 nuevosDatos <- merge( censo, datosHabitacion)
 nuevosDatos
-</code></pre>
+```
 
 ##
 ### El tipo de dato con **class()**
-<pre><code>
+```r
 class(datosHabitacion)
-</code></pre>
+```
 
 ##
 ### Más funciones para el marco de datos
 
 - Funciones para manipular objetos tipo Fecha
-<pre><code>
+```r
 fecha_nacimiento <- as.Date(c("1976-06-14", "1974-05-07", "1958-12-25", "1983-09-19"))
-</code></pre>
+```
 
 ### Borrando columnas en el dataframe con !(names(dataframe) %in% vector)
-<pre><code>
+```r
 id <- c(1,2,3,4,5,6,7,8,9)
 valor <- c(7,1,12,4,5,16,71,38,19)
 categoria <- c(rep("bajo",3),rep("medio",3),rep("alto",3))
@@ -661,4 +661,4 @@ head(datos, n=9)
 borrar <- c("valor","categoria")
 datos2 <- datos[ , !(names(datos) %in% borrar)]
 head(datos2, n=9)
-</code></pre>
+```
