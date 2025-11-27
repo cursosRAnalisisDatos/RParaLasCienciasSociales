@@ -193,7 +193,7 @@ personaje[-c(2, 5)]
 
 Usando la función *mean* podemos calcular la media aritmética de las calificaciones del estudiante:
 
-```{r setup, include=FALSE}
+```r
 x <- c(2, 4, 3, 6, 3, 7, 5, 8)
 mean(x) # 4.75
 # Equivalente a:
