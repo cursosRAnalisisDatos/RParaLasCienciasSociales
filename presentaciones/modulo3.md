@@ -199,7 +199,6 @@ mean(x) # 4.75
 # Equivalente a:
 sum(x)/lenght(x) # 4.75
 
-knitr::opts_chunk$set(echo=TRUE)
 ```
 
 #### 3.3 Matrices <a name="matrices"></a>
