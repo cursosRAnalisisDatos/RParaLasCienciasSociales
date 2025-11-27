@@ -7,7 +7,7 @@
 3.4. [Listas](#listas) <br>
 3.5. [Dataframes](#dataframes)<br>
 
-#### Introducción <a name="introduccion"></a>
+#### 3.1. Introducción <a name="introduccion"></a>
 Las colecciones de datos surgen de la necesidad de manipular datos agrupados con fines específicos.
 
 Cuando se tiene una colección, las operaciones básicas que se requieren hacer son:
@@ -29,7 +29,7 @@ Entre ellas encontramos:
  - listas
  - data frames
 
-#### Vectores <a name="vectores"></a>
+#### 3.2 Vectores <a name="vectores"></a>
 Un vector es una colección de uno o más datos del mismo tipo (es la estructura más sencilla que tiene **R**).
 
 ### Características:
@@ -200,7 +200,7 @@ mean(x) # 4.75
 sum(x)/lenght(x) # 4.75
 ```
 
-#### Matrices <a name="matrices"></a>
+#### 3.3 Matrices <a name="matrices"></a>
 Es un tipo especial de vector que tiene una dimensión más, logrando una forma rectangular y controlada por renglones y columnas.
 
 Para crear matrices se usa la función *matrix()*
@@ -266,7 +266,7 @@ eigen( matriz ) # los eigen valores y los eigen vectores de una matriz
 A %*% B #la multiplicacion de matrices, sólo se pone el signo de %
 ```
 
-#### Listas <a name="listas"></a>
+#### 3.4 Listas <a name="listas"></a>
 - Una lista es un objeto que contiene una colección ordenada de objetos.
 - Los componentes no necesitan ser del mismo tipo
 
@@ -314,7 +314,7 @@ Se usa la función **c()** y si los argumentos son listas, el resultado es un ob
 list.ABC <- c(list.A, list.B, list.C)
 ```
 
-#### Dataframe (marco de datos) <a name="dataframes"></a>
+#### 3.5 Dataframe (marco de datos) <a name="dataframes"></a>
 
 - Un data frame es mas general que una matriz, esta estructura permite que diferentes 
 columnas contengan distintos tipos de datos: numérico, cáracter, lógicos y otros.
