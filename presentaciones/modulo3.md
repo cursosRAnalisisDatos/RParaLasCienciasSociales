@@ -193,11 +193,13 @@ personaje[-c(2, 5)]
 
 Usando la función *mean* podemos calcular la media aritmética de las calificaciones del estudiante:
 
-```r
+```{r setup, include=FALSE}
 x <- c(2, 4, 3, 6, 3, 7, 5, 8)
 mean(x) # 4.75
 # Equivalente a:
 sum(x)/lenght(x) # 4.75
+
+knitr::opts_chunk$set(echo=TRUE)
 ```
 
 #### 3.3 Matrices <a name="matrices"></a>
