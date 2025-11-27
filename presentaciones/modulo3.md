@@ -1,11 +1,11 @@
 ## Módulo 3: Objetos de R (estructuras de datos)
 
 ### Contenido
-3.1. [Introducción](#introduccion)
-3.2. [Vectores](#vectores)
-3.3. [Matrices](#matrices)
-3.4. [Listas](#listas)
-3.5. [Dataframes](#dataframes)
+3.1. [Introducción](#introduccion) <br>
+3.2. [Vectores](#vectores) <br>
+3.3. [Matrices](#matrices) <br>
+3.4. [Listas](#listas) <br>
+3.5. [Dataframes](#dataframes)<br>
 
 #### Introducción <a name="introduccion"></a>
 Las colecciones de datos surgen de la necesidad de manipular datos agrupados con fines específicos.
