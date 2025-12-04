@@ -34,7 +34,7 @@ pero las necesidades de publicar resultados conllevan a también generar resulta
   
  - en el repositorio de R (**CRAN** - Comprehensive R Archive Network -)
  
-  [*importinegi*](https://rde.inegi.org.mx/index.php/2020/12/02/importinegi-un-paquete-de-r-para-descargar-y-gestionar-bases-de-datos-del-inegi/)
+  [*importinegi*](https://crenteriam.github.io/2019/08/04/importinegi/)
   
    <pre><code>
     install.packages("importinegi")
