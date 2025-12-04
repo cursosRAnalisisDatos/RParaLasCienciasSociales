@@ -124,7 +124,7 @@ write.csv(na.omit(data),"data/datosSinNA.csv")
 
 #### RMarkdown
 
-(https://rmarkdown.rstudio.com/)[https://rmarkdown.rstudio.com/]
+[https://rmarkdown.rstudio.com/](https://rmarkdown.rstudio.com/)
 
 ### 5.6 Usando paquetes
 
