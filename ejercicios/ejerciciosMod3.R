@@ -149,3 +149,22 @@ womenSI<- women[,-height]
 womenSI<- women[,-"height"]
 womenSI<- women[,-c(height)]
 womenSI<- women[,-c(1)]
+
+# ----------------------------------------------------------------------------------------------------------
+# Ejercicio5. Calcular la edad de una persona en años
+# ----------------------------------------------------------------------------------------------------------
+# 1. Define la fecha de nacimiento como un objeto de fecha
+fecha_nacimiento <- as.Date("1988-12-23")
+
+# 2. Obtén la fecha actual
+fecha_actual <- Sys.Date()
+
+# 3. Extrae el año de ambas fechas
+año_nacimiento <- format(fecha_nacimiento, "%Y")
+año_actual <- format(fecha_actual, "%Y")
+
+# 4. Calcula la diferencia
+años_cumplidos <- as.numeric(año_actual) - as.numeric(año_nacimiento)
+
+# Muestra el resultado
+print(años_cumplidos)
