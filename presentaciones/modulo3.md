@@ -536,7 +536,8 @@ censo
 
 ##
 ### Otro ejemplo de añadiendo columnas
-Nota: volver a revisar vectorización (en vectores y matrices).
+> [!NOTE]
+> Volver a revisar vectorización (en vectores y matrices).
 
 ```r
 censo$TieneHijos <- censo$NumeroHijos > 0
