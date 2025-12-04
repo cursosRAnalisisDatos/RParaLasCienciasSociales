@@ -60,6 +60,8 @@ Por omisión utiliza **","** como separador de columnas y **"."** como separador
   misDatos   
   </code></pre>
 
+  >[!NOTE] Ver, Módulo 2. Los directorios de trabajo
+
 #### Hay ocasiones que los archivos se encuentran en servidores públicos
 <pre><code>
 datos <-read.csv("https://raw.githubusercontent.com/cursosRAnalisisDatos/RParaLasCienciasSociales/main/data/censo.csv", encoding="UTF-8")
