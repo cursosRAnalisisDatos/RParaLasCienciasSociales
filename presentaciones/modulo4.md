@@ -7,7 +7,7 @@
 
 ### Condicionales
 #### if/else
-<pre><code>
+```r
 if(condición) {
   operaciones_si_condición=TRUE
 } else {
@@ -18,10 +18,10 @@ euros <- -20
 if (euros < 0){
   print("Estás en números negativos")
 }
-</code></pre>
+```
 
 #### Condicionales anidadas: if/else,if/else
-<pre><code>
+```r
 if(condición1) {
   operaciones_si_condición=TRUE
 } else if(condición2) {
@@ -29,10 +29,10 @@ if(condición1) {
 } else { 
   operaciones_si_condiciones=FALSE
 }
-</code></pre>
+```
 
 Ejemplo
-<pre><code>
+```r
 num_real <- 5.43
 num_entero <- -10
 if(num_real < num_entero) {
@@ -42,16 +42,16 @@ if(num_real < num_entero) {
 } else {
   "condiciones-FALSE"
 }
-</code></pre>
+```
 
 #### Condicionales aplicadas a un vector
-<pre><code>
+```r
 resultado <- ifelse(c(3,4,5,6,7) < num_real, "condición-TRUE", "condición-FALSE")
-</code></pre>
+```
 
 ### Ciclos 
 #### for
-<pre><code>
+```r
 for(elemento in estructura){
   operaciones_con/sin_elemento
 }
@@ -72,23 +72,23 @@ vector_for1 <- 1
 for(i in 2:7) {
   vector_for1[i] <- i
 }
-</code></pre>
+```
 
 #### ciclos while
 
 Se repite el ciclo, mientras la **condicion** sea evaluada a **TRUE**
-<pre><code>
+```r
 while(condicion) {
   operaciones_si_condicion=TRUE
 }
-</code></pre>
+```
 
 Ejemplo
-<pre><code>
+```r
 while(num_real > 1 | num_entero < num_real) {
   num_real <- num_real - 3
 }
-</code></pre>
+```
 
 #### repeat y break, next
 
@@ -96,15 +96,15 @@ while(num_real > 1 | num_entero < num_real) {
 - La expresion **next** se salta el ciclo actual y continua con el que sigue
 
 La sentencia **repeat** siempre necesita de **break**
-<pre><code>
+```r
 repeat{
   operaciones
   break
 }
-</code></pre>
+```
 
 Ejemplo de **repeat, break**:
-<pre><code>
+```r
 num_real <- 0
 repeat{
   num_real <- num_real / 2
@@ -113,10 +113,10 @@ repeat{
     break
   }
 }
-</code></pre>
+```
 
 Ejemplo de **for, next**:
-<pre><code>
+```r
 vector_for1
 vector11 <- c()
 for(i in vector_for1) {
@@ -126,4 +126,4 @@ for(i in vector_for1) {
   vector11[i] <- vector_for1[i] * 2
 }
 vector11
-</code></pre>
+```
