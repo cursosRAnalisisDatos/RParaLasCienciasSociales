@@ -2,9 +2,9 @@
 “Un simple gráfico ha brindado más información a la mente del analista de datos que cualquier otro dispositivo”. — John Tukey
 
 ### 7.1 Conociendo el tipo de datos que tenemos en nuestro dataframe
-Conocer el tipo de datos de nuestro marco de datos (o la estructura de datos que estemos trabajando) es importante pues eso nos permitirá saber qué análisis se puede realizar sobre ella, pues están determinadas si el dato representa relaciones cualitativas o cuantitativas.
+Conocer el tipo de datos de nuestro marco de datos (o la estructura de datos que estemos trabajando) es importante pues eso nos permitirá saber qué análisis se puede realizar sobre ella, ya que las operaciones están determinadas por si la columna representa relaciones cualitativas o cuantitativas.
 
-Una manera de saberlo es con la función **class**, pero quisiéramos aplicarlo de manera automática a todas las columnas.
+Una manera de saberlo es con la función **class**, la cuál quisiéramos aplicar de manera automática a todas las columnas.
 
 #### La función lapply
 <pre><code>
