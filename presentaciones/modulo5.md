@@ -110,6 +110,10 @@ library(readxl)
 censoTmp <- read_excel("data/censoTmp.xlsx")
 View(censoTmp)
 ```
+Otra manera es usando el propio IDE RStudio.
+1. File->Import Dataset
+2. From Excel 
+
 
 ### 5.5 Salidas de datos.
 
