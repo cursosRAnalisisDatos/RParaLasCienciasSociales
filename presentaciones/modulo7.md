@@ -7,21 +7,21 @@ Conocer el tipo de datos de nuestro marco de datos (o la estructura de datos que
 Una manera de saberlo es con la función **class**, la cuál quisiéramos aplicar de manera automática a todas las columnas.
 
 #### La función lapply
-<pre><code>
+ ```r
 Sintáxis: apply( x, funcion ) #aplicado de esta manera es para columnas
 Regresa: una lista con el tipo de dato para cada columna
-</code></pre>
+ ```
 Ejemplo **lapply**.
-<pre><code>
+ ```r
 lapply(datosInegiConMunicipiosOrdenado, class)
-</code></pre>
+ ```
 
 ### 7.2 Obteniendo un resumen de los datos
 Y por último, pedimos un resumen de nuestros datos con la función **summary()**. Esta función acepta cualquier tipo de objeto como argumento y nos devuelve un resumen descriptivo de los datos de cada uno de sus elementos.
 
-<pre><code>
+ ```r
 summary(datosInegiConMunicipiosOrdenado)
-</code></pre>
+ ```
 
 <img src="../images/modulo7/salidaFuncionSummary.png" alt="proyecto R" width="800px"> 
 
@@ -30,9 +30,9 @@ La salida muestra:
 - si la media y mediana son similares la una a la otra.
 
 También se puede realizar el resumen por columna
-<pre><code>
+ ```r
 summary(datosInegiConMunicipiosOrdenado$EDAD)
-</code></pre>
+ ```
 
 ### 7.3 Variables discretas en R
 
@@ -40,64 +40,64 @@ summary(datosInegiConMunicipiosOrdenado$EDAD)
 Recibe un vector o una lista
 
 Ejemplo:
-<pre><code>
+ ```r
 table(datosInegiConMunicipiosOrdenado$NOM_ENT)
-</code></pre>
+ ```
 
 #### Frecuencias relativas (proporciones) con la función **prop.table()**
 Ejemplo:
-<pre><code>
+ ```r
 prop.table(table(datosInegiConMunicipiosOrdenado$NOM_ENT))
-</code></pre>
+ ```
 
 ### 7.4 Histogramas
 
 #### usando la función ggplot
 1. Creamos la variable **pl** correspondiente a la sintaxis básica en el paquete **ggplot2** para la creación de una gráfica.
 
-<pre><code>
+ ```r
 install.packages("ggplot2")
 library(ggplot2)
 colnames(datosInegiConMunicipiosOrdenado)
 head(datosInegiConMunicipiosOrdenado)
 pl <- ggplot(datosInegiConMunicipiosOrdenado, aes(x = EDAD))
 class(pl)
-</code></pre>
+ ```
 
 2. Añadimos el elemento geométrico, en esta caso, queremos un histograma.
-<pre><code>
+ ```r
 pl + geom_histogram()
-</code></pre>
+ ```
 
 3. Mejoramos la visualización agregando más parámetros a la función *geom_histogram()*
-<pre><code>
+ ```r
 pl2 <- pl + geom_histogram(binwidth = 0.8, #ancho de la barra 
                                     col='black', #contorno de la barra
                                     fill='green', #relleno de cada barra
                                     alpha=0.4) #transparencia del color
 pl2
-</code></pre>
+ ```
 
 4. Agregamos una capa más de etiquetas.
-<pre><code>
+ ```r
 pl2 + labs( title = "CENSO",
             x = "Columna Edad",
             y = "Conteos",
             subtitle = "Edad")
-</code></pre>
+ ```
 
 #### Dibujando la gráfica de otra manera
 Otra manera de rellenar las barras del histograma en función del número de apariciones es usando **..count..** en los aesthetics de **geom_histogram()**
-<pre><code>
+ ```r
 pl2 <- pl + geom_histogram(binwidth = 0.8, #ancho de la barra 
                            aes(fill=..count..),
                            col="black") #transparencia del color
-</code></pre>
+ ```
 
 ### Histogramas por grupos
 
 Ejemplo simple:
-<pre><code>
+ ```r
 set.seed(3)
 x1 <- rnorm(500)
 x2 <- rnorm(500, mean = 3)
@@ -105,21 +105,21 @@ x <- c(x1, x2)
 grupo <- c(rep("G1", 500), rep("G2", 500))
 
 df <- data.frame(x, group = grupo)
-</code></pre>
+ ```
 
-<pre><code>
+ ```r
 ggplot(df, aes(x = x, fill = grupo)) + 
   geom_histogram()
-</code></pre>
+ ```
 
 Ejemplo con datos del INEGI
-<pre><code>
+ ```r
 df <- data.frame(datosInegiConMunicipiosOrdenado, 
                  group = datosInegiConMunicipiosOrdenado$NOM_ENT)
 ggplot(df, aes(x = datosInegiConMunicipiosOrdenado$EDAD, 
                fill = datosInegiConMunicipiosOrdenado$NOM_ENT)) + 
   geom_histogram()
-</code></pre>
+ ```
 
 Nota: Ejercicio 1. 
 
@@ -132,45 +132,45 @@ Con este paquete se puede personalizar a gran detalle cada una de las gráficas,
 
 Si estableces **fill** dentro de **aes** pero no **colour** puedes cambiar el color del borde para todos los histogramas así como el ancho y tipo de línea con los argumentos de **geom_histogram**.
 
-<pre><code>
+ ```r
 ggplot(df, aes(x = datosInegiConMunicipiosOrdenado$EDAD, 
                fill = datosInegiConMunicipiosOrdenado$NOM_ENT)) + 
               geom_histogram(colour = "black",
                                 lwd = 0.75,
                                 linetype = 1,
                                 position = "identity")
-</code></pre>
+ ```
 
 ##### Personalizando el color de fondo
 Si estableces **colour** pero no **fill** puedes cambiar el color de fondo de todos los histogramas con el argumento **fill** de **geom_histogram**.
 
-<pre><code>
+ ```r
 ggplot(df, aes(x = datosInegiConMunicipiosOrdenado$EDAD, 
                colour = datosInegiConMunicipiosOrdenado$SEXO_CHAR)) + 
   geom_histogram(fill  = "white",
                  position = "identity")
-</code></pre>
+ ```
 Nota: Asegurarse que el argumento activo de **aes** es **colour**
 
 ##### Personalizando el color del borde para cada grupo
 
 El color de los bordes se puede personalizar para cada histograma con **scale_color_manual**. Si quieres usar una paleta predefinina puedes usar, por ejemplo, **scale_color_brewer**.
 
-<pre><code>
+ ```r
  geom_histogram(fill  = "white",
                  position = "identity") +
   scale_color_manual(values = c("blue", "orange"))
-</code></pre>
+ ```
 
 ##### Personalizando el color de fondo para cada grupo
 De manera similar a personalizar los colores de los bordes, los colores de fondo se pueden cambiar con **scale_fill_manual** o una función equivalente.
-<pre><code>
+ ```r
 ggplot(df, aes(x = datosInegiConMunicipiosOrdenado$EDAD, 
                fill = datosInegiConMunicipiosOrdenado$SEXO_CHAR)) +
 geom_histogram(color = 1, alpha = 0.75,
                  position = "identity") +
  scale_fill_manual(values = c("#8795E8", "#FF6AD5"))
-</code></pre>
+ ```
 Nota: Asegurarse que el campo activo para **aes** es **fill**
 
 #### Colores predefinidos en R
@@ -191,18 +191,18 @@ https://r-charts.com/es/colores/
 
 NOTA: Probar una por una, para notar los cambios, para diferentes parámetros de cada argumento
 
-<pre><code>
+ ```r
 geom_histogram(alpha = 0.5, position = "identity")
 #geom_histogram(alpha = 0.5, position="identity", binwidth = 1.5 ) #Ejemplo para probar
 #geom_histogram(alpha = 0.5, position = "dodge") #Ejemplo para probar
-</code></pre>
+ ```
 
 #### La leyenda de los valores categóricos (por grupos)
 El título de la leyenda es el nombre de la columna de la variable categórica del conjunto de datos. Puedes cambiarlo con los argumentos **fill** y/o **colour** de la función **guides**. 
-<pre><code>
+ ```r
 df +guides(fill = guide_legend(title = "Por Municipio"),
          colour = guide_legend(title = "Por Municipio"))
-</code></pre>
+ ```
 
 #### Posición de la leyenda
 La posición por defecto de la leyenda es la derecha, pero puedes cambiarla con el argumento **legend.position** de la función **theme**. 
@@ -216,9 +216,9 @@ Los argumentos válidos son:
 - "top"
 
 Ejemplo:
-<pre><code>
+ ```r
 + theme(legend.position = "left")
-</code></pre>
+ ```
 
 ###
 
