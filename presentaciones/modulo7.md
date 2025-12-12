@@ -26,7 +26,7 @@ summary(datosInegiConMunicipiosOrdenado)
 <img src="../images/modulo7/salidaFuncionSummary.png" alt="proyecto R" width="800px"> 
 
 La salida muestra:
-- mínimos y máximos en busca de outliers, 
+- mínimos y máximos en busca de valores atípicos (outliers), 
 - si la media y mediana son similares la una a la otra.
 
 También se puede realizar el resumen por columna
