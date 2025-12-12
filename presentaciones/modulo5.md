@@ -97,7 +97,7 @@ read.csv("mi_archivo.csv", na.strings = c("-9999" , "Na" )) # o se le puede pasa
 Si necesitas eliminar los valores NA después de abrir el CSV, deberás usar la función que corresponda según tus datos. 
 La función más habitual es **na.omit**
 ```r
-na.omit(dataFrame)
+na.omit(data)
 ```
 
 ### 5.4 Leyendo archivos Excel
