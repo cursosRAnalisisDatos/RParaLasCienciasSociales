@@ -106,7 +106,9 @@ Una de las formas más comunes de hacerlo es con la función **read.xlsx()**
 
 Ejemplo:
 ```r
-telde = read.xlsx("endocrino.xlsx") 
+library(readxl)
+censoTmp <- read_excel("data/censoTmp.xlsx")
+View(censoTmp)
 ```
 
 ### 5.5 Salidas de datos.
