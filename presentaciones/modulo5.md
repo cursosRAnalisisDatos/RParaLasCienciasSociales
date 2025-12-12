@@ -157,7 +157,7 @@ Para usar un paquete se usa la función
   Ejemplo:
   ```r
   install.packages("dplyr")# Instalando la librería dplyr
-```
+  ```
 
 #### Nota importante con respecto a paquetes
 
