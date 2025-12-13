@@ -64,7 +64,7 @@ pl <- ggplot(datosInegiConMunicipiosOrdenado, aes(x = EDAD))
 class(pl)
  ```
 
-2. Añadimos el elemento geométrico, en esta caso, queremos un histograma.
+2. Añadimos el elemento geométrico, en este caso, queremos un histograma.
  ```r
 pl + geom_histogram()
  ```
