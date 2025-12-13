@@ -135,10 +135,10 @@ Si estableces **fill** dentro de **aes** pero no **colour** puedes cambiar el co
  ```r
 ggplot(df, aes(x = datosInegiConMunicipiosOrdenado$EDAD, 
                fill = datosInegiConMunicipiosOrdenado$NOM_ENT)) + 
-              geom_histogram(colour = "black",
-                                lwd = 0.75,
-                                linetype = 1,
-                                position = "identity")
+           geom_histogram(colour = "black",
+                          lwd = 0.75, #line width
+                          linetype = 1,
+                          position = "identity")
  ```
 
 ##### Personalizando el color de fondo
