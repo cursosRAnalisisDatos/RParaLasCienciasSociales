@@ -123,6 +123,7 @@ ggplot(df, aes(x = datosInegiConMunicipiosOrdenado$EDAD,
 
 > [!note]
 > Realizar el Ejercicio 1
+> A partir de este punto, los códigos dependen de la ejecución del Ejercicio 1
 
 ### Personalizando la gráfica
 Con este paquete se puede personalizar a gran detalle cada una de las gráficas, en esta sección vamos a explorar algunas de las opciones disponibles.
@@ -151,8 +152,9 @@ ggplot(df, aes(x = datosInegiConMunicipiosOrdenado$EDAD,
   geom_histogram(fill  = "white",
                  position = "identity")
  ```
-Nota: Asegurarse que el argumento activo de **aes** es **colour**
-
+> [!note]
+> Asegurarse que el argumento activo de **aes** es **colour**
+> 
 ##### Personalizando el color del borde para cada grupo
 
 El color de los bordes se puede personalizar para cada histograma con **scale_color_manual**. Si quieres usar una paleta predefinina puedes usar, por ejemplo, **scale_color_brewer**.
