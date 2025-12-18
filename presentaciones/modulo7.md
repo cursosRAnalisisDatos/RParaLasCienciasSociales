@@ -121,7 +121,8 @@ ggplot(df, aes(x = datosInegiConMunicipiosOrdenado$EDAD,
   geom_histogram()
  ```
 
-Nota: Ejercicio 1. 
+> [!note]
+> Realizar el Ejercicio 1
 
 ### Personalizando la gráfica
 Con este paquete se puede personalizar a gran detalle cada una de las gráficas, en esta sección vamos a explorar algunas de las opciones disponibles.
