@@ -123,6 +123,7 @@ ggplot(df, aes(x = datosInegiConMunicipiosOrdenado$EDAD,
 
 > [!note]
 > Realizar el Ejercicio 1
+
 > [!note]
 > A partir de este punto, los códigos dependen de la ejecución del Ejercicio 1
 
