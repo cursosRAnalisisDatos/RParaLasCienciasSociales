@@ -78,11 +78,12 @@ Una gráfica de densidad es similar a un histograma solo que utiliza una estimac
     geom_density()  
 </code></pre>
 
-Al igual que en el histograma también podemos agregar capas. Por ejemplo, vamos a graficar la distribución de frecuencias por *SEXO*
+Igual que en el histograma también podemos agregar capas. <br>
+Por ejemplo, vamos a graficar la distribución de frecuencias por *SEXO*
 
 <pre><code>
 ggplot(datosInegiConMunicipiosOrdenado, aes(x = EDAD, fill = grupoSexo)) +
-  geom_density(alpha = 0.4)
+  geom_density(alpha = 0.4) # probar sin el argumento de alpha
 </code></pre>
 
 agregado una transparencia a través del parámetro *alpha = 0.4* para poder visualizar la distribución por SEXO. 
