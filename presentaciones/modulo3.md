@@ -640,6 +640,9 @@ nuevosDatos <- merge( censo, datosHabitacion)
 nuevosDatos
 ```
 
+<img src="../images/modulo3/merge.png" alt="merge en dataframe" width="800px"> 
+
+
 ##
 ### El tipo de dato con **class()**
 ```r
