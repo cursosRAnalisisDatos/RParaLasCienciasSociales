@@ -74,8 +74,8 @@ ggplot(datosInegiConMunicipiosOrdenado, aes(x = EDAD, fill = SEXO, color = 'whit
 Una gráfica de densidad es similar a un histograma solo que utiliza una estimación no paramétrica de la distribución de probabilidades de los datos. El objeto geométrico es *geom_density*
 
 <pre><code>
-ggplot(datosInegiConMunicipios, aes(x = EDAD)) +
-  geom_density()
+ ggplot(datosInegiConMunicipiosOrdenado, aes(x = EDAD)) +
+    geom_density()  
 </code></pre>
 
 Al igual que en el histograma también podemos agregar capas. Por ejemplo, vamos a graficar la distribución de frecuencias por *SEXO*
