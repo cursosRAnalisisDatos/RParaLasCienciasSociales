@@ -639,7 +639,8 @@ datosHabitacion <- data.frame("Nombre" = c("Juan", "Margarita", "Ruben", "Daniel
 nuevosDatos <- merge( censo, datosHabitacion)
 nuevosDatos
 ```
-Acá un ejemplo de el resultado de hacer un *merge*
+
+Acá un ejemplo de el resultado de hacer un *merge*<br>
 <img src="../images/modulo3/merge.png" alt="merge en dataframe" width="500px"> 
 
 
