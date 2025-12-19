@@ -641,7 +641,7 @@ nuevosDatos
 ```
 
 Acá un ejemplo de el resultado de hacer un *merge*<br>
-<img src="../images/modulo3/merge.png" alt="merge en dataframe" width="500px"> 
+<img src="../images/modulo3/merge.png" alt="merge en dataframe" width="600px"> 
 
 
 ##
