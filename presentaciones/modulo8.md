@@ -44,10 +44,11 @@ ggplot(datosInegiConMunicipiosOrdenado, aes(x = EDAD, fill=grupoSexo)) +
 
 Para simplificar la gráfica, vamos a eliminar las leyendas, agregar un título y un subtitulo
 
+#### Se pueden separar los histogramas por valores diferentes encontrados en la columna elegida
 <pre><code>
 ggplot(datosInegiConMunicipiosOrdenado, aes(x = EDAD, fill = grupoSexo)) +
   geom_histogram(color = 'white') +
-  facet_wrap(~grupoSexo, scales = 'free', nrow = 2) +
+  facet_wrap(~grupoSexo, scales = 'free', nrow = 2) + # se puede probar con ncol = "
   theme(legend.position = 'none') +
   labs(title = 'Data Inegi',
        subtitle = 'Histogram by SEXO')
