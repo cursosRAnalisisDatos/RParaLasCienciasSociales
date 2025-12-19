@@ -8,10 +8,10 @@ tags: [github, markdown, yaml]
 ## Principios de Probabilidad y Estadística con R, para las Ciencias Sociales
 
 Curso diseñado e impartido para el Instituto de Investigaciones Económicas, UNAM 
-(1era edición - Octubre 2023) <br>
-(2da edición - Abril 2023) <br>
-(3era edición - Abril 2024)<br>
-(4ta edición - Octubre 2025)<br>
+- (1era edición - Octubre 2023) <br>
+- (2da edición - Abril 2023) <br>
+- (3era edición - Abril 2024)<br>
+- (4ta edición - Octubre 2025)<br>
 
 - Dr. Eric Hernández Ramírez
 - Lic. en C. C. Virginia Teodosio Procopio
