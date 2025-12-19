@@ -13,6 +13,7 @@ Curso diseñado e impartido para el Instituto de Investigaciones Económicas, UN
 - (3era edición - Abril 2024)<br>
 - (4ta edición - Octubre 2025)<br>
 
+Impartido por:
 - Dr. Eric Hernández Ramírez
 - Lic. en C. C. Virginia Teodosio Procopio
 - Fís. Octavio Eduardo Vizcaya Xilotl
