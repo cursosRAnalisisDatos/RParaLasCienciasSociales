@@ -18,7 +18,6 @@ El histograma visualiza la distribución de frecuencias de los datos. En ggplot 
 
 <pre><code>
 unique(datosInegiConMunicipiosOrdenado$SEXO)
-#if(datosInegiConMunicipiosOrdenado ==  )
 class(datosInegiConMunicipiosOrdenado$SEXO)
 datosInegiConMunicipiosOrdenado <- cbind(datosInegiConMunicipiosOrdenado, 
                                          grupoSexo = ifelse(datosInegiConMunicipiosOrdenado$SEXO <= 1, "HOMBRE", "MUJER"))
