@@ -16,7 +16,7 @@ En esta sección usaremos ggplot con el conjunto de datos del Inegi que ya hemos
 
 El histograma visualiza la distribución de frecuencias de los datos. En ggplot existe la forma geométrica geom_histogram:
 
-<pre><code>
+```r
 unique(datosInegiConMunicipiosOrdenado$SEXO)
 class(datosInegiConMunicipiosOrdenado$SEXO)
 datosInegiConMunicipiosOrdenado <- cbind(datosInegiConMunicipiosOrdenado, 
@@ -26,7 +26,7 @@ resultadoSexo <- ifelse(datosInegiConMunicipiosOrdenado$SEXO <= 1, "HOMBRE", "MU
 #En este histograma la variable para fill es la que se genera usando el ifelse 
 #y agregando la columna al dataframe
 ggplot(datosInegiConMunicipiosOrdenado, aes(x = EDAD, fill=grupoSexo)) + geom_histogram()
-</code></pre>
+```
 
 Agregando más detalles al gráfico
 - color: agrega el color a las divisiones de las barras
@@ -34,25 +34,25 @@ Agregando más detalles al gráfico
 - position: la manera en la que se dibujan los datos que coinciden, {identity, stack, ...}
 - theme_gray(): son los temas preinstalados que pueden tomar el gráfico, de fondo
 
-<pre><code>
+```r
 ggplot(datosInegiConMunicipiosOrdenado, aes(x = EDAD, fill=grupoSexo)) + 
   geom_histogram(color="#e9ecef", alpha=0.6, position = "identity") +
   scale_fill_manual(values=c("#69b3a2", "#404080")) + #cambiamos los colores de manera manual
   theme_gray() + 
   labs(fill="")
-</code></pre>
+```
 
 Para simplificar la gráfica, vamos a eliminar las leyendas, agregar un título y un subtitulo
 
 #### Se pueden separar los histogramas por valores diferentes encontrados en la columna elegida
-<pre><code>
+```r
 ggplot(datosInegiConMunicipiosOrdenado, aes(x = EDAD, fill = grupoSexo)) +
   geom_histogram(color = 'white') +
   facet_wrap(~grupoSexo, scales = 'free', nrow = 2) + # se puede probar con ncol = "
   theme(legend.position = 'none') +
   labs(title = 'Data Inegi',
        subtitle = 'Histogram by SEXO')
-</code></pre>
+```
 
 #### Más de histogramas
  - [https://r-graph-gallery.com/histogram.html](https://r-graph-gallery.com/histogram.html)
@@ -64,44 +64,44 @@ ggplot(datosInegiConMunicipiosOrdenado, aes(x = EDAD, fill = grupoSexo)) +
 ###
 También podemos hacer un histograma por la variable *SEXO*. Para lograr esto, podemos hacer uso de un **facet**. Los facets permiten hacer un corte en los datos para visualizarlos por grupos. Ejemplo: *facet_wrap()*
 
-<pre><code>
+```r
 ggplot(datosInegiConMunicipiosOrdenado, aes(x = EDAD, fill = SEXO, color = 'white')) +
   geom_histogram() +
   facet_wrap(~SEXO, scales = 'free', nrow = 2)
-</code></pre>
+```
 
 ### Gráficas de densidad
 Una gráfica de densidad es similar a un histograma solo que utiliza una estimación no paramétrica de la distribución de probabilidades de los datos. El objeto geométrico es *geom_density*
 
-<pre><code>
+```r
  ggplot(datosInegiConMunicipiosOrdenado, aes(x = EDAD)) +
     geom_density()  
-</code></pre>
+```
 
 Igual que en el histograma también podemos agregar capas. <br>
 Por ejemplo, vamos a graficar la distribución de frecuencias por *SEXO*
 
-<pre><code>
+```r
 ggplot(datosInegiConMunicipiosOrdenado, aes(x = EDAD, fill = grupoSexo)) +
   geom_density(alpha = 0.4) # probar sin el argumento de alpha
-</code></pre>
+```
 
 agregado una transparencia a través del parámetro *alpha = 0.4* para poder visualizar la distribución por SEXO. 
 
 Si te parece que la imagen no es muy clara, podemos aplicar un facet_wrap
-<pre><code>
+```r
 ggplot(datosInegiConMunicipiosOrdenado, aes(x = EDAD, fill = grupoSexo)) +
   geom_density(alpha = 0.4) +
   facet_wrap(~grupoSexo, scales = 'free', nrow = 2) +
   theme(legend.position = 'none') +
   labs(title = 'Inegi',
        subtitle = 'Density Plot by SEXO')
-</code></pre>
+```
 
 ### Gráficos de dispersion o *geom_point*
 Veamos cómo ha evolucionado la esperanza de vida en Europa
 
-<pre><code>
+```r
 if(!require(gapminder)) {
   install.packages("gapminder")
   library(gapminder)} 
@@ -110,72 +110,72 @@ head(df)
 ncol(df)
 nrow(df)
 citation("gapminder")
-</code></pre>
+```
 
-<pre><code>
+```r
 aa <- filter(gapminder, continent == "Europe") 
 p = ggplot(data = aa, aes(y = lifeExp, x = year )) +
   geom_point()
 p
-</code></pre>
+```
 
 #### Añadimos color
-<pre><code>
+```r
 p = ggplot(aa, aes(y = lifeExp, x = year , color=gdpPercap)) +
   geom_point()
 p
-</code></pre>
+```
 
 #### Suavizados (geom_smooth())
 El **geom_smooth()** añade una aproximación de los datos **x** e **y**, e incluye una cinta con el margen de confianza.
-<pre><code>
+```r
 p +  geom_smooth() 
-</code></pre>
+```
 
 #### Texto (geom_text())
 Podemos añadir unas etiquetas a los puntos del gráfico de dispersión con el objeto **geom_text()**.
-<pre><code>
+```r
 p +  geom_smooth() + 
 geom_text(aes(label=country))
-</code></pre>
+```
 
 ### Gráficos de lineas (geom_line())
 Para hacer un gráfico de líneas usaremos una sintaxis muy parecida, pero tendremos que tener en cuenta que R va hacer una línea de punto a punto
-<pre><code>
+```r
 bb <- gapminder %>% filter(country == "Spain")
 p = ggplot(data = bb, aes(y = lifeExp, x = year )) +
   geom_line()
 p
-</code></pre>
+```
 
 #### Haciendo agrupaciones por países
 Si queremos graficar todos los valores del año, podemos darle un color para que nos separe por países por ejemplo:
-<pre><code>
+```r
 cc <- gapminder %>% filter(continent == "Oceania")
 ggplot(data = cc, aes(y = lifeExp, x = year ,color=country)) +
   geom_line() +
   geom_point()
-</code></pre>
+```
 
 #### Separando en diferentes figuras:
-<pre><code>
+```r
 ggplot(data = cc, aes(y = lifeExp, x = year )) +
   geom_line() + facet_wrap(~country)
-</code></pre>
+```
 
 ### Gráficas de cajas (Box Plots)
 La gráfica de cajas es otra forma de visualizar la distribución de los datos. 
 La geometría que la define es *geom_boxplot()* y son muy buenas para visualizar la dispersión por grupos de datos.
 
-<pre><code>
+```r
 ggplot(datosInegiConMunicipiosOrdenado, aes(y = EDAD, x = grupoSexo, fill = grupoSexo)) +
   geom_boxplot()
-</code></pre>
+```
 
 Las gráficas de caja o **box plots** nos permiten agregar una 3er variable para visualizar los datos. 
 Supongamos que queremos ver las diferencias entre la escolaridad, el sexo y la edad Entonces, agregaremos un **facet** por la variable escolaridad.
 
-<pre><code>
+```r
 unique( datosInegiConMunicipiosOrdenado$ESCOLARI) 
 colnames(datosInegiConMunicipiosOrdenado)
 ggplot(datosInegiConMunicipiosOrdenado, 
@@ -185,7 +185,7 @@ ggplot(datosInegiConMunicipiosOrdenado,
   theme(legend.position = 'none') +
   labs(title = 'Dataset Inegi',
        subtitle = 'Box Plot by sexo and by escolaridad')
-</code></pre>
+```
 
 #### Más detalles a la gráfica
 
@@ -193,7 +193,7 @@ Una característica interesante de **ggplot** es que también podemos agregar el
 Supongamos que queremos agregar un punto en cada caja que represente el **promedio por grupo**. <br>
 Esto se logra con el elemento **stat_summary()**<br>
 
-<pre><code>
+```r
 ggplot(datosInegiConMunicipiosOrdenado, aes(y = EDAD, x = grupoSexo, fill = grupoSexo)) +
   geom_boxplot(alpha = 0.6) +
   facet_wrap(~ESCOLARI, scales = 'free', nrow = 2) +
@@ -201,38 +201,38 @@ ggplot(datosInegiConMunicipiosOrdenado, aes(y = EDAD, x = grupoSexo, fill = grup
   stat_summary(fun=mean, geom = "point", shape = 16, size = 1, color="red", fill = "red") +
   labs(title = 'Dataset Inegi',
        subtitle = 'Box Plot by sexo and by escolaridad')
-</code></pre>
+```
 
 #### 
 Otro ejemplo con gapminder
-<pre><code>
+```r
 ggplot(data = gapminder, aes(y = lifeExp, x = country )) +
 geom_boxplot() 
-</code></pre>
+```
 
 #### Con color y leyendas
-<pre><code>
+```r
 ggplot(gapminder, aes(y=lifeExp, x=country, fill=continent)) +
   geom_boxplot() +
   labs(x="País", y="Esperanza de vida", fill="Continente")   # título, ejes y leyenda
-</code></pre>
+```
 
 #### Añadir estadísticas que nos puedan interesar
-<pre><code>
+```r
 ggplot(gapminder, aes(y=lifeExp, x=continent, fill=continent)) +
   geom_boxplot() +
   labs(x="Continente", y="Esperanza de vida", fill="Continente") +  
   geom_point(stat= "summary", fun="mean", shape=16, size=4, color="red") +
-</code></pre>
+```
 
 #### Podemos cambiar los ejes
-<pre><code>
+```r
 ggplot(gapminder, aes(y=lifeExp, x=continent, fill=continent)) +
   geom_boxplot() +
   labs(x="Continente", y="Esperanza de vida", fill="Continente") +  
   geom_point(stat= "summary", fun="mean", shape=16, size=4, color="red") +
   coord_flip()
- </code></pre>
+ ```
 
 ### Gráficas de Violin (Violin plot)
 
@@ -240,12 +240,35 @@ Es una variante del gráfico de caja que muestra de una forma mas clara la distr
 
 https://datavizcatalogue.com/ES/metodos/diagrama_de_violin.html
 
-<pre><code> 
+```r 
 ggplot(datosInegiConMunicipiosOrdenado, 
        aes(y = EDAD, x = grupoSexo, fill = grupoSexo)) +
        geom_violin()
-</code></pre>
+```
 
 
 ### Galería de gráficos en R
 [https://www.r-graph-gallery.com/](https://www.r-graph-gallery.com/)
+
+## Gráficas extras
+### HeatMap (Mapa de calor)
+
+```r 
+   # notar la elección de mtcars, que tiene solo columnas enteras
+  lapply(mtcars, class)
+  mtcars
+  # se transforma a matriz (revisar capítulo 3)
+  data <- as.matrix(mtcars)
+  View(data)
+  
+  # Default Heatmap
+  heatmap(data, scale="column")
+  
+  # con escala por columna
+  heatmap(data, scale="column") 
+  
+  # sin escala y sin dendograma
+  heatmap(data, scale="none", Rowv = NA)
+  
+```
+
