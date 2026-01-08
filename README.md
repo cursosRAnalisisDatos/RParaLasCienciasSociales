@@ -1,9 +1,3 @@
----
-title: Mi Artículo de Ejemplo
-author: Tu Nombre
-date: 2025-11-26
-tags: [github, markdown, yaml]
----
 # Introducción a R para las Ciencias Sociales
 ## Principios de Probabilidad y Estadística con R, para las Ciencias Sociales
 
