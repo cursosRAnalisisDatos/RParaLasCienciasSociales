@@ -1,13 +1,3 @@
----
-title: "Introducción a R para las Ciencias Sociales"
-author: 
-- "Dr. Eric Hernández Ramírez"
-- "Lic. en C. C. Virginia Teodosio Procopio"
-- "Fís. Octavio Eduardo Vizcaya Xilotl"
-date: "`r Sys.Date()`"
-output: ioslides_presentation
-logo: ../images/logoIIEc.jpg
----
 
 # Módulo 1. Introducción a R
 
