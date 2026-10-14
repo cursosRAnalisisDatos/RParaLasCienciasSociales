@@ -6,6 +6,7 @@ Curso diseñado e impartido para el Instituto de Investigaciones Económicas, UN
 - (2da edición - Abril 2023) <br>
 - (3era edición - Abril 2024)<br>
 - (4ta edición - Octubre 2025)<br>
+- (5ta edición - Octubre 2026) <br>
 
 Impartido por:
 - Dr. Eric Hernández Ramírez
