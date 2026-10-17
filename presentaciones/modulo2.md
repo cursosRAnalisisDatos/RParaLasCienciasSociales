@@ -46,28 +46,8 @@ Favor de teclear
 
 Despliega una versión de la documentación en línea de R, con ligas a las versiones de R instaladas localmente, manuales de R y una lista de los paquetes actualmente instalados.
 
-### 2.2 Los directorios de trabajo
-Un directorio de trabajo es el directorio desde el cual **R** va a leer los archivos (de datos, imágenes) o a guardar archivos (si el código lo dice).
-<pre><code>
-getwd() # para conocer el directorio de trabajo
-setwd("C:\otro_directorio") #para modificar el directorio de trabajo
 
-</code></pre>
-
-Ejemplos (en ambos ejemplos se asume que existen dichos subdirectorios):
-<pre><code>
-
-#en Windows
-setwd("C:\Users\TuUsuario\Documents\Proyecto")
-  
-#en Mac
-setwd("/Users/tu_usuario/Desktop/MiCarpeta")
-  
-#en Ubuntu 
-setwd("/home/virgin/Desktop/cursoR")
-</code></pre>
-
-### 2.3 Qué es un "script" (un archivo de código fuente)?
+### 2.2 Qué es un "script" (un archivo de código fuente)?
 
 Un archivo de código fuente en R es un archivo que contiene instrucciones que sólo R sabe identificar, para luego interpretarlas y generar salidas en tiempo de ejecución.
 
@@ -76,7 +56,7 @@ Y no volver a reconstruir todo cada vez que necesitemos hacer una análisis.
 
 - Los scripts en *R* tienen terminación **.R**
 
-### 2.4 Comentarios
+### 2.3 Comentarios
 **Los comentarios son líneas, inmersas en el código fuente, que son ignoradas por el *intérprete de R*, por lo que pueden contener cualquier información, en cualquier formato**
 
 - La mayoría de veces las instrucciones que usamos, así como el uso de las funciones y los argumentos que necesitan, no son fáciles de recordar. 
@@ -85,7 +65,7 @@ Y no volver a reconstruir todo cada vez que necesitemos hacer una análisis.
 
 - Además que es uno de los mecanismos de comunicación con nosotros mismos (en el futuro) y con otros desarrolladores.
 
-### 2.5 Operadores
+### 2.4 Operadores
 
 #### Operaciones aritméticas
 <pre><code>
@@ -135,7 +115,7 @@ Ejemplo:
 ## [1] TRUE
 </code></pre>
 
-### 2.6 Funciones matemáticas
+### 2.5 Funciones matemáticas
   Hay una gran cantidades de funciones matemáticas predefinidas, sólo hay que saber que argumentos necesitan para trabajar
 
 <pre><code>
@@ -153,7 +133,7 @@ pi                    # not a function but useful
 ## [1] 3.141593
 </code></pre>
 
-### 2.7 Funciones numéricas
+### 2.6 Funciones numéricas
 <pre><code>
 #abs(x): Valor absoluto de x, 
 abs(-7) #devuelve 7
@@ -171,7 +151,7 @@ trunc(5.99) #devuelve 5.
 10%%3 #devuelve 1.
 </code></pre>
 
-### 2.8 Funciones de Caracteres
+### 2.7 Funciones de Caracteres
 #### substr()
 ##### usar el help()
 Lo que hace la función substr(x) es devolver una subcadena de la cadena que le hemos pasado.<br>
@@ -202,7 +182,7 @@ tolower(cadena)
 #[1] "openwebinars"
 </code></pre>
 
-### 2.9 Objetos en el ambiente de ejecución de R
+### 2.8 Objetos en el ambiente de ejecución de R
   - Los *objetos* son espacios en la memoria que guardan información que puede accederse y guardarse de manera específica para luego hacer procedimientos estadísticos y gráficos, entre otros. 
 
 - En R existen: variables, constantes, vectores, matrices, arreglos, dataframes(marco de datos), listas, etc.
@@ -331,7 +311,7 @@ Se muestra un código de R que el lector puede copiar y pegar en un script. El c
             "años de edad."))
 </code></pre>
 
-### 2.10 Documentando el script
+### 2.9 Documentando el script
 <pre><code>
 # Title: Time series analysis of snouters
 
