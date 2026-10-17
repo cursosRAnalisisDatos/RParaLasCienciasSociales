@@ -48,9 +48,30 @@ pero las necesidades de publicar resultados conllevan a también generar resulta
  - **Bioconductor**
  
   [http://bioconductor.org/packages/release/bioc/](http://bioconductor.org/packages/release/bioc/)
+
+### 5.3 Los directorios de trabajo
+Un directorio de trabajo es el directorio desde el cual **R** va a leer los archivos (de datos, imágenes) o a guardar archivos (si el código lo dice).
+<pre><code>
+getwd() # para conocer el directorio de trabajo
+setwd("C:\otro_directorio") #para modificar el directorio de trabajo
+
+</code></pre>
+
+Ejemplos (en ambos ejemplos se asume que existen dichos subdirectorios):
+<pre><code>
+
+#en Windows
+setwd("C:\Users\TuUsuario\Documents\Proyecto")
+  
+#en Mac
+setwd("/Users/tu_usuario/Desktop/MiCarpeta")
+  
+#en Ubuntu 
+setwd("/home/virgin/Desktop/cursoR")
+</code></pre>
  
 
-### 5.3 Leyendo archivos CSV
+### 5.4 Leyendo archivos CSV
 
 Por omisión utiliza **","** como separador de columnas y **"."** como separador de la parte decimal para números
   ```r
@@ -100,7 +121,7 @@ La función más habitual es **na.omit**
 na.omit(data)
 ```
 
-### 5.4 Leyendo archivos Excel
+### 5.5 Leyendo archivos Excel
 
 Una de las formas más comunes de hacerlo es con la función **read.xlsx()**
 
@@ -115,7 +136,7 @@ Otra manera es usando el propio IDE RStudio.
 2. From Excel 
 
 
-### 5.5 Salidas de datos.
+### 5.6 Salidas de datos.
 
 Hay muchos formatos de salidas de datos, en esta sección sólo mencionaremos dos:
 
@@ -132,7 +153,7 @@ write.csv(na.omit(data),"data/datosSinNA.csv")
 
 [https://rmarkdown.rstudio.com/](https://rmarkdown.rstudio.com/)
 
-### 5.6 Usando paquetes
+### 5.7 Usando paquetes
 
 Para usar un paquete se usa la función
 ```r
