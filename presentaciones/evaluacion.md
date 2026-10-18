@@ -16,7 +16,7 @@ Para poder obtener una constancia aprobatoria
 I. La asistencia, con el mínimo del 80% (lo solicita y verifica el equipo de trabajo del IIEc)<br>
 II. La evaluación propia del curso.
   1. **70% Tareas**. Son ejercicios cortos que se proponen para resolver con los temas que se revisan en cada sesión.
-  2. **30% Tareas-examen**. Al final del curso, el participante propone algún análisis de su interés y lo resuelve con los temas revisados durante el curso. Puede usar datos propios o datos de su interés. Y realiza una presentación breve frente al grupo, abordando desde el contexto, los datos técnicos así como los resultados obtenidos.
+  2. **30% Proyecto final**. Al final del curso, el participante propone algún análisis de su interés y lo resuelve con los temas revisados durante el curso. Puede usar datos propios o datos de su interés. Y realiza una presentación breve frente al grupo, abordando desde el contexto, los datos técnicos así como los resultados obtenidos.
 
 ## Forma de comunicación
   
