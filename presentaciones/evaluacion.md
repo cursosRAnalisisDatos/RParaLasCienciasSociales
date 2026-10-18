@@ -13,11 +13,10 @@ Pero también entendemos que aveces no es posible el trabajo en equipo por difer
 
 Para poder obtener una constancia aprobatoria
 
-I. La asistencia, con el mínimo del 80%
+I. La asistencia, con el mínimo del 80% (lo solicita y verifica el equipo de trabajo del IIEc)<br>
 II. La evaluación propia del curso.
-  1. **50% Ejercicios en clase**. Generalmente son los scripts que se van generando en clase y ejercicios extras que se van generando con cada módulo.
-  2. **50% Tareas-examen**. Son continuaciones de ejercicios de clase, donde se agregan algunas especificaciones para volver al ejercicio o más completo o con datos diferentes
-  3. **Puntos extras**. Al final del curso, el participante tiene la opción de trabajar los últimos ejercicios, ya sea en equipo o de manera individual, con sus propios datos y exponerlos frente al grupo.
+  1. **70% Tareas**. Son ejercicios cortos que se proponen para resolver con los temas que se revisan en cada sesión.
+  2. **30% Tareas-examen**. Al final del curso, el participante propone algún análisis de su interés y lo resuelve con los temas revisados durante el curso. Puede usar datos propios o datos de su interés. Y realiza una presentación breve frente al grupo, abordando desde el contexto, los datos técnicos así como los resultados obtenidos.
 
 ## Forma de comunicación
   
@@ -28,10 +27,5 @@ Para nosotros es muy importante la iteracción constante con los participantes, 
 - Si el grupo es grande, y para conservar el orden, el expositor dará pautas de manera constante para poder tomar la palabra y esclarecer dudas antes de avanzar con los temas.
 - Todas las dudas serán tomadas en cuenta; algunas de manera inmediata, otras más adelante en el curso, cuando haya "más material" para hablar de ella.
 
-### Fuera del tiempo de las sesiones
-- Muchas de las dudas surgen cuando ya no se está conectado en sesión, cuando eso pase, se usará un grupo de discusión de googlegroups, en donde se atenderán de forma rápida todas las dudas durante el tiempo que dure el curso.
-
-      **cursos-de-r-iiec@googlegroups.com**
-  
   Sólo pueden escribir los participantes que estén inscritos.
 - Se invita también a dar respuestas entre participantes y promover la iteracción entre los mismos
