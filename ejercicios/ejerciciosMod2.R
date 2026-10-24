@@ -29,15 +29,6 @@ help(rnoorm)   ##Esto fue escrito para mostrar la importancia de la
 ##sintaxis (es decir que sea exacta la expresión)
 
 help.start()  ## Esta funcion despliega ta ta ta....
-getwd()   ##Esta carpeta no coincide cn la que cree en el escritorio
-setwd("C:/Users/UsuariO/Desktop/cursoRParaLasCienciasSociales/sesion1")
-setwd("C:/Users/DiplomadoMCyCC/Desktop/CursoR")
-
-setwd ("/Users/virg/Documents/")
-
-## Volvemos a ver dónde está nuestro directorio de trabajo
-getwd()
- ## ahora sí dirije 
 
 ### Usarlo como calculadora
 5+7
