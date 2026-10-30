@@ -160,6 +160,22 @@ mi_vector_mezcla <- c(FALSE, 2, "tercero", 4.00)
 -3.75:3 #decimales al inicio
 46:50.05 #decimales al final
 ```
+la función **seq()**, en donde definimos el valor de inicio, el valor final y el incremento que requerimos
+
+```r
+secuencia <- seq(from = 1.5, to = 3.75, by = 0.25)
+# [1] 1.50 1.75 2.00 2.25 2.50 2.75 3.00 3.25 3.50 3.75
+```
+la función **rep()** con la cual podemos repetir valores un cierto número de veces.
+
+```r
+repeticiones <- rep(5, times = 5)
+# [1] 5 5 5 5 5
+repeticiones_str <- rep("hi", times = 3)
+# [1] "hi" "hi" "hi"
+repeticiones_vec <- rep(c(2, 12, 22, 32, 42), times = 2)
+# [1]  2 12 22 32 42  2 12 22 32 42
+```
 
 ## 
 ### Vectorización de funciones
