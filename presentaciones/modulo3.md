@@ -330,6 +330,8 @@ Se usa la función **c()** y si los argumentos son listas, el resultado es un ob
 ```r
 list.ABC <- c(list.A, list.B, list.C)
 ```
+#### Nota: Ver ejercicios de listas
+
 
 #### 3.5 Dataframe (marco de datos) <a name="dataframes"></a>
 
