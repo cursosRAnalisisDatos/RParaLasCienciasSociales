@@ -1,3 +1,75 @@
+## ------------------------------------------------------------------------------
+# Ejercicios con listas
+
+#1. Creación de una lista
+#Una lista en R puede contener elementos de distintos tipos: vectores, números, texto, matrices o incluso otras listas.
+#Ejercicio 1
+#Crea una lista llamada mi_lista que contenga:
+#1. Un vector numérico del 1 al 5 llamado numeros.
+#2. Un vector de caracteres con los nombres "Ana", "Juan", "Sofía" llamado nombres.
+#3. Una matriz de 2 × 2 con los valores del 1 al 4.
+# Solución
+mi_lista <- list(
+  numeros = 1:5,
+  nombres = c("Ana", "Juan", "Sofía"),
+  matriz = matrix(1:4, nrow = 2)
+)
+print(mi_lista)
+
+
+#2. Acceso a los elementos de una lista
+#Para acceder a un elemento de una lista se usan doble corchete [[ ]] (para extraer el objeto original) o el operador 
+#de dólar $ si la lista tiene nombres. Si usas un solo corchete [ ], obtendrás una sub-lista.
+#Ejercicio 2
+#Utilizando la lista mi_lista creada en el ejercicio anterior:
+#1. Accede al vector nombres usando el operador $.
+#2. Accede al primer elemento del vector numeros usando doble corchete [[ ]].
+#3. Accede al elemento que está en la fila 2, columna 1 de la matriz.
+# Solución 1: Usando $
+mi_lista$nombres
+
+# Solución 2: Usando doble corchete y corchete anidado
+mi_lista$numeros[1]
+# O alternativamente:
+mi_lista[[1]][1]
+
+# Solución 3: Acceder a la matriz y a su posición (fila 2, columna 1)
+mi_lista$matriz[2, 1]
+# O alternativamente:
+mi_lista[[3]][2, 1]
+
+
+#3. Modificar y añadir elementos
+# Puedes agregar nuevos componentes a una lista o modificar los existentes asignándoles un nuevo valor.
+#Ejercicio 3
+#1. Añade un nuevo elemento a mi_lista llamado activo con el valor lógico TRUE.
+#2. Modifica el vector nombres para agregar un cuarto nombre: "Carlos".
+# Solución 1: Añadir elemento
+mi_lista$activo <- TRUE
+
+# Solución 2: Modificar elemento
+mi_lista$nombres <- c(mi_lista$nombres, "Carlos")
+print(mi_lista)
+
+#4. Aplicar funciones a listas (lapply y sapply)
+#Para recorrer una lista y aplicar una función a cada uno de sus elementos, R provee la familia de funciones apply, 
+#siendo lapply() (devuelve una lista) y sapply() (devuelve un vector o matriz simplificado) las más utilizadas.
+#Ejercicio 4
+#Dada la siguiente lista:
+
+lista_notas <- list(
+  grupo1 = c(8, 9, 7, 10),
+  grupo2 = c(5, 6, 8, 7, 9),
+  grupo3 = c(10, 10, 9)
+)
+#1. Usa lapply() para calcular la longitud (número de alumnos) de cada grupo.
+#2. Usa sapply() para calcular la media (promedio) de notas de cada grupo.
+
+# Solución 1: Longitud de cada elemento
+lapply(lista_notas, length)
+
+# Solución 2: Media de cada elemento
+sapply(lista_notas, mean)
 
 
 # ------------------------------------------------------------------------------
