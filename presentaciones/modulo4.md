@@ -44,7 +44,7 @@ if(num_real < num_entero) {
 }
 ```
 
-#### Condicionales aplicadas a un vector
+#### Condicionales aplicadas a un vector y a un dataframe
 ```r
 resultado <- ifelse(c(3,4,5,6,7) < num_real, "condición-TRUE", "condición-FALSE")
 ```
