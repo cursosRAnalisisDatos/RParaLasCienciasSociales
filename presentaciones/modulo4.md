@@ -48,6 +48,24 @@ if(num_real < num_entero) {
 ```r
 resultado <- ifelse(c(3,4,5,6,7) < num_real, "condición-TRUE", "condición-FALSE")
 ```
+```r
+# 1. Creamos un data frame de inventario
+inventario <- data.frame(
+  producto = c("Teclado", "Mouse", "Monitor", "Cables"),
+  stock = c(15, 3, 0, 50),
+  precio = c(25, 15, 150, 5)
+)
+
+# 2. Usamos 'if' para evaluar una condición global
+# Queremos revisar si el promedio de stock es crítico (menor a 20 unidades)
+if (mean(inventario$stock) < 20) {
+  print("ALERTA: El inventario promedio global es bajo. Considerar reabastecer.")
+} else {
+  print("El inventario general está en niveles óptimos.")
+}
+```
+
+
 
 ### Ciclos 
 #### for
