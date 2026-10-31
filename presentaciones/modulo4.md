@@ -135,6 +135,21 @@ for (i in 1:nrow(tienda)) {
   } else {
     tienda$prioridad_compra[i] <- "BAJA (Sobrestock)"
   }
+
+# B. Evaluación de Rendimiento basada en ventas y precio (Facturación estimada)
+  ingreso_estimado <- tienda$ventas_mes[i] * tienda$precio[i]
+  
+  if (ingreso_estimado > 5000) {
+    tienda$rendimiento[i] <- "Excelente"
+  } else if (ingreso_estimado >= 1500) {
+    tienda$rendimiento[i] <- "Normal"
+  } else {
+    tienda$rendimiento[i] <- "Bajo"
+  }
+}
+
+# 4. Mostrar el resultado final en consola
+print(tienda)
 ```
 
 
