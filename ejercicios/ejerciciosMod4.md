@@ -49,5 +49,6 @@ for(i in n:100){
   }
   suma <- suma + i
 }
-cat("El valor de la suma de enteros hasta que supera por primera vez el valor 2000 es", suma)
+
+  cat("El valor de la suma de enteros hasta que supera por primera vez el valor 2000 es", suma)
 </code></pre>
