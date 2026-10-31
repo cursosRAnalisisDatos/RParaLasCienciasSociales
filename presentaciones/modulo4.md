@@ -107,6 +107,36 @@ while(num_real > 1 | num_entero < num_real) {
   num_real <- num_real - 3
 }
 ```
+```r
+# Un sistema de categorización de productos y control de calidad de datos.
+# 1. Crear un data frame con datos de ventas e inventario
+tienda <- data.frame(
+  producto = c("Laptop", "Mouse Wireless", "Teclado Mecánico", "Monitor 4K", "Cable HDMI"),
+  stock = c(5, 45, 12, 0, 120),
+  precio = c(1200, 25, 80, 450, 15),
+  ventas_mes = c(18, 110, 35, 4, 210)
+)
+
+# 2. Inicializar nuevas columnas vacías para guardar los cálculos
+tienda$prioridad_compra <- NA
+tienda$rendimiento <- NA
+nrow(tienda)
+
+# 3. Estructura de control elaborada: Bucle + Condicionales anidados (Fila por Fila)
+for (i in 1:nrow(tienda)) {
+  
+  # A. Evaluación de Prioridad de Compra basada en stock
+  if (tienda$stock[i] == 0) {
+    tienda$prioridad_compra[i] <- "CRÍTICA (Agotado)"
+  } else if (tienda$stock[i] < 10) {
+    tienda$prioridad_compra[i] <- "ALTA (Bajo stock)"
+  } else if (tienda$stock[i] <= 50) {
+    tienda$prioridad_compra[i] <- "MEDIA"
+  } else {
+    tienda$prioridad_compra[i] <- "BAJA (Sobrestock)"
+  }
+```
+
 
 #### repeat y break, next
 
