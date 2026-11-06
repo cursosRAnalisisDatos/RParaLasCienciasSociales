@@ -223,20 +223,30 @@ womenSI<- women[,-c(height)]
 womenSI<- women[,-c(1)]
 
 # ----------------------------------------------------------------------------------------------------------
-# Ejercicio5. Calcular la edad de una persona en años
+# Ejercicio6. Trabajar con factor
 # ----------------------------------------------------------------------------------------------------------
-# 1. Define la fecha de nacimiento como un objeto de fecha
-fecha_nacimiento <- as.Date("1988-12-23")
+# Procesamiento de Datos y Eficiencia Profesional
+# Objetivo:** Manejar con mayor rapidez y eficiencia grandes cantidades de datos, e interpretar información 
+#para uso constante en el departamento laboral.
 
-# 2. Obtén la fecha actual
-fecha_actual <- Sys.Date()
+#Escenario: Importaste una gran base de datos de tu departamento, aplicaste filtros para quedarte solo con 
+#los casos de tu interés, pero tu memoria y tus gráficos siguen arrastrando "basura" (niveles vacíos). 
+#Aprenderemos a limpiar esto eficientemente.
+# Simulamos una gran base de datos departamental con 5 delegaciones
+datos_departamento <- data.frame(
+  folio_tramite = 1001:1005,
+  delegacion = factor(c("Norte", "Sur", "Norte", "Oriente", "Sur"),
+                      levels = c("Norte", "Sur", "Este", "Oeste", "Centro", "Oriente"))
+)
+# 1. Supongamos que tu análisis departamental de esta semana SOLO requiere la zona "Norte"
+datos_norte <- subset(datos_departamento, delegacion == "Norte")
 
-# 3. Extrae el año de ambas fechas
-año_nacimiento <- format(fecha_nacimiento, "%Y")
-año_actual <- format(fecha_actual, "%Y")
+# 2. El problema de eficiencia: la tabla de frecuencias sigue calculando todo
+# y los gráficos dejarían espacios en blanco para el Sur, Este, Oeste, etc.
+table(datos_norte$delegacion)
 
-# 4. Calcula la diferencia
-años_cumplidos <- as.numeric(año_actual) - as.numeric(año_nacimiento)
+# 3. Solución eficiente: Limpiar datos con droplevels
+datos_norte_limpios <- droplevels(datos_norte)
 
-# Muestra el resultado
-print(años_cumplidos)
+# Ahora el procesamiento y la graficación serán exactos a nuestra muestra
+table(datos_norte_limpios$delegacion)
