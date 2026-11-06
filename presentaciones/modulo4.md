@@ -107,6 +107,7 @@ while(num_real > 1 | num_entero < num_real) {
   num_real <- num_real - 3
 }
 ```
+
 ```r
 # Un sistema de categorización de productos y control de calidad de datos.
 # 1. Crear un data frame con datos de ventas e inventario
@@ -149,5 +150,7 @@ for (i in 1:nrow(tienda)) {
 }
 
 # 4. Mostrar el resultado final en consola
+print(tienda)
+```
 print(tienda)
 ```
