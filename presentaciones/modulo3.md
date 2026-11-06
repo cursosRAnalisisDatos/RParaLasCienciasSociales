@@ -1,13 +1,14 @@
-## Módulo 3: Objetos de R (estructuras de datos)
+# Módulo 3: Objetos de R (estructuras de datos)
 
-### Contenido
+## Contenido
 3.1. [Introducción](#introduccion) <br>
 3.2. [Vectores](#vectores) <br>
 3.3. [Matrices](#matrices) <br>
 3.4. [Listas](#listas) <br>
 3.5. [Dataframes](#dataframes)<br>
+3.6. [Tema extra: La clase Factor](#factor)<br>
 
-#### 3.1. Introducción <a name="introduccion"></a>
+## 3.1. Introducción <a name="introduccion"></a>
 Las colecciones de datos surgen de la necesidad de manipular datos agrupados con fines específicos.
 
 Cuando se tiene una colección, las operaciones básicas que se requieren hacer son:
@@ -694,3 +695,100 @@ borrar <- c("valor","categoria")
 datos2 <- datos[ , !(names(datos) %in% borrar)]
 head(datos2, n=9)
 ```
+
+## 3.6. Tema extra: La clase Factor <a name="factor"></a>
+  Un **factor** en R es una clase que nos permite organizar **variables categóricas** (cualitativas). Es decir, datos que pertenecen a un número finito de categorías o grupos, llamados **niveles** (`levels`).
+  Internamente, R no guarda los factores como texto, sino como una secuencia de números enteros (1, 2, 3...) asociados a un conjunto de etiquetas de texto. Esto tiene dos grandes ventajas:
+
+- 1. Son mucho más eficientes en memoria que los vectores de texto (character).
+- 2. Son fundamentales para el análisis estadístico y la creación de gráficos correctos.
+
+### Tipos de variables categóricas
+
+* **Nominales:** Categorías sin un orden intrínseco (ej. género, país, color de ojos).
+* **Ordinales:** Categorías que siguen una jerarquía o escala lógica (ej. nivel educativo: Primaria < Secundaria < Universidad).
+
+## 2. Creación de Factores Nominales
+
+La función fundamental para trabajar con estas estructuras es `factor()`.
+
+```{r}
+# 1. Empezamos con un vector de texto original
+genero <- c("Mujer", "Hombre", "Hombre", "Mujer", "Mujer")
+
+# 2. Lo convertimos a factor
+factor_genero <- factor(genero)
+
+# 3. Inspeccionamos el resultado
+print(factor_genero)
+
+# Vemos su estructura interna
+str(factor_genero)
+```
+Como puedes notar, R detectó automáticamente los niveles ("Hombre" y "Mujer") y por defecto los ordenó alfabéticamente.
+
+## 3. Factores Ordinales (Con Jerarquía)
+
+Para establecer un orden explícito entre las categorías, utilizamos el argumento `ordered = TRUE` y especificamos el orden deseado en el argumento `levels`.
+
+```{r}
+nivel_satisfaccion <- factor(
+  c("Medio", "Alto", "Bajo", "Alto", "Medio"),
+  levels = c("Bajo", "Medio", "Alto"),
+  ordered = TRUE
+)
+print(nivel_satisfaccion)
+```
+Fíjate en la salida: ahora R nos indica `Bajo < Medio < Alto`. Al ser un factor ordenado, R nos permite hacer **comparaciones lógicas**:
+
+```{r}
+# ¿El primer elemento ("Medio") es mayor que el tercer elemento ("Bajo")?
+nivel_satisfaccion[1] > nivel_satisfaccion[3] 
+```
+## 4. Personalización: Niveles (`levels`) y Etiquetas (`labels`)
+
+A veces nuestros datos originales vienen codificados (por ejemplo, con números o abreviaturas) y queremos darles nombres más descriptivos sin cambiar el dato original.
+
+```{r}
+# Vector original con códigos numéricos
+zona_residencia_raw <- c(1, 2, 2, 1, 3, 2, 1)
+
+# Conversión declarando niveles esperados y sus etiquetas asociadas
+zona_residencia <- factor(
+  zona_residencia_raw,
+  levels = c(1, 2, 3),
+  labels = c("Rural", "Urbana", "Periurbana")
+)
+print(zona_residencia)
+```
+
+**Precaución:** Si un dato en tu vector original no coincide con ningún valor declarado en `levels`, R lo convertirá en un valor ausente (`NA`).
+```{r}
+respuestas <- factor(
+  c("SI", "NO", "SI", "NO", "SINO"), # "SINO" es un error tipográfico
+  levels = c("NO", "SI"),
+  labels = c("Ausente", "Presente")
+)
+
+# R convierte "SINO" en NA porque no está en los 'levels' definidos
+print(respuestas)
+```
+
+## 5. Funciones Útiles para Trabajar con Factores
+
+Aquí te presentamos algunas funciones de R base muy comunes para manipular y explorar factores:
+  
+  ```{r}
+# Crear un factor de regiones para los ejemplos
+regiones <- factor(c("Norte", "Sur", "Norte", "Centro", "Sur"))
+
+# 1. levels(): Muestra todas las categorías del factor
+levels(regiones)
+
+# 2. nlevels(): Devuelve la cantidad total de categorías
+nlevels(regiones)
+
+# 3. table(): Genera una tabla de frecuencias
+table(regiones)
+```
+
