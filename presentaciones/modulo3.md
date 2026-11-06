@@ -779,7 +779,7 @@ print(respuestas)
 Aquí te presentamos algunas funciones de R base muy comunes para manipular y explorar factores:
   
   ```{r}
-# Crear un factor de regiones para los ejemplos
+## Crear un factor de regiones para los ejemplos
 regiones <- factor(c("Norte", "Sur", "Norte", "Centro", "Sur"))
 
 # 1. levels(): Muestra todas las categorías del factor
@@ -788,7 +788,61 @@ levels(regiones)
 # 2. nlevels(): Devuelve la cantidad total de categorías
 nlevels(regiones)
 
+
 # 3. table(): Genera una tabla de frecuencias
 table(regiones)
+```
+
+## El problema de los niveles fantasma (`droplevels`)
+
+Cuando filtramos datos, los niveles originales del factor se conservan, incluso si ya no hay datos que pertenezcan a esa categoría.
+
+# Filtramos para quitar la región "Sur"
+subconjunto_regiones <- regiones[regiones != "Sur"]
+
+# Notarás que "Sur" sigue apareciendo en los "Levels"
+print(subconjunto_regiones)
+
+# Limpiamos los niveles vacíos con droplevels()
+subconjunto_limpio <- droplevels(subconjunto_regiones)
+print(subconjunto_limpio)
+
+## Manipulación Avanzada en Dataframes (Usando R Base)
+
+En el análisis de datos del mundo real, los factores viven dentro de bases de datos (`data.frames`). A continuación, veremos técnicas puras de R base para manipularlos.
+
+### Caso A: Biología (Dataset `iris` - Nivel de Referencia)
+
+En modelos estadísticos, el primer nivel de un factor actúa como la "categoría base". Podemos cambiarlo con `relevel()`.
+
+```{r}
+# Inspeccionamos el factor original en el dataset precargado 'iris'
+levels(iris$Species) # Orden original: setosa, versicolor, virginica
+
+# Cambiamos la referencia para que "virginica" sea el primer nivel
+especies_mod <- relevel(iris$Species, ref = "virginica")
+levels(especies_mod)
+```
+
+### Caso B: Economía (Agrupando Calificaciones de Riesgo)
+
+Para agrupar niveles en R base, simplemente reasignamos una `list` a la función `levels()`.
+
+```{r}
+df_economia <- data.frame(
+  pais = c("País A", "País B", "País C", "País D", "País E"),
+  calificacion = factor(c("AAA", "AA", "BB", "B", "CCC"))
+)
+
+nivel_riesgo <- df_economia$calificacion
+
+# Agrupamos las categorías
+levels(nivel_riesgo) <- list(
+  "Grado de Inversión" = c("AAA", "AA"),
+  "Grado Especulativo" = c("BB", "B", "CCC")
+)
+
+df_economia$categoria_riesgo <- nivel_riesgo
+print(df_economia)
 ```
 
