@@ -797,6 +797,7 @@ table(regiones)
 
 Cuando filtramos datos, los niveles originales del factor se conservan, incluso si ya no hay datos que pertenezcan a esa categoría.
 
+```{r}
 # Filtramos para quitar la región "Sur"
 subconjunto_regiones <- regiones[regiones != "Sur"]
 
@@ -806,7 +807,7 @@ print(subconjunto_regiones)
 # Limpiamos los niveles vacíos con droplevels()
 subconjunto_limpio <- droplevels(subconjunto_regiones)
 print(subconjunto_limpio)
-
+```
 ## Manipulación Avanzada en Dataframes (Usando R Base)
 
 En el análisis de datos del mundo real, los factores viven dentro de bases de datos (`data.frames`). A continuación, veremos técnicas puras de R base para manipularlos.
