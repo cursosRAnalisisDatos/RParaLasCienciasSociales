@@ -152,5 +152,3 @@ for (i in 1:nrow(tienda)) {
 # 4. Mostrar el resultado final en consola
 print(tienda)
 ```
-print(tienda)
-```
