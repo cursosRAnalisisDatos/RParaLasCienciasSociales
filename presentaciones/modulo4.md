@@ -152,3 +152,45 @@ for (i in 1:nrow(tienda)) {
 # 4. Mostrar el resultado final en consola
 print(tienda)
 ```
+
+## **¿Qué es `break`?**
+* Es una palabra clave que rompe y termina inmediatamente el bucle (`for` o `while`) en el que se encuentra, sin importar cuántas iteraciones falten por cumplir.
+* **¿Cuándo se usa en Análisis de Datos?**
+  * Para detener procesos largos si se detecta un error de datos grave (valores nulos, stock negativo).
+  * Para optimizar código: si ya encontraste el dato que buscabas, no tiene sentido seguir recorriendo las 10,000 filas restantes.
+* **La regla de oro:** Siempre va dentro de un condicional `if`.
+
+### Ejemplo Guiado en Clase (10 minutos)
+**Contexto:** Estamos auditando un DataFrame de transacciones bancarias. Si detectamos una transacción con un monto negativo o sospechoso, debemos congelar el proceso inmediatamente para que el analista revise qué pasó.
+
+```R
+# 1. Crear los datos de prueba
+compras <- data.frame(
+  Cliente = c("Ana", "Luis", "Pedro", "Sofía", "Carlos"),
+  Monto = c(150, 320, -50, 200, 95), # ¡Pedro tiene un monto negativo extraño!
+  stringsAsFactors = FALSE
+)
+#stringsAsFactors = FALSE le dice al programa: "Cuando crees este DataFrame, guarda el texto como texto puro (character)
+#y NO lo conviertas automáticamente en categorías (factors)
+
+cat("--- Iniciando auditoría de caja ---\n\n")
+
+# 2. Recorrer el dataframe fila por fila
+for (i in 1:nrow(compras)) {
+  
+  # Condición de parada de emergencia
+  if (compras$Monto[i] < 0) {
+    cat("🚨 Alerta en la fila ", i, ": El cliente ", compras$Cliente[i], 
+        " tiene un monto negativo ($", compras$Monto[i], "). ALERTA DE ERROR. Proceso detenido.\n", sep="")
+    break # Aquí se destruye el bucle por completo
+  }
+  
+  # Si el monto es normal, se procesa
+  cat("✅ Compra de ", compras$Cliente[i], " por $", compras$Monto[i], " procesada correctamente.\n", sep="")
+}
+
+cat("\n--- Fin de la auditoría preliminar ---\n")
+```
+**Punto clave:** Noten cómo "Sofía" y "Carlos" jamás se imprimieron en la consola. El `break` detuvo el reloj 
+por completo en la fila 3 al detectar el número negativo de Pedro.
+
