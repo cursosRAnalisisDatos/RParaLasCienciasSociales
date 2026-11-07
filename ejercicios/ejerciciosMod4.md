@@ -33,3 +33,40 @@ while (n <= 100){
 cat("El valor de la suma de enteros hasta 100 es", suma)
 </code></pre>
 
+3. Tienes un DataFrame con el inventario de una tienda de tecnología. Quieres calcular el valor total del inventario (Precio × Stock).
+   Sin embargo, si encuentras un producto que tiene `Stock = 0`, el sistema debe **detenerse inmediatamente** e imprimir un mensaje de advertencia indicando qué producto causó la parada, ya que no se pueden calcular métricas con datos faltantes.
+
+**Datos iniciales:**
+```R
+inventario <- data.frame(
+  Producto = c("Laptop", "Mouse", "Teclado", "Monitor", "Audífonos"),
+  Precio = c(800, 25, 45, 300, 60),
+  Stock = c(10, 50, 0, 15, 30), # El Teclado detendrá el código
+  stringsAsFactors = FALSE
+)
+
+total_acumulado <- 0
+
+# TU TURNO: Escribe el bucle 'for' que recorra las filas,
+# sume el (Precio * Stock) al total_acumulado,
+# y use un 'break' si el Stock es igual a 0.
+```
+SOLUCIÓN
+```R
+for (i in 1:nrow(inventario)) {
+  
+  # Validar si hay stock cero
+  if (inventario$Stock[i] == 0) {
+    cat("⚠️ ERROR: El producto '", inventario$Producto[i], "' tiene stock 0. Cálculo detenido.\n", sep="")
+    break
+  }
+  
+  # Calcular el valor de la fila y sumarlo al total
+  valor_producto <- inventario$Precio[i] * inventario$Stock[i]
+  total_acumulado <- total_acumulado + valor_producto
+  
+  cat("Subtotal acumulado hasta ", inventario$Producto[i], ": $", total_acumulado, "\n", sep="")
+}
+
+cat("\nValor total calculado del inventario: $", total_acumulado, "\n", sep="")
+```
