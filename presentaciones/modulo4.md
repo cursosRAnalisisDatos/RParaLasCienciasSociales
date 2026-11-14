@@ -160,8 +160,7 @@ print(tienda)
   * Para optimizar código: si ya encontraste el dato que buscabas, no tiene sentido seguir recorriendo las 10,000 filas restantes.
 * **La regla de oro:** Siempre va dentro de un condicional `if`.
 
-### Ejemplo Guiado en Clase (10 minutos)
-**Contexto:** Estamos auditando un DataFrame de transacciones bancarias. Si detectamos una transacción con un monto negativo o sospechoso, debemos congelar el proceso inmediatamente para que el analista revise qué pasó.
+### **Contexto:** Estamos auditando un DataFrame de transacciones bancarias. Si detectamos una transacción con un monto negativo o sospechoso, debemos congelar el proceso inmediatamente para que el analista revise qué pasó.
 
 ```R
 # 1. Crear los datos de prueba
