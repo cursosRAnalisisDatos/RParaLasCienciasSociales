@@ -45,7 +45,7 @@ Considere los datos "DNase" precargados en R.
 7. ¿Qué valor tiene la media (redondeada a 4 cifras decimales) de los valores de la variable "density", en los registros cuyo valor de la variable "Run" sea 5? 
 Hint: usa la función "round", usa el "help", para ver su documentación
 
-
+```R
   ### Respuestas: Introducción a R para las ciencias sociales
   ###
   ###   Tarea 2    
@@ -145,5 +145,6 @@ lstA[[4]][2]
 lstA$childAges[2]
 
 ####   En ambas fromas el resultado numérico es  7
+```
 #####     FIN  de la Tarea 2
 
