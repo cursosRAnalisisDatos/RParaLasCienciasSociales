@@ -61,3 +61,40 @@ Crear un programa que tome esas cadenas y se asegure de convertirlas a un format
 Sólo se pueden usar las funciones vistas en el módulo 2. <br>
 3.2. Investigar si existe una función que ya resuelva dicho problema.
 
+```R
+
+# 1. Crear tres objetos de tipo character
+nombre1 <- "MaurIcio"
+nombre2 <- "alfredo"
+nombre3 <- "Tania"
+
+# 2. Convertir todas las letras a minúsculas
+nombre1 <- tolower(nombre1)
+nombre2 <- tolower(nombre2)
+nombre3 <- tolower(nombre3)
+
+# 3. Obtener la primera letra de cada nombre
+letra1 <- substr(nombre1, 1, 1)
+letra2 <- substr(nombre2, 1, 1)
+letra3 <- substr(nombre3, 1, 1)
+
+# 4. Convertir la primera letra a mayúscula
+letra1 <- toupper(letra1)
+letra2 <- toupper(letra2)
+letra3 <- toupper(letra3)
+
+# 5. Obtener el resto de las letras
+resto1 <- substr(nombre1, 2, nchar(nombre1))
+resto2 <- substr(nombre2, 2, nchar(nombre2))
+resto3 <- substr(nombre3, 2, nchar(nombre3))
+
+# 6. Reconstruir los nombres
+nombre1 <- paste0(letra1, resto1)
+nombre2 <- paste0(letra2, resto2)
+nombre3 <- paste0(letra3, resto3)
+
+# 7. Mostrar los resultados
+print(nombre1)
+print(nombre2)
+print(nombre3)
+```
