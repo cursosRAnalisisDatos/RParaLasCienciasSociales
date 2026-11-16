@@ -31,6 +31,29 @@ print(promedio)
 Si nos dan 3 círculos de radios r1=4cm, r2=8cm, y r3=20cm.
 
 2.1. Calcular el área promedio de dichos círculos.
+```R
+r1 <- 4
+r2 <- 8
+r3 <- 20
+
+# 2. Definir el valor de pi
+pi <- 3.141592653589793
+
+# 3. Calcular el área de cada círculo
+area1 <- pi * r1^2
+area2 <- pi * r2^2
+area3 <- pi * r3^2
+
+# 4. Calcular el área promedio
+area_promedio <- (area1 + area2 + area3) / 3
+
+# 5. Mostrar los resultados
+print(area1)
+print(area2)
+print(area3)
+print(area_promedio)
+```
+
 
 ### 3. Cadenas de nombres propios.
 3.1. Tenemos 3 cadenas que representan nombres de tres personas: MaurIcio, alfredo, Tania <br>
