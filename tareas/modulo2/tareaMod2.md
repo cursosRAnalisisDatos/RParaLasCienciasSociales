@@ -7,6 +7,25 @@
   1.3. Aplicar la fórmula de promedio
   1.4. Mostrar el resultado en la pantalla
 
+´´´R
+# 1.1. Crear seis objetos numéricos
+peso1 <- 65
+peso2 <- 72
+peso3 <- 58
+peso4 <- 80
+peso5 <- 68
+peso6 <- 75
+
+# 1.2. Los valores enteros positivos representan
+# el peso de cada persona en kilogramos.
+
+# 1.3. Calcular el promedio
+promedio <- (peso1 + peso2 + peso3 + peso4 + peso5 + peso6) / 6
+
+# 1.4. Mostrar el resultado en pantalla
+print(promedio)
+´´´
+
 ### 2. Sabemos que el área de un círculo está dado por la fórmula
               ** A = pi*r^2 **
 Si nos dan 3 círculos de radios r1=4cm, r2=8cm, y r3=20cm.
