@@ -98,3 +98,25 @@ print(nombre1)
 print(nombre2)
 print(nombre3)
 ```
+
+En R existe una función llamada tools::toTitleCase().
+Esta función permite convertir una cadena de caracteres a un formato de título (Title Case).
+
+```R
+
+# Crear los nombres originales
+nombre1 <- "MaurIcio"
+nombre2 <- "alfredo"
+nombre3 <- "Tania"
+
+# Aplicar la función toTitleCase()
+nombre1 <- tools::toTitleCase(tolower(nombre1))
+nombre2 <- tools::toTitleCase(tolower(nombre2))
+nombre3 <- tools::toTitleCase(tolower(nombre3))
+
+# Mostrar resultados
+print(nombre1)
+print(nombre2)
+print(nombre3)
+```
+
