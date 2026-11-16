@@ -7,7 +7,7 @@
   1.3. Aplicar la fórmula de promedio
   1.4. Mostrar el resultado en la pantalla
 
-´´´R
+```R
 # 1.1. Crear seis objetos numéricos
 peso1 <- 65
 peso2 <- 72
@@ -24,7 +24,7 @@ promedio <- (peso1 + peso2 + peso3 + peso4 + peso5 + peso6) / 6
 
 # 1.4. Mostrar el resultado en pantalla
 print(promedio)
-´´´
+```
 
 ### 2. Sabemos que el área de un círculo está dado por la fórmula
               ** A = pi*r^2 **
