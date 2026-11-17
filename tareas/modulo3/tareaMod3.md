@@ -139,6 +139,396 @@ Juan Pérez, 85 kg; Leticia Ramírez, 68 kg; Rosa Flores, 59 kg; Josue Navarrete
 4. Reordena tu data.frame por edades; reordena por tipo de enfermedad
 5. ¿Se puede hallar la edad promedio de los pacientes? Si es así, cuál es.
 
+###### Actividad: Manipulación de un `data.frame` en R
+
+####### Datos de los pacientes
+
+Se cuenta con información de cinco pacientes. A partir de estos datos,
+construiremos un `data.frame` que permita organizar, consultar y
+manipular la información.
+
+  Nombre              Edad Estado           Diabetes   Pronóstico   Residencia
+  ----------------- ------ ---------------- ---------- ------------ ---------------------
+  Juan Pérez            25 En observación   Tipo1      Pobre        `NA`
+  Leticia Ramírez       34 En cuidado       Tipo2      Mejora       `NA`
+  Rosa Flores           38 `NA`             Tipo1      Excelente    CDM
+  Josue Navarrete       52 `NA`             Tipo2      Mejora       Veracruz
+  Felipe García       `NA` `NA`             Tipo1      Pobre        Cuernavaca, Morelos
+
+**Nota:** `NA` representa un dato no disponible o no especificado.
+
+###### 1. Construcción del data.frame
+
+Primero, creamos un objeto llamado `pacientes` que almacene la
+información de la tabla.
+
+``` r
+pacientes <- data.frame(
+  Nombre = c(
+    "Juan Pérez",
+    "Leticia Ramírez",
+    "Rosa Flores",
+    "Josue Navarrete",
+    "Felipe García"
+  ),
+  Edad = c(25, 34, 38, 52, NA),
+  Estado = c(
+    "En observación",
+    "En cuidado",
+    NA,
+    NA,
+    NA
+  ),
+  Diabetes = c(
+    "Tipo1",
+    "Tipo2",
+    "Tipo1",
+    "Tipo2",
+    "Tipo1"
+  ),
+  Pronostico = c(
+    "Pobre",
+    "Mejora",
+    "Excelente",
+    "Mejora",
+    "Pobre"
+  ),
+  Residencia = c(
+    NA,
+    NA,
+    "CDM",
+    "Veracruz",
+    "Cuernavaca, Morelos"
+  )
+)
+
+# Visualizar el data.frame
+print(pacientes)
+```
+
+Para conocer la estructura del objeto podemos utilizar:
+
+``` r
+str(pacientes)
+```
+
+La función `str()` permite observar las variables que contiene el `data.frame` y el tipo de dato de cada columna.
+
+También podemos consultar sus dimensiones:
+``` r
+dim(pacientes)
+```
+
+Resultado:
+``` text
+[1] 5 6
+```
+
+Esto significa que tenemos cinco filas y seis columnas.
+
+###### 2. Obtener la edad de Felipe García
+Podemos consultar un dato específico utilizando los índices de fila y columna:
+
+``` r
+pacientes[5, 2]
+```
+
+En este caso:
+
+-   El número `5` indica la quinta fila.
+-   El número `2` indica la segunda columna.
+
+También podemos obtener el dato mediante el nombre del paciente:
+
+``` r
+pacientes$Edad[pacientes$Nombre == "Felipe García"]
+```
+
+Resultado:
+
+``` text
+[1] NA
+```
+
+El resultado es `NA` porque no se proporcionó la edad de Felipe García.
+
+## 3. Obtener el pronóstico de Leticia Ramírez y Rosa Flores
+
+Podemos utilizar una condición lógica para localizar a los pacientes y recuperar sus pronósticos:
+
+``` r
+pacientes$Pronostico[
+  pacientes$Nombre == "Leticia Ramírez" |
+  pacientes$Nombre == "Rosa Flores"
+]
+```
+
+Resultado:
+``` text
+[1] "Mejora"    "Excelente"
+```
+
+Otra alternativa es utilizar el operador `%in%`, que permite comprobar si los elementos pertenecen a un conjunto de valores:
+
+``` r
+pacientes$Pronostico[
+  pacientes$Nombre %in% c("Leticia Ramírez", "Rosa Flores")
+]
+```
+
+También podemos recuperar todas las columnas de esos pacientes:
+
+``` r
+pacientes[
+  pacientes$Nombre %in% c("Leticia Ramírez", "Rosa Flores"),
+]
+```
+
+###### 4. Agregar una columna con el peso de los pacientes
+
+Agregaremos una nueva variable llamada `Peso`, que contendrá el peso de cada paciente en kilogramos.
+
+  Nombre              Peso
+  ----------------- ------
+  Juan Pérez            85
+  Leticia Ramírez       68
+  Rosa Flores           59
+  Josue Navarrete       96
+  Felipe García         73
+
+Para agregar la columna utilizamos:
+
+``` r
+pacientes$Peso <- c(85, 68, 59, 96, 73)
+```
+
+Podemos visualizar el resultado:
+
+``` r
+print(pacientes)
+```
+
+La nueva columna se incorpora al final del `data.frame`.
+
+##### 5. Reordenar el data.frame
+
+###### 5.1. Ordenar por edad
+
+La función `order()` permite obtener el orden de los elementos de una variable:
+
+``` r
+pacientes[order(pacientes$Edad), ]
+```
+
+Por defecto, los valores faltantes (`NA`) aparecen al final.
+
+Si queremos ordenar las edades de mayor a menor:
+
+``` r
+pacientes[order(pacientes$Edad, decreasing = TRUE), ]
+```
+
+##### 5.2. Ordenar por tipo de diabetes
+
+También podemos ordenar los registros de acuerdo con el tipo de enfermedad:
+
+``` r
+pacientes[order(pacientes$Diabetes), ]
+```
+
+Esto organiza los registros alfabéticamente según el contenido de la columna `Diabetes`.
+
+##### 5.3. Ordenar por más de una variable
+
+Podemos combinar criterios de ordenamiento. Por ejemplo, ordenar primero por tipo de diabetes y después por edad:
+
+``` r
+pacientes[
+  order(pacientes$Diabetes, pacientes$Edad),
+]
+```
+
+De esta manera, los pacientes se organizan primero por tipo de diabetes y, dentro de cada grupo, por edad.
+
+**Importante:** Estas instrucciones muestran el `data.frame` ordenado, pero no modifican permanentemente el objeto original.
+
+Si queremos guardar el ordenamiento, podemos asignar el resultado
+nuevamente:
+
+``` r
+pacientes <- pacientes[order(pacientes$Edad), ]
+```
+
+## 6. Calcular la edad promedio de los pacientes
+
+Podemos calcular la edad promedio utilizando la función `mean()`:
+
+``` r
+mean(pacientes$Edad)
+```
+
+Sin embargo, al ejecutar esta instrucción obtendremos:
+
+``` text
+[1] NA
+```
+
+Esto sucede porque existe un valor faltante (`NA`) en la columna de edades.
+
+Para calcular el promedio ignorando los valores faltantes, utilizamos el argumento `na.rm = TRUE`:
+
+``` r
+mean(pacientes$Edad, na.rm = TRUE)
+```
+
+Resultado:
+
+``` text
+[1] 37.25
+```
+
+Por lo tanto, la edad promedio de los pacientes es de **37.25 años**, considerando únicamente los cuatro pacientes cuya edad está disponible.
+
+------------------------------------------------------------------------
+
+# Código completo de la actividad
+
+El siguiente código reúne todos los procedimientos anteriores:
+
+``` r
+# ==========================================
+# ACTIVIDAD: MANIPULACIÓN DE UN DATA.FRAME
+# ==========================================
+
+# 1. Crear el data.frame
+
+pacientes <- data.frame(
+  Nombre = c(
+    "Juan Pérez",
+    "Leticia Ramírez",
+    "Rosa Flores",
+    "Josue Navarrete",
+    "Felipe García"
+  ),
+  Edad = c(25, 34, 38, 52, NA),
+  Estado = c(
+    "En observación",
+    "En cuidado",
+    NA,
+    NA,
+    NA
+  ),
+  Diabetes = c(
+    "Tipo1",
+    "Tipo2",
+    "Tipo1",
+    "Tipo2",
+    "Tipo1"
+  ),
+  Pronostico = c(
+    "Pobre",
+    "Mejora",
+    "Excelente",
+    "Mejora",
+    "Pobre"
+  ),
+  Residencia = c(
+    NA,
+    NA,
+    "CDM",
+    "Veracruz",
+    "Cuernavaca, Morelos"
+  )
+)
+
+# Visualizar los datos
+print(pacientes)
+
+
+# 2. Obtener la edad de Felipe García
+
+pacientes$Edad[pacientes$Nombre == "Felipe García"]
+
+
+# 3. Obtener el pronóstico de Leticia Ramírez y Rosa Flores
+
+pacientes$Pronostico[
+  pacientes$Nombre %in% c("Leticia Ramírez", "Rosa Flores")
+]
+
+
+# 4. Agregar la columna Peso
+
+pacientes$Peso <- c(85, 68, 59, 96, 73)
+
+# Visualizar el data.frame actualizado
+print(pacientes)
+
+
+# 5. Ordenar por edad
+
+pacientes[order(pacientes$Edad), ]
+
+
+# Ordenar por edad de mayor a menor
+
+pacientes[order(pacientes$Edad, decreasing = TRUE), ]
+
+
+# Ordenar por tipo de diabetes
+
+pacientes[order(pacientes$Diabetes), ]
+
+
+# Ordenar por diabetes y después por edad
+
+pacientes[order(pacientes$Diabetes, pacientes$Edad), ]
+
+
+# 6. Calcular la edad promedio
+
+mean(pacientes$Edad, na.rm = TRUE)
+```
+
+# Funciones y operadores utilizados
+
+  -----------------------------------------------------------------------
+  Función u operador                  Descripción
+  ----------------------------------- -----------------------------------
+  `data.frame()`                      Construye un `data.frame`.
+
+  `print()`                           Muestra el contenido de un objeto.
+
+  `str()`                             Muestra la estructura interna de un
+                                      objeto.
+
+  `dim()`                             Devuelve el número de filas y
+                                      columnas.
+
+  `$`                                 Permite acceder a una columna por
+                                      su nombre.
+
+  `[fila, columna]`                   Permite seleccionar filas y
+                                      columnas.
+
+  `==`                                Compara si dos valores son iguales.
+
+  `\|`                                Operador lógico OR; permite
+                                      combinar condiciones.
+
+  `%in%`                              Comprueba si un elemento pertenece
+                                      a un conjunto de valores.
+
+  `order()`                           Devuelve el orden de los elementos.
+
+  `mean()`                            Calcula la media aritmética.
+
+  `na.rm = TRUE`                      Indica que se deben ignorar los
+                                      valores faltantes.
+
+  `NA`                                Representa un valor faltante.
+  -----------------------------------------------------------------------
+
 
 #### Actividad 3. Correspondiente a "dataframe": Vamos a explorar un conjunto de datos!
 Instrucciones:
@@ -154,6 +544,6 @@ Considere los datos "DNase" precargados en R.
 4. ¿Qué valor tiene la variable "conc" para la observación correspondiente a la cuadragésima quinta fila?
 5. Crea un nuevo data frame a partir de los datos de DNase
 6. Añade una nueva fila donde la variable Run tome el valor 5, la variable conc tome el valor 0.5 y la variable density tome el valor 2.3.
-7. ¿Qué valor tiene la media (redondeada a 4 cifras decimales) de los valores de la variable "density", en los registros cuyo valor de la variable "Run" sea 5? 
+7. ¿Qué valor tiene la media (redondeada a 4 cifras decimales) de los  valores de la variable "density", en los registros cuyo valor de la variable "Run" sea 5? 
 Hint: usa la función "round", usa el "help", para ver su documentación
 
