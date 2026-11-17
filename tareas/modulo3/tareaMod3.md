@@ -544,6 +544,73 @@ Considere los datos "DNase" precargados en R.
 4. ¿Qué valor tiene la variable "conc" para la observación correspondiente a la cuadragésima quinta fila?
 5. Crea un nuevo data frame a partir de los datos de DNase
 6. Añade una nueva fila donde la variable Run tome el valor 5, la variable conc tome el valor 0.5 y la variable density tome el valor 2.3.
-7. ¿Qué valor tiene la media (redondeada a 4 cifras decimales) de los  valores de la variable "density", en los registros cuyo valor de la variable "Run" sea 5? 
+7. ¿Qué valor tiene la media (redondeada a 4 cifras decimales) de los  valores de la variable "density", en los registros cuyo valor de la variable "Run" sea 5?
+
+```R
+# ==========================================
+# ACTIVIDAD 3. EXPLORACIÓN DE UN DATA FRAME
+# Conjunto de datos: DNase
+# ==========================================
+
+# 1. Dar un vistazo a los datos
+head(DNase)       # Muestra las primeras 6 filas
+# Resultado:
+# Se muestran las primeras 6 observaciones del conjunto DNase.
+
+# También podemos consultar su estructura
+str(DNase)
+# Resultado:
+# DNase contiene 176 observaciones y 3 variables:
+# Run, conc y density.
+
+
+# 2. Mostrar el nombre de las columnas
+names(DNase)
+# Resultado:
+# [1] "Run" "conc" "density"
+
+
+# 3. Contar cuántos registros tienen los datos
+nrow(DNase)
+# Resultado:
+# [1] 176
+
+
+# 4. Obtener el valor de conc en la fila 45
+DNase$conc[45]
+# Resultado:
+# [1] 0.048
+
+
+# 5. Crear un nuevo data frame a partir de DNase
+datos <- data.frame(DNase)
+
+# Comprobar la creación
+head(datos)
+# Resultado:
+# Se muestran las primeras 6 filas del nuevo data frame.
+
+
+# 6. Añadir una nueva fila
+datos <- rbind(
+  datos,
+  data.frame(Run = 5, conc = 0.5, density = 2.3)
+)
+
+# Mostrar la última fila para comprobar que se agregó
+tail(datos, 1)
+# Resultado:
+#     Run conc density
+# 177   5  0.5     2.3
+
+
+# 7. Calcular la media de density para los registros
+# cuyo valor de Run sea 5, redondeada a 4 decimales
+
+round(mean(datos$density[datos$Run == 5]), 4)
+
+# Resultado:
+# [1] 1.1096
+```
 Hint: usa la función "round", usa el "help", para ver su documentación
 
