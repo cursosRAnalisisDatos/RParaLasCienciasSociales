@@ -545,6 +545,8 @@ Considere los datos "DNase" precargados en R.
 5. Crea un nuevo data frame a partir de los datos de DNase
 6. Añade una nueva fila donde la variable Run tome el valor 5, la variable conc tome el valor 0.5 y la variable density tome el valor 2.3.
 7. ¿Qué valor tiene la media (redondeada a 4 cifras decimales) de los  valores de la variable "density", en los registros cuyo valor de la variable "Run" sea 5?
+   Hint: usa la función "round", usa el "help", para ver su documentación
+
 
 ```R
 # ==========================================
@@ -612,5 +614,3 @@ round(mean(datos$density[datos$Run == 5]), 4)
 # Resultado:
 # [1] 1.1096
 ```
-Hint: usa la función "round", usa el "help", para ver su documentación
-
