@@ -474,22 +474,22 @@ correspondiente a cada valor o categoría.
 Se calcula dividiendo la frecuencia absoluta entre el número total de
 observaciones.
 
-``` text
+$$
 \[ h_i = `\frac{f_i}{N}`{=tex} \]
-```
+$$
 
 Donde:
 
-``` text
+$$
 -   (h_i): frecuencia relativa.
 -   (f_i): frecuencia absoluta.
 -   (N): número total de observaciones.
-```
-
-Por ejemplo, para Sociología:
-``` text
+$$
+  
+  Por ejemplo, para Sociología:
+$$
 \[ h_i = `\frac{5}{10}`{=tex} = 0.5 \]
-```
+$$
 
 Esto significa que el 50 % de los estudiantes seleccionó Sociología.
 
@@ -498,16 +498,15 @@ Esto significa que el 50 % de los estudiantes seleccionó Sociología.
 La frecuencia porcentual expresa la frecuencia relativa en términos de
 porcentaje.
 
-``` text
+$$
 \[ p_i = h_i `\times 100`{=tex} \]
-```
+$$
 
 Por ejemplo:
 
-``` text
+$$
 \[ 0.5 `\times 100`{=tex} = 50% \]
-```
-
+$$
 
 ## Frecuencia acumulada
 
@@ -519,13 +518,13 @@ ordinales, porque requiere un orden significativo.
 
 Por ejemplo:
 
-  Nivel educativo     Frecuencia   Frecuencia acumulada
-  ----------------- ------------ ----------------------
-  Primaria                    10                     10
-  Secundaria                  20                     30
-  Bachillerato                35                     65
-  Universidad                 25                     90
-  Posgrado                    10                    100
+  | Nivel educativo | Frecuencia | Frecuencia acumulada |
+|:---|---:|---:|
+| Primaria | 10 | 10 |
+| Secundaria | 20 | 30 |
+| Bachillerato | 35 | 65 |
+| Universidad | 25 | 90 |
+| Posgrado | 10 | 100 |
 
 La frecuencia acumulada permite responder preguntas como:
 
@@ -637,27 +636,32 @@ entre el número total de observaciones.
 
 Se representa mediante:
 
+$$
 \[ `\bar`{=tex}{x} = `\frac{\sum_{i=1}^{n}x_i}{n}`{=tex} \]
+$$
 
 Donde:
-
+$$
 -   (`\bar`{=tex}{x}): media aritmética.
 -   (x_i): cada uno de los valores.
 -   (n): número de observaciones.
 -   (`\sum`{=tex}): símbolo de sumatoria.
 
+$$
 **Ejemplo:**
 
 Consideremos las edades de cinco estudiantes:
 
+$$
 \[ 18, 20, 21, 22, 24 \]
+$$
 
 La media es:
-
+$$
 \[ `\bar`{=tex}{x} = `\frac{18+20+21+22+24}{5}`{=tex} \]
 
 \[ `\bar`{=tex}{x} = `\frac{105}{5}`{=tex}=21 \]
-
+$$
 La edad promedio es de 21 años.
 
 ### Cálculo en R
@@ -685,8 +689,9 @@ Si el número de observaciones es impar, la mediana corresponde al valor
 central.
 
 Ejemplo:
-
+$$
 \[ 12, 15, 18, 20, 25 \]
+$$
 
 La mediana es 18.
 
@@ -695,11 +700,13 @@ promedio de los dos valores centrales.
 
 Ejemplo:
 
+$$
 \[ 12, 15, 18, 20 \]
 
 \[ Me = `\frac{15+18}{2}`{=tex}=16.5 \]
 
 La mediana es 16.5.
+$$
 
 ### Cálculo en R
 
@@ -725,7 +732,9 @@ de un conjunto de datos.
 
 Por ejemplo:
 
+$$
 \[ 2, 3, 3, 4, 4, 4, 5, 6 \]
+$$
 
 La moda es 4, porque aparece tres veces.
 
@@ -779,21 +788,11 @@ names(frecuencias)[frecuencias == max(frecuencias)]
 
 Las tres medidas proporcionan información diferente.
 
-  -----------------------------------------------------------------------
-  Medida                  Característica          Sensibilidad a valores
-                                                  extremos
-  ----------------------- ----------------------- -----------------------
-  Media                   Promedio de los         Alta.
-                          valores.                
-
-  Mediana                 Valor central de los    Baja.
-                          datos ordenados.        
-
-  Moda                    Valor o categoría más   No depende de la
-                          frecuente.              magnitud de los
-                                                  valores.
-  -----------------------------------------------------------------------
-
+| Medida | Característica | Sensibilidad a valores extremos |
+|:---|:---|:---|
+| **Media** | Promedio de los valores. | Alta. |
+| **Mediana** | Valor central de los datos ordenados. | Baja. |
+| **Moda** | Valor o categoría más frecuente. | No depende de la magnitud de los valores. |
 Consideremos los siguientes ingresos mensuales:
 
 ``` r
@@ -839,13 +838,14 @@ observaciones.
 Por ejemplo, consideremos las calificaciones de dos grupos:
 
 **Grupo A:**
-
+$$
 \[ 8, 8, 9, 9, 10 \]
+$$
 
 **Grupo B:**
-
+$$
 \[ 5, 7, 9, 11, 12 \]
-
+$$
 Ambos grupos tienen una media de 8.8, pero sus valores presentan
 diferentes niveles de dispersión.
 
@@ -853,15 +853,15 @@ diferentes niveles de dispersión.
 
 El rango es la diferencia entre el valor máximo y el valor mínimo de un
 conjunto de datos.
-
+$$
 \[ R = X\_{`\max`{=tex}} - X\_{`\min`{=tex}} \]
-
+$$
 Ejemplo:
-
+$$
 \[ 5, 8, 10, 12, 15 \]
 
 \[ R = 15-5=10 \]
-
+$$
 El rango es 10.
 
 ### Cálculo en R
@@ -909,22 +909,23 @@ depende de si trabajamos con una población o una muestra.
 
 Cuando disponemos de todos los elementos de una población, la varianza
 se calcula mediante:
-
+$$
 \[ `\sigma`{=tex}\^2 = `\frac{\sum_{i=1}^{N}(x_i-\mu)^2}{N}`{=tex} \]
-
+$$
 Donde:
-
+$$
 -   (`\sigma`{=tex}\^2): varianza poblacional.
 -   (x_i): cada observación.
 -   (`\mu`{=tex}): media poblacional.
 -   (N): número de elementos de la población.
 
+$$
 ### Varianza muestral
 
 Cuando trabajamos con una muestra, se utiliza:
-
+$$
 \[ s\^2 = `\frac{\sum_{i=1}^{n}(x_i-\bar{x})^2}{n-1}`{=tex} \]
-
+$$
 La división entre (n-1) corresponde a la corrección de Bessel y permite
 obtener un estimador insesgado de la varianza poblacional bajo los
 supuestos habituales de muestreo.
@@ -952,9 +953,9 @@ Esto permite distinguir entre ambos procedimientos.
 ## Desviación estándar
 
 La desviación estándar es la raíz cuadrada de la varianza.
-
+$$
 \[ s = `\sqrt{s^2}`{=tex} \]
-
+$$
 Su ventaja es que se expresa en las mismas unidades que los datos
 originales.
 
@@ -1013,9 +1014,9 @@ El rango intercuartílico mide la dispersión del 50 % central de los
 datos.
 
 Se calcula mediante:
-
+$$
 \[ RIC = Q3-Q1 \]
-
+$$
 Donde:
 
 -   Q1: primer cuartil.
@@ -1142,13 +1143,13 @@ El espacio muestral es el conjunto de todos los resultados posibles de
 un experimento aleatorio.
 
 Se representa generalmente mediante la letra:
-
+$$
 \[ `\Omega`{=tex} \]
-
+$$
 Por ejemplo, al lanzar un dado de seis caras:
-
+$$
 \[ `\Omega `{=tex}= {1,2,3,4,5,6} \]
-
+$$
 El espacio muestral contiene todos los resultados posibles.
 
 ## Eventos o sucesos
@@ -1157,13 +1158,13 @@ Un evento es un subconjunto del espacio muestral.
 
 Por ejemplo, al lanzar un dado, podemos definir el evento A como obtener
 un número par:
-
+$$
 \[ A = {2,4,6} \]
-
+$$
 El evento B puede representar obtener un número mayor que cuatro:
-
+$$
 \[ B = {5,6} \]
-
+$$
 Los eventos pueden clasificarse de diferentes maneras.
 
 **Eventos simples:** contienen un solo resultado.
@@ -1191,9 +1192,9 @@ La probabilidad representa una medida numérica de la posibilidad de que
 ocurra un evento.
 
 Sus valores se encuentran entre 0 y 1:
-
+$$
 \[ 0 `\leq `{=tex}P(A) `\leq 1`{=tex} \]
-
+$$
 Donde:
 
 -   0 representa un evento imposible.
@@ -1201,25 +1202,25 @@ Donde:
 -   Los valores intermedios representan distintos grados de posibilidad.
 
 Por ejemplo:
-
+$$
 \[ P(A)=0.5 \]
-
+$$
 Representa una probabilidad del 50 %.
 
 ## Probabilidad clásica
 
 Cuando todos los resultados posibles son igualmente probables, podemos
 calcular la probabilidad de un evento mediante:
-
+$$
 \[
 P(A)=`\frac{\text{Resultados favorables}}{\text{Resultados posibles}}`{=tex}
 \]
-
+$$
 Por ejemplo, al lanzar un dado justo, la probabilidad de obtener un
 número par es:
-
+$$
 \[ P(A)=`\frac{3}{6}`{=tex}=0.5 \]
-
+$$
 Por lo tanto, existe una probabilidad del 50 % de obtener un número par.
 
 ## Probabilidad frecuencial o empírica
@@ -1228,16 +1229,16 @@ La probabilidad frecuencial se estima a partir de la proporción de veces
 que ocurre un evento cuando repetimos un experimento.
 
 Se expresa mediante:
-
+$$
 \[
 P(A)`\approx`{=tex}`\frac{\text{Número de veces que ocurre A}}{\text{Número total de experimentos}}`{=tex}
 \]
-
+$$
 Por ejemplo, si lanzamos una moneda 100 veces y obtenemos 53 caras, la
 probabilidad empírica de obtener cara es:
-
+$$
 \[ P(`\text{cara}`{=tex})=`\frac{53}{100}`{=tex}=0.53 \]
-
+$$
 A diferencia de la probabilidad teórica, la probabilidad empírica puede
 variar entre experimentos.
 
@@ -1256,36 +1257,37 @@ La unión de dos eventos representa la ocurrencia de al menos uno de
 ellos.
 
 Se representa mediante:
-
+$$
 \[ A `\cup `{=tex}B \]
-
+$$
 Su probabilidad se calcula mediante:
-
+$$
 \[ P(A`\cup `{=tex}B)=P(A)+P(B)-P(A`\cap `{=tex}B) \]
-
+$$
 ### Intersección
 
 La intersección representa la ocurrencia simultánea de dos eventos.
 
 Se representa mediante:
-
+$$
 \[ A`\cap `{=tex}B \]
-
+$$
 Si dos eventos son independientes:
-
+$$
 \[ P(A`\cap `{=tex}B)=P(A)`\cdot `{=tex}P(B) \]
-
+$$
 ### Complemento
 
 El complemento de un evento representa que dicho evento no ocurre.
 
 Se representa mediante:
-
+$$
 \[ A\^c \]
-
+$$
 Su probabilidad es:
-
+$$
 \[ P(A\^c)=1-P(A) \]
+$$
 
 ## Simulación de experimentos aleatorios en R
 
@@ -1358,8 +1360,9 @@ resultados que cumplen la condición.
 El resultado será una aproximación de la probabilidad teórica de obtener
 un número par:
 
+$$
 \[ P(A)=0.5 \]
-
+$$
 ------------------------------------------------------------------------
 
 # 6.7. Variables aleatorias y distribuciones de probabilidad
@@ -1379,8 +1382,9 @@ Por ejemplo, si lanzamos una moneda tres veces, podemos definir una
 variable aleatoria X que represente el número de caras obtenidas.
 
 Los valores posibles de X son:
-
+$$
 \[ X={0,1,2,3} \]
+$$
 
 La variable aleatoria permite estudiar la probabilidad de obtener cada
 uno de esos valores.
@@ -1453,14 +1457,16 @@ condiciones:
 4.  Los experimentos son independientes.
 
 La distribución binomial se representa mediante:
-
+$$
 \[ X`\sim `{=tex}Bin(n,p) \]
-
+$$
 Donde:
-
+$$
 -   (n): número de experimentos.
 -   (p): probabilidad de éxito en cada experimento.
 -   (X): número de éxitos obtenidos.
+
+$$
 
 ### Ejemplo
 
@@ -1471,11 +1477,11 @@ Si entrevistamos a cinco personas, podemos estudiar la probabilidad de
 obtener exactamente tres respuestas afirmativas.
 
 Tenemos:
-
+$$
 \[ n=5 \]
 
 \[ p=0.6 \]
-
+$$
 La distribución binomial permite calcular esa probabilidad.
 
 ### Funciones binomiales en R
