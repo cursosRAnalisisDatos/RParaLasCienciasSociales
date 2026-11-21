@@ -339,25 +339,22 @@ importante identificar la escala de medición utilizada.
 
 Existen cuatro escalas fundamentales:
 
-  -----------------------------------------------------------------------
-  Escala                  Características         Ejemplo
-  ----------------------- ----------------------- -----------------------
-  Nominal                 Categorías sin orden.   Nacionalidad.
+## Escalas de medición
 
-  Ordinal                 Categorías ordenadas.   Nivel educativo.
+Además de distinguir entre variables cualitativas y cuantitativas, es importante identificar la escala de medición utilizada, ya que esta determina qué tipo de comparaciones y operaciones tienen sentido al analizar los datos.
 
-  Intervalo               Diferencias numéricas   Temperatura en °C.
-                          interpretables, sin     
-                          cero absoluto.          
+Existen cuatro escalas fundamentales:
 
-  Razón                   Diferencias y           Edad, peso e ingresos.
-                          proporciones            
-                          interpretables, con     
-                          cero absoluto.          
-  -----------------------------------------------------------------------
+| Escala | Características | Ejemplo |
+|:---|:---|:---|
+| **Nominal** | Clasifica los datos en categorías que no tienen un orden inherente. | Nacionalidad, estado civil o tipo de ocupación. |
+| **Ordinal** | Clasifica los datos en categorías que tienen un orden, pero no necesariamente existe una distancia equivalente entre ellas. | Nivel educativo, nivel de satisfacción o nivel socioeconómico. |
+| **Intervalo** | Los valores tienen un orden y las diferencias entre ellos son interpretables y equivalentes, pero no existe un cero absoluto. | Temperatura en grados Celsius o Fahrenheit. |
+| **Razón** | Tiene las propiedades de la escala de intervalo, pero además posee un cero absoluto que representa la ausencia de la cantidad medida. | Edad, ingreso, peso, estatura o número de hijos. |
 
-La escala de medición influye en las operaciones estadísticas que
-podemos realizar y en la interpretación de sus resultados.
+**Nota:** Las escalas nominal y ordinal suelen utilizarse con variables cualitativas, mientras que las escalas de intervalo y razón se utilizan con variables cuantitativas. La escala de medición depende del significado de la variable y no solamente de cómo se almacena en R.
+
+La escala de medición influye en las operaciones estadísticas que podemos realizar y en la interpretación de sus resultados.
 
 ## Aplicación en R: identificación de variables
 
