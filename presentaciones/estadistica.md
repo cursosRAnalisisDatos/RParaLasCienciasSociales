@@ -166,10 +166,6 @@ Resultado:
 
 R calculó automáticamente el promedio de las ocho observaciones.
 
-A lo largo de este módulo utilizaremos estas herramientas para
-comprender cómo se aplican los conceptos estadísticos mediante
-programación.
-
 ------------------------------------------------------------------------
 
 # 6.2. Conceptos fundamentales de estadística
