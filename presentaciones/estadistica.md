@@ -164,8 +164,6 @@ Resultado:
 [1] 21.125
 ```
 
-R calculó automáticamente el promedio de las ocho observaciones.
-
 ------------------------------------------------------------------------
 
 # 6.2. Conceptos fundamentales de estadística
