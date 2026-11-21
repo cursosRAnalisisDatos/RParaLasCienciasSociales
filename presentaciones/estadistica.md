@@ -435,7 +435,9 @@ determinado valor o categoría.
 
 Se representa generalmente mediante la letra:
 
+``` r
 \[ f_i \]
+```
 
 Por ejemplo, supongamos que preguntamos a diez estudiantes cuál es su
 área de estudio preferida y obtenemos:
@@ -455,15 +457,14 @@ Sociología
 
 La distribución de frecuencias absolutas sería:
 
-  Área           Frecuencia absoluta
-  ------------ ---------------------
-  Sociología                       5
-  Economía                         3
-  Psicología                       2
-  Total                           10
+  | Área | Frecuencia absoluta |
+|:---|---:|
+| Sociología | 5 |
+| Economía | 3 |
+| Psicología | 2 |
+| **Total** | **10** |
 
-Podemos observar que Sociología es la categoría que aparece con mayor
-frecuencia.
+Podemos observar que Sociología es la categoría que aparece con mayor frecuencia.
 
 ## Frecuencia relativa
 
@@ -473,17 +474,22 @@ correspondiente a cada valor o categoría.
 Se calcula dividiendo la frecuencia absoluta entre el número total de
 observaciones.
 
+``` text
 \[ h_i = `\frac{f_i}{N}`{=tex} \]
+```
 
 Donde:
 
+``` text
 -   (h_i): frecuencia relativa.
 -   (f_i): frecuencia absoluta.
 -   (N): número total de observaciones.
+```
 
 Por ejemplo, para Sociología:
-
+``` text
 \[ h_i = `\frac{5}{10}`{=tex} = 0.5 \]
+```
 
 Esto significa que el 50 % de los estudiantes seleccionó Sociología.
 
@@ -492,11 +498,16 @@ Esto significa que el 50 % de los estudiantes seleccionó Sociología.
 La frecuencia porcentual expresa la frecuencia relativa en términos de
 porcentaje.
 
+``` text
 \[ p_i = h_i `\times 100`{=tex} \]
+```
 
 Por ejemplo:
 
+``` text
 \[ 0.5 `\times 100`{=tex} = 50% \]
+```
+
 
 ## Frecuencia acumulada
 
