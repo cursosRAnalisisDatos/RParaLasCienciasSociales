@@ -107,19 +107,19 @@ están sujetas a incertidumbre.
 ### Diferencias entre ambas
 
   -----------------------------------------------------------------------
-  Estadística descriptiva             Estadística inferencial
+  | Estadística descriptiva            |  Estadística inferencial| 
   ----------------------------------- -----------------------------------
-  Describe los datos observados.      Busca obtener conclusiones sobre
-                                      una población.
+  | Describe los datos observados.      | Busca obtener conclusiones sobre
+                                      una población.| 
 
-  Organiza y resume información.      Utiliza muestras para realizar
-                                      estimaciones.
+  | Organiza y resume información.      | Utiliza muestras para realizar
+                                      estimaciones.| 
 
-  Calcula medias, medianas y          Realiza estimaciones y pruebas de
-  desviaciones.                       hipótesis.
+  | Calcula medias, medianas y          | Realiza estimaciones y pruebas de
+  desviaciones.                       hipótesis.| 
 
-  Se concentra en los datos           Considera la incertidumbre asociada
-  disponibles.                        al muestreo.
+  | Se concentra en los datos           | Considera la incertidumbre asociada
+  disponibles.                        al muestreo.| 
   -----------------------------------------------------------------------
 
 ## Aplicaciones de la estadística en las ciencias sociales
