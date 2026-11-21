@@ -435,9 +435,9 @@ determinado valor o categoría.
 
 Se representa generalmente mediante la letra:
 
-``` r
+$$
 \[ f_i \]
-```
+$$
 
 Por ejemplo, supongamos que preguntamos a diez estudiantes cuál es su
 área de estudio preferida y obtenemos:
