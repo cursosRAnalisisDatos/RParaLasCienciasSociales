@@ -106,9 +106,9 @@ están sujetas a incertidumbre.
 
 ### Diferencias entre ambas
 
-  -----------------------------------------------------------------------
+  |-----------------------------------------------------------------------|
   | Estadística descriptiva            |  Estadística inferencial| 
-  ----------------------------------- -----------------------------------
+  |----------------------------------- |-----------------------------------|
   | Describe los datos observados.      | Busca obtener conclusiones sobre
                                       una población.| 
 
