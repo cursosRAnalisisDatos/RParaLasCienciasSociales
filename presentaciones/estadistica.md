@@ -108,7 +108,7 @@ están sujetas a incertidumbre.
 
   |----------------------|--------------|-----------------------------------|
   | Estadística descriptiva | Estadística inferencial| 
-  |----------------------------------- |-----------------------------------|
+  |----------------------|------------- |-----------------------------------|
   | Describe los datos observados | Busca obtener conclusiones sobre una población| 
   | Organiza y resume información | Utiliza muestras para realizar estimaciones| 
   | Calcula medias, medianas y desviaciones | Realiza estimaciones y pruebas de hipótesis| 
