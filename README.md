@@ -34,7 +34,7 @@ El curso está pensado para profesionistas y alumnos de los últimos semestres d
 3. [Objetos de R (estructuras de datos)](presentaciones/modulo3.md)
 4. [Estructuras de control](presentaciones/modulo4.md)
 5. [Manejo de datos](presentaciones/modulo5.md)
-6. [Introducción a la estadística y probabilidad](presentaciones/modulo6.md)
+6. [Introducción a la estadística y probabilidad](presentaciones/estadistica.md)
 7. [Graficando datos estadísticos con R (ggplot2)](presentaciones/modulo7.md)
 8. [Análisis de una base de datos real (INEGI, BM, ONU, etc)](presentaciones/modulo8.md)
 
